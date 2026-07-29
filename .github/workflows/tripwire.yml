@@ -22,6 +22,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: ./scripts/check.sh --fast
+      - if: failure()
+        name: Détail de l'échec (last-fail.log + version kicad)
+        run: |
+          kicad-cli version || true
+          cat .git/tripwire/last-fail.log || true
 
   check-full:
     if: github.event_name != 'pull_request'
@@ -34,3 +39,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: ./scripts/check.sh
+      - if: failure()
+        name: Détail de l'échec (last-fail.log + version kicad)
+        run: |
+          kicad-cli version || true
+          cat .git/tripwire/last-fail.log || true
