@@ -1,0 +1,296 @@
+(footprint "SW_Micro_Switch"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Micro Switch")
+	(tags "Ultra Subminiature Basic Micro Switch D2F")
+	(property "Reference" "SW101"
+		(at -9.15 0.2 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "8130ac4f-89f5-4ff5-b6d9-35e8c02955ac")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Push_Button"
+		(at 0 3.81 180)
+		(layer "F.Fab")
+		(uuid "e1fa644a-43aa-4a5c-87eb-3ac9cdfac454")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "PCM_openinput:SW_Micro_Switch"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1b5818ad-a992-434f-8a1f-beb1e1b8ec7c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "614d0b6c-693b-45a5-b87c-0972d7c44f60")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Common 6mmx6mm Push Button"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1a43607e-8b0c-4ebb-b42a-cbcffd306a6e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -6.52 -3.02)
+		(end -6.52 -2.02)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "23ad1587-6c14-4e92-834c-735c5c65f633")
+	)
+	(fp_line
+		(start -6.52 -3.02)
+		(end -5.52 -3.02)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "263c9fb7-54a0-47d9-84d3-1cdb9a6d4933")
+	)
+	(fp_line
+		(start -6.52 3.02)
+		(end -6.52 2.02)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "39c3aed1-dbd7-4e89-b322-7c4c3844f1fa")
+	)
+	(fp_line
+		(start -6.52 3.02)
+		(end -5.52 3.02)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4ade98a9-228a-4fb8-992d-bcfb36e11f1d")
+	)
+	(fp_line
+		(start -2.5 0.9)
+		(end -2.5 -0.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e01fd9b7-030d-4717-9af3-d017add9898d")
+	)
+	(fp_line
+		(start -1.4 0.9)
+		(end -1.4 -0.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "297809e0-adaa-4285-84ce-f2af444e137f")
+	)
+	(fp_line
+		(start 6.52 -3.02)
+		(end 5.52 -3.02)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "779f4e0c-c2b8-4df8-904b-119303b87ff9")
+	)
+	(fp_line
+		(start 6.52 -3.02)
+		(end 6.52 -2.02)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "537963fe-5793-44d5-a220-f9a4953cb07d")
+	)
+	(fp_line
+		(start 6.52 3.02)
+		(end 5.52 3.02)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ffd97a9b-2666-442a-bd20-96a1d3fc2f88")
+	)
+	(fp_line
+		(start 6.52 3.02)
+		(end 6.52 2.02)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "02a05df6-9ef6-4f10-ba94-2b08c11c0eea")
+	)
+	(fp_arc
+		(start -2.5 -0.9)
+		(mid -1.95 -1.45)
+		(end -1.4 -0.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8924ecbd-a1eb-40a5-adde-5110d2ed80fa")
+	)
+	(fp_arc
+		(start -1.4 0.9)
+		(mid -1.95 1.45)
+		(end -2.5 0.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d65368c0-34f9-4365-835f-e4302ab1d388")
+	)
+	(fp_line
+		(start -1.95 1.45)
+		(end -1.95 -1.45)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "299c2f5c-3766-472e-a8c0-140b43b950e1")
+	)
+	(fp_line
+		(start -1.4 0)
+		(end -2.5 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "df28100b-5939-4f62-85c7-a2408862b93b")
+	)
+	(fp_line
+		(start -6.4 -2.9)
+		(end 6.4 -2.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6203f360-e6cf-40fe-bdf1-fd3f9e9b13b0")
+	)
+	(fp_line
+		(start -6.4 2.9)
+		(end -6.4 -2.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "23ce58ba-1076-4830-a084-693c00b02983")
+	)
+	(fp_line
+		(start 6.4 -2.9)
+		(end 6.4 2.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "95fa73c6-8cdb-4ef6-8b69-3b1a525b94be")
+	)
+	(fp_line
+		(start 6.4 2.9)
+		(end -6.4 2.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b7b4c4f0-79c8-41f8-8a87-ab376b980baa")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 1.905 180)
+		(layer "F.Fab")
+		(uuid "85734cad-2eb9-4d29-989f-705039aa4f02")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -5.08 0)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "04843cda-089c-4a39-af84-c1f474d51d9b")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e0c03abc-1e4c-4313-8ab3-0534dc3f6380")
+	)
+	(pad "3" thru_hole circle
+		(at 5.08 0)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "96a0b20b-9091-49ec-94a1-e3e5cad7bbe4")
+	)
+	(model "${KICAD6_3RD_PARTY}/3dmodels/com_github_openinput-fw_openinput-kicad-library/openinput.3dshapes/SW_Micro_Switch.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

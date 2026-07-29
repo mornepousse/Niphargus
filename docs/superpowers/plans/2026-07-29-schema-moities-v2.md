@@ -8,7 +8,7 @@
 
 **Architecture** : projet KiCad neuf `rouge-gorge/`, schéma hiérarchique 4 feuilles (alim / mcu+radio / matrice / liens). Réf. : design doc `docs/superpowers/specs/2026-07-29-rouge-gorge-refonte-design.md`.
 
-**Stack** : KiCad 10.0.x · tripwire (`./scripts/check.sh --fast` = ERC ratchet) · libs locales existantes (`corne-cherry/pcb/*.pretty`, `mae.kicad_sym`) + libs officielles KiCad.
+**Stack** : KiCad 10.0.x · tripwire (`./scripts/check.sh --fast` = ERC ratchet) · libs locales existantes (`rili/pcb/*.pretty`, `mae.kicad_sym`) + libs officielles KiCad.
 
 ## Contraintes globales
 
@@ -44,7 +44,7 @@
 
 **Interfaces :** produit le squelette de projet + 4 feuilles hiérarchiques vides nommées `alim`, `mcu_radio`, `matrice`, `liens` que les tâches 1-4 remplissent.
 
-- [ ] **Étape 1 (Mae)** : KiCad → Fichier → Nouveau projet → `rouge-gorge/rouge-gorge` à la racine du repo. Dans le schéma racine, poser 4 feuilles hiérarchiques (Placer → Feuille) : `alim.kicad_sch`, `mcu_radio.kicad_sch`, `matrice.kicad_sch`, `liens.kicad_sch`. Recopier les tables de libs : Préférences → Gérer les librairies de symboles/empreintes → ajouter (projet) `mae.kicad_sym`, `rouge_gorge.kicad_sym` et les `.pretty` de `corne-cherry/pcb/` utiles (`key`, `MaeLid`, `EKR82-footprint`). Sauvegarder.
+- [ ] **Étape 1 (Mae)** : KiCad → Fichier → Nouveau projet → `rouge-gorge/rouge-gorge` à la racine du repo. Dans le schéma racine, poser 4 feuilles hiérarchiques (Placer → Feuille) : `alim.kicad_sch`, `mcu_radio.kicad_sch`, `matrice.kicad_sch`, `liens.kicad_sch`. Recopier les tables de libs : Préférences → Gérer les librairies de symboles/empreintes → ajouter (projet) `mae.kicad_sym`, `rouge_gorge.kicad_sym` et les `.pretty` de `rili/pcb/` utiles (`key`, `MaeLid`, `EKR82-footprint`). Sauvegarder.
 - [ ] **Étape 2 (Claude)** : retarget `scripts/kicad-check.sh` : `SCH="rouge-gorge/rouge-gorge.kicad_sch"`, `PCB="rouge-gorge/rouge-gorge.kicad_pcb"` ; supprimer `.tripwire-kicad-baseline` (la baseline se ré-initialise au premier run) ; ajouter `rouge-gorge/` à la puce chemins surveillés de CLAUDE.md.
 - [ ] **Étape 3 (vérif)** : `./scripts/check.sh --fast` → vert, baseline ré-initialisée à ~0/0 (schéma quasi vide). `./scripts/check.sh` → DRC : le PCB vide initialisera sa référence (probablement 1 erreur `invalid_outline` — c'est la référence de départ, elle fondra au layout).
 - [ ] **Étape 4 (commit)** : `git add rouge-gorge/ scripts/kicad-check.sh CLAUDE.md .tripwire-kicad-baseline && git commit -m "feat(v2): projet KiCad rouge-gorge + bascule tripwire"`

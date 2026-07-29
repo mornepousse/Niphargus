@@ -1,8 +1,8 @@
 # Rouge-Gorge — claude instructions
 
 Clavier split (dérivé Jorne/Kyria), 100 % KiCad pour l'instant : schéma et PCB
-dans `corne-cherry/pcb/` (projet `corne-cherry`), footprints dans
-`corne-cherry/pcb/EKR82-footprint.pretty/` et `kbd/`.
+dans `rili/pcb/` (projet `rili`), footprints dans
+`rili/pcb/EKR82-footprint.pretty/` et `kbd/`.
 
 ## Refonte en cours — cahier des charges
 
@@ -41,7 +41,7 @@ KiCad — local et CI restent sur la même mineure (10.0.x).
 `pre-push` lance le check complet et bloque le push si rouge. WIP : `git push --no-verify`.
 
 **Hooks Claude Code** (`.claude/settings.json`, automatiques) :
-- `PostToolUse` sur édition d'un fichier surveillé (`corne-cherry/`, `kbd/`,
+- `PostToolUse` sur édition d'un fichier surveillé (`rili/`, `kbd/`,
   futur `firmware/`) → `check.sh --fast`.
 - `Stop` → check complet. Si `kicad-cli` n'est pas disponible, dégrade en
   `--fast` seul.

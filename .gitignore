@@ -3,11 +3,12 @@
 *.kicad_pcb-bak
 **/gerber/*
 
-corne-cherry/pcb/DXF/
-corne-cherry/pcb/corne-cherry-backups/
+rili/pcb/DXF/
+rili/pcb/rili-backups/
+rili/pcb/corne-cherry-backups/
 
 # Fichiers de verrou KiCad (session ouverte)
 *.lck
 
 # Dump fournisseur du module dev JC-ESP32P4-M3-C6 (350 Mo, retéléchargeable)
-corne-cherry/pcb/JC-ESP32P4-M3-C6/
+rili/pcb/JC-ESP32P4-M3-C6/

@@ -1,12 +1,12 @@
 # Généré par /tripwire:init — la CI n'appelle que scripts/check.sh (invariant).
 # Image kicad/kicad épinglée sur la même mineure que le poste local (10.0.x) :
 # une autre version de KiCad change les comptes ERC/DRC et fausserait la baseline.
-# Étages : fast (ERC) sur PR, full (ERC+DRC) sur jorne + nightly.
+# Étages : fast (ERC) sur PR, full (ERC+DRC) sur main + nightly.
 name: tripwire
 on:
   pull_request:
   push:
-    branches: ["jorne"]
+    branches: ["main"]
   schedule:
     - cron: "0 3 * * *"   # nightly full — supprimer si inutile
 

@@ -15,8 +15,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 cd "$PROJECT_DIR" || exit 1
 
-SCH="corne-cherry/pcb/corne-cherry.kicad_sch"
-PCB="corne-cherry/pcb/corne-cherry.kicad_pcb"
+SCH="rili/pcb/rili.kicad_sch"
+PCB="rili/pcb/rili.kicad_pcb"
 BASELINE=".tripwire-kicad-baseline"
 
 MODE="${1:-}"
