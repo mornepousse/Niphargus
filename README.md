@@ -1,5 +1,22 @@
+# Rili
 
-<img src="images/robinlogo.png" alt="alt text" width="300" height="300">
+*La petite rouge sur laquelle on peut compter.*
+
+Rili est un clavier split sans fil, fin et increvable — ESP32 + nRF24L01+, fallback
+filaire (« rebrancher doit suffire »), robustesse ESD, et une trousse de secours
+d'informaticien cachée derrière la prise USB (clé bootable multi-ISO, token PGP,
+stockage). Refonte complète du **Rouge-Gorge** (v1, ci-dessous), dont ce dépôt
+porte tout l'historique.
+
+en : Rili is a thin, unkillable wireless split keyboard — ESP32 + nRF24L01+, wired
+fallback, ESD hardening, and a hidden sysadmin survival kit behind the USB port.
+Complete redesign of the Rouge-Gorge (v1, below); this repo carries its full history.
+
+---
+
+## Rouge-Gorge (v1, 2022)
+
+<img src="images/robinlogo.png" alt="Rouge-Gorge logo" width="300" height="300">
 
 The keyboard I created is a derivative of the Jorne and Kyria rev2, two keyboards highly appreciated in the community of mechanical keyboard enthusiasts. I took the best for me.
 
