@@ -17,7 +17,10 @@ cd "$PROJECT_DIR" || exit 1
 
 SCH="rili/pcb/rili.kicad_sch"
 PCB="rili/pcb/rili.kicad_pcb"
-BASELINE=".tripwire-kicad-baseline"
+# La CI pointe TRIPWIRE_BASELINE vers .tripwire-kicad-baseline-ci : l'environnement
+# conteneur décale les comptes de warnings (fontes/libs globales) — même design,
+# même ratchet, référence par environnement.
+BASELINE="${TRIPWIRE_BASELINE:-.tripwire-kicad-baseline}"
 
 MODE="${1:-}"
 case "$MODE" in erc|drc) ;; *) echo "usage: $0 erc|drc" >&2; exit 2 ;; esac

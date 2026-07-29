@@ -20,6 +20,7 @@ jobs:
       options: --user root   # l'image tourne en user kicad ; root évite les soucis de droits sur le workspace
     env:
       HOME: /root   # kicad-cli veut un HOME inscriptible pour sa config
+      TRIPWIRE_BASELINE: .tripwire-kicad-baseline-ci   # référence propre à l'env CI
     steps:
       - uses: actions/checkout@v4
       - run: ./scripts/check.sh --fast
@@ -40,6 +41,7 @@ jobs:
       options: --user root
     env:
       HOME: /root
+      TRIPWIRE_BASELINE: .tripwire-kicad-baseline-ci
     steps:
       - uses: actions/checkout@v4
       - run: ./scripts/check.sh

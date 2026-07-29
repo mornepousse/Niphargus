@@ -32,7 +32,13 @@ ni de warnings ERC/DRC que la référence committée `.tripwire-kicad-baseline` 
 Toute baisse est enregistrée automatiquement dans la baseline → **committer le
 fichier**. La baisser à la main = diff visible en review. Objectif : zéro à la
 fin de la refonte ESP32/nRF24. Caveat : les comptes dépendent de la version de
-KiCad — local et CI restent sur la même mineure (10.0.x).
+KiCad ET de l'environnement (fontes, libs globales) — la CI est épinglée sur la
+version exacte du poste (10.0.4) et a sa propre référence committée
+`.tripwire-kicad-baseline-ci` (env `TRIPWIRE_BASELINE`) : +19 warnings ERC / +5
+DRC en conteneur, même design. Les deux baselines suivent le même ratchet ; les
+deux objectifs sont zéro. Le DRC `hole_clearance` de KiCad 10 étant
+non-déterministe (±quelques erreurs par run), l'oracle tolère ±10 erreurs DRC
+(tolérance forcée à 0 quand la référence atteint 0).
 
 **Activation des hooks git (une fois par clone)** :
 ```bash
