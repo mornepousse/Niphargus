@@ -75,15 +75,27 @@ if [ -z "$REF_ERR" ] || [ -z "$REF_WARN" ]; then
   exit 0
 fi
 
+# Jitter DRC : le test hole_clearance de KiCad 10 est non-déterministe sur ce
+# board hérité (mesuré : 814/817/819 erreurs sur le même fichier, violations
+# uniques différentes d'un run à l'autre). Tolérance sur les ERREURS DRC :
+# rouge seulement si > réf + TOL ; le ratchet ne descend que sous réf - TOL
+# (évite de verrouiller un run chanceux). ERC déterministe -> TOL 0.
+# Garde-fou : quand la réf atteint 0, zéro veut dire zéro (TOL forcée à 0).
+TOL_ERR=0
+[ "$MODE" = "drc" ] && [ "$REF_ERR" -gt 0 ] && TOL_ERR=10
+
 rc=0
-if [ "$ERR" -gt "$REF_ERR" ] || [ "$WARN" -gt "$REF_WARN" ]; then
-  echo "✗ $MODE : $ERR erreur(s) (réf $REF_ERR), $WARN warning(s) (réf $REF_WARN) — régression vs baseline" >&2
+if [ "$ERR" -gt $((REF_ERR + TOL_ERR)) ] || [ "$WARN" -gt "$REF_WARN" ]; then
+  echo "✗ $MODE : $ERR erreur(s) (réf $REF_ERR, tolérance +$TOL_ERR), $WARN warning(s) (réf $REF_WARN) — régression vs baseline" >&2
   echo "  détail : $REPORT" >&2
   rc=1
 else
-  if [ "$ERR" -lt "$REF_ERR" ] || [ "$WARN" -lt "$REF_WARN" ]; then
-    set_ref "${MODE}_errors" "$ERR"; set_ref "${MODE}_warnings" "$WARN"
-    echo "» ratchet $MODE : $REF_ERR→$ERR erreur(s), $REF_WARN→$WARN warning(s) ($BASELINE mis à jour — à committer)"
+  NEW_ERR="$REF_ERR"; NEW_WARN="$REF_WARN"
+  [ "$ERR" -lt $((REF_ERR - TOL_ERR)) ] && NEW_ERR="$ERR"
+  [ "$WARN" -lt "$REF_WARN" ] && NEW_WARN="$WARN"
+  if [ "$NEW_ERR" != "$REF_ERR" ] || [ "$NEW_WARN" != "$REF_WARN" ]; then
+    set_ref "${MODE}_errors" "$NEW_ERR"; set_ref "${MODE}_warnings" "$NEW_WARN"
+    echo "» ratchet $MODE : $REF_ERR→$NEW_ERR erreur(s), $REF_WARN→$NEW_WARN warning(s) ($BASELINE mis à jour — à committer)"
   fi
   echo "✓ $MODE : $ERR erreur(s), $WARN warning(s) — dans la baseline"
 fi
