@@ -28,6 +28,9 @@ jobs:
         run: |
           kicad-cli version || true
           cat .git/tripwire/last-fail.log || true
+          echo "--- comptes bruts ERC/DRC dans CET environnement ---"
+          ./scripts/kicad-check.sh erc || true
+          ./scripts/kicad-check.sh drc || true
 
   check-full:
     if: github.event_name != 'pull_request'
@@ -45,3 +48,6 @@ jobs:
         run: |
           kicad-cli version || true
           cat .git/tripwire/last-fail.log || true
+          echo "--- comptes bruts ERC/DRC dans CET environnement ---"
+          ./scripts/kicad-check.sh erc || true
+          ./scripts/kicad-check.sh drc || true
