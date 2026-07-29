@@ -1,6 +1,7 @@
 # Généré par /tripwire:init — la CI n'appelle que scripts/check.sh (invariant).
-# Image kicad/kicad épinglée sur la même mineure que le poste local (10.0.x) :
-# une autre version de KiCad change les comptes ERC/DRC et fausserait la baseline.
+# Image kicad/kicad épinglée sur la version EXACTE du poste local (10.0.4) :
+# un autre patch de KiCad change les comptes ERC/DRC et fausse la baseline
+# (constaté : 10.0.5 en CI vs 10.0.4 local -> +5 warnings DRC). Monter les deux ensemble.
 # Étages : fast (ERC) sur PR, full (ERC+DRC) sur main + nightly.
 name: tripwire
 on:
@@ -15,7 +16,7 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     container:
-      image: kicad/kicad:10.0
+      image: kicad/kicad:10.0.4
       options: --user root   # l'image tourne en user kicad ; root évite les soucis de droits sur le workspace
     env:
       HOME: /root   # kicad-cli veut un HOME inscriptible pour sa config
@@ -32,7 +33,7 @@ jobs:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     container:
-      image: kicad/kicad:10.0
+      image: kicad/kicad:10.0.4
       options: --user root
     env:
       HOME: /root
