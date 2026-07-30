@@ -1,12 +1,12 @@
-# Schéma KiCad des moitiés Rouge-Gorge v2 — Plan d'implémentation
+v# Schéma KiCad des moitiés Rouge-Gorge v2 — Plan d'implémentation
 
 > **Exécution en binôme** : Mae dessine dans KiCad (GUI), Claude fournit chaque bloc (composants,
 > valeurs, table de connexions), vérifie au tripwire et relit le `.kicad_sch` (format texte).
 > Les étapes utilisent des cases `- [ ]`. Une tâche = un bloc = un commit.
 
-**But** : le schéma complet d'une moitié Rouge-Gorge v2 (les deux moitiés partagent le même schéma), ERC zéro erreur, prêt pour le layout.
+**But** : le schéma complet des deux moitiés Rouge-Gorge v2, ERC zéro erreur, prêt pour le layout.
 
-**Architecture** : projet KiCad neuf `rouge-gorge/`, schéma hiérarchique 4 feuilles (alim / mcu+radio / matrice / liens). Réf. : design doc `docs/superpowers/specs/2026-07-29-rouge-gorge-refonte-design.md`.
+**Architecture** (décision Mae 2026-07-29 : **pas de PCB réversible, pas de deuxième projet — un seul projet, un seul `.kicad_pcb` contenant les deux moitiés côte à côte**, deux contours sur Edge.Cuts) : projet KiCad neuf `rouge-gorge/`, feuille chapeau `moitie.kicad_sch` contenant les 4 feuilles (alim / mcu+radio / matrice / liens), instanciée 2× à la racine (gauche/droite) — les tâches 1-4 se font sur une seule instance, la 2ᵉ instance arrive en Tâche 5. Réf. : design doc `docs/superpowers/specs/2026-07-29-rouge-gorge-refonte-design.md`.
 
 **Stack** : KiCad 10.0.x · tripwire (`./scripts/check.sh --fast` = ERC ratchet) · libs locales existantes (`rili/pcb/*.pretty`, `mae.kicad_sym`) + libs officielles KiCad.
 
@@ -16,10 +16,11 @@
 - **La radio WiFi/BLE du S3 ne sera jamais utilisée** (MCP1700 250 mA — décision Mae).
 - **Hors périmètre de ce plan** : le coffre P4 (point ouvert №1), le firmware, le layout PCB.
 - **Baseline tripwire neuve** : sur ce projet, vert = **0 erreur ERC** (pas d'héritage toléré).
+- **Résidu DRC connu du choix « 2 moitiés, 1 PCB »** : les nets globaux (GND, +3V3, VSYS, +BATT, VBUS_5V) existent dans les deux moitiés sans cuivre entre elles → le DRC verra ~5 « unconnected items » incompressibles entre les deux planches. Piste vers le zéro : **exclusions DRC** posées une fois sur ces violations précises (stockées dans le `.kicad_pcb`, normalement honorées par `kicad-cli` — à vérifier au moment du layout) ; sinon le résidu est documenté et gelé dans la baseline. **Décision Mae 2026-07-29 : panneau sécable** — 1 seul gerber, les deux moitiés reliées par tabs + mouse-bites (ajoutés par script juste avant commande ; un tab peut porter le GND → résidu unconnected éliminable). Commande fab : « panel by customer, different designs : 2 ». Miroir du côté droit : script `mirror_panel.py` (positions x→2a−x, angle empreinte →−θ, angles internes absolus +δ, pads dé-netés, uuids neufs) — conservé en scratchpad, à archiver dans `scripts/` à la phase layout.
 - Coordination : Mae peut garder corne-cherry ouvert (projet séparé) ; elle **sauvegarde** avant chaque revue de Claude.
 - Le connecteur inter-moitiés est dessiné **générique 4 pins** (`J_LINK`) — le choix TRRS vs magnétique (point ouvert №2) se fera au layout, éventuellement en double empreinte.
 
-## Carte des pins ESP32-S3-MINI-1 (référence pour toutes les tâches)
+## Carte des pins ESP32-S3-WROOM-1 (référence normative — MCU tranché par Mae 2026-07-29 ; remap depuis la version MINI-1 : GPIO33/34 non câblés sur WROOM-1, GPIO35-37 réservés PSRAM octale sur variantes R8/R16V → évités par prudence)
 
 | Fonction | GPIO | Contrainte respectée |
 |---|---|---|
@@ -30,9 +31,10 @@
 | UART lien TX / RX | 17 / 18 | — |
 | USB D− / D+ | 19 / 20 | pins USB natifs (fixe) |
 | EN du load switch 5 V (poignée de main) | 21 | — |
-| nRF24 : CE / CSN / MOSI / SCK / MISO / IRQ | 33 / 34 / 35 / 36 / 37 / 38 | SPI logiciel/matériel, hors RTC (pas besoin) |
+| nRF24 : CE / CSN | 15 / 16 | libres, hors strapping |
+| nRF24 : SCK / MOSI / MISO / IRQ | 38 / 40 / 39 / 41 | GPIO matrix (SPI routable partout) ; 39-42 = JTAG, OK car debug via USB-JTAG ; MOSI/MISO tels que dessinés par Mae (équivalent, matrice GPIO) |
 | Boot (pad de test) | 0 | strapping — pull-up 10k, pad |
-| Interdits | 3, 45, 46 (strapping), 43/44 (UART0 debug → pads de test) | |
+| Interdits | 3, 45, 46 (strapping), 43/44 (UART0 debug → pads de test), 35-37 (PSRAM octale), 33/34 (absents du module) | |
 
 ---
 
@@ -44,7 +46,7 @@
 
 **Interfaces :** produit le squelette de projet + 4 feuilles hiérarchiques vides nommées `alim`, `mcu_radio`, `matrice`, `liens` que les tâches 1-4 remplissent.
 
-- [ ] **Étape 1 (Mae)** : KiCad → Fichier → Nouveau projet → `rouge-gorge/rouge-gorge` à la racine du repo. Dans le schéma racine, poser 4 feuilles hiérarchiques (Placer → Feuille) : `alim.kicad_sch`, `mcu_radio.kicad_sch`, `matrice.kicad_sch`, `liens.kicad_sch`. Recopier les tables de libs : Préférences → Gérer les librairies de symboles/empreintes → ajouter (projet) `mae.kicad_sym`, `rouge_gorge.kicad_sym` et les `.pretty` de `rili/pcb/` utiles (`key`, `MaeLid`, `EKR82-footprint`). Sauvegarder.
+- [ ] **Étape 1 (Mae)** : KiCad → Fichier → Nouveau projet → `rouge-gorge/rouge-gorge` à la racine du repo. Dans le schéma racine, poser UNE feuille hiérarchique (Placer → Feuille) : `moitie.kicad_sch`, nommée `gauche`. Entrer dans `moitie` et y poser les 4 feuilles : `alim.kicad_sch`, `mcu_radio.kicad_sch`, `matrice.kicad_sch`, `liens.kicad_sch`. (La 2ᵉ instance `droite` de `moitie` sera posée en Tâche 5, une fois l'instance unique verte.) Recopier les tables de libs : Préférences → Gérer les librairies de symboles/empreintes → ajouter (projet) `mae.kicad_sym`, `rouge_gorge.kicad_sym` et les `.pretty` de `rili/pcb/` utiles (`key`, `MaeLid`, `EKR82-footprint`). Sauvegarder.
 - [ ] **Étape 2 (Claude)** : retarget `scripts/kicad-check.sh` : `SCH="rouge-gorge/rouge-gorge.kicad_sch"`, `PCB="rouge-gorge/rouge-gorge.kicad_pcb"` ; supprimer `.tripwire-kicad-baseline` (la baseline se ré-initialise au premier run) ; ajouter `rouge-gorge/` à la puce chemins surveillés de CLAUDE.md.
 - [ ] **Étape 3 (vérif)** : `./scripts/check.sh --fast` → vert, baseline ré-initialisée à ~0/0 (schéma quasi vide). `./scripts/check.sh` → DRC : le PCB vide initialisera sa référence (probablement 1 erreur `invalid_outline` — c'est la référence de départ, elle fondra au layout).
 - [ ] **Étape 4 (commit)** : `git add rouge-gorge/ scripts/kicad-check.sh CLAUDE.md .tripwire-kicad-baseline && git commit -m "feat(v2): projet KiCad rouge-gorge + bascule tripwire"`
@@ -70,7 +72,7 @@ VSYS ─ SW1 slide MSK-12C02 (coupure côté système) ─ MCP1700-3302E/TT ─ 
 +BATT ─ R 1M ─┬─ R 1M ─ GND   (jauge)    ┬ = VBAT_SENSE, + C 100nF vers GND
 ```
 
-- [ ] **Étape 1 (Claude)** : livrer la liste de courses du bloc (réfs LCSC/mouser des 9 composants) en commentaire de la PR/du commit — symboles KiCad : `Battery_Management:TP4056` (ou équiv. dans libs officielles ; sinon je fournis le symbole dans `rouge_gorge.kicad_sym`), `Power_Protection:DW01A`? (sinon fourni), `Transistor_FET:AO3407`, `Diode:SS14`, `Regulator_Linear:MCP1700-3302E_SOT23`, `Switch:SW_SPDT` (MSK-12C02), `Device:R`, `Device:C`, `Device:Battery_Cell`.
+- [x] **Étape 1 (Claude)** : liste de courses livrée (2026-07-29, réfs LCSC vérifiées en ligne, symboles vérifiés dans les libs KiCad 10 installées) — voir annexe « Liste de courses feuille alim » en fin de plan. Symbole `FS8205` créé dans `rili/pcb/rouge_gorge.kicad_sym` (absent des libs officielles ; pinout SOT23-6 vérifié sur datasheet Fortune).
 - [ ] **Étape 2 (Mae)** : dessiner la feuille selon la chaîne ci-dessus, netlabels exactement `+BATT`, `VSYS`, `+3V3`, `VBUS_5V`, `VBAT_SENSE`. PWR_FLAG sur `+BATT` et `VBUS_5V`. Sauvegarder.
 - [ ] **Étape 3 (vérif)** : `./scripts/check.sh --fast` → vert (0 erreur ; le ratchet reste 0). Claude relit `alim.kicad_sch` (texte) et recoupe chaque net contre la chaîne ci-dessus — écarts signalés, corrigés, re-check.
 - [ ] **Étape 4 (commit)** : `git add rouge-gorge/ .tripwire-kicad-baseline && git commit -m "feat(v2): feuille alim — 16340, protection, charge 500mA, load-sharing, MCP1700"`
@@ -84,7 +86,8 @@ VSYS ─ SW1 slide MSK-12C02 (coupure côté système) ─ MCP1700-3302E/TT ─ 
 Contenu (voir carte des pins en tête de plan — elle est normative) :
 
 - `RF_Module:ESP32-S3-MINI-1` (déjà dans ton brouillon s3.kicad_sch — le reprendre). Découplage : C 10µF + 2× C 100nF sur 3V3.
-- EN : R 10k vers +3V3 + C 1µF vers GND. GPIO0 : R 10k vers +3V3 + pad de test `TP_BOOT`. Pads de test `TP_TX0`/`TP_RX0` sur GPIO43/44.
+- EN : R 10k vers +3V3 + C 1µF vers GND. GPIO0 : R 10k vers +3V3.
+- **Connecteur de prog `J_PROG` 6 pins par moitié** (décision Mae 2026-07-29, remplace les pads TP_BOOT/TP_TX0/TP_RX0) — brochage ESP-Prog : 1=EN, 2=3V3, 3=TX0 (GPIO43), 4=GND, 5=RX0 (GPIO44), 6=IO0 (GPIO0). Symbole `Conn_02x03_Odd_Even` ou `Conn_01x06` ; « zéro header » réglé au layout (bas profil / pads / Tag-Connect).
 - Détection VBUS : `VBUS_5V ─ R 100k ─┬─ R 100k ─ GND`, ┬ = net `VBUS_DET` → GPIO14, + C 100nF.
 - `VBAT_SENSE` → GPIO13.
 - nRF24 : symbole `RF:NRF24L01_Breakout` (celui de KaSe V2), connecteur 2×4 femelle bas profil ou soudé à plat — empreinte au layout. Alim module : C 10µF + 100nF au plus près. CE/CSN/MOSI/SCK/MISO/IRQ → GPIO 33/34/35/36/37/38.
@@ -129,12 +132,28 @@ Contenu (voir carte des pins en tête de plan — elle est normative) :
 
 **Fichiers :** Modifier (Mae) : `rouge-gorge/rouge-gorge.kicad_sch` (racine) ; Modifier (Claude) : design doc (§ statut), plan (cases cochées)
 
-- [ ] **Étape 1 (Mae)** : câbler les 4 feuilles au niveau racine (pins hiérarchiques : `+3V3`, `GND`, `VBUS_5V`, `ROW/COL`, `USB_*`, `LINK_*`, `VBAT_SENSE`, `VBUS_DET`), annotation complète (Outils → Annoter), attribution des empreintes différée au layout SAUF celles déjà fixées (MCP1700 SOT-23, diodes SOD-123, TVS SOT-23-6/SOT-143, AO3407 SOT-23, TP4056 SOP-8, USB-C, MSK-12C02).
+- [ ] **Étape 1 (Mae)** : câbler les 4 feuilles à l'intérieur de `moitie` (pins hiérarchiques : `+3V3`, `GND`, `VBUS_5V`, `ROW/COL`, `USB_*`, `LINK_*`, `VBAT_SENSE`, `VBUS_DET`), puis poser la **2ᵉ instance** de `moitie.kicad_sch` à la racine (Placer → Feuille, même fichier, nom `droite`), annotation complète des deux instances (Outils → Annoter — les refs se dédoublent automatiquement), attribution des empreintes différée au layout SAUF celles déjà fixées (MCP1700 SOT-23, diodes SOD-123, TVS SOT-23-6/SOT-143, AO3407 SOT-23, TP4056 SOP-8, USB-C, MSK-12C02).
 - [ ] **Étape 2 (vérif finale)** : `./scripts/check.sh` complet → **ERC 0 erreur / 0 warning visé** (les warnings restants se justifient un par un ou s'éliminent) ; baseline committée à son plancher.
 - [ ] **Étape 3 (Claude)** : revue texte intégrale du projet (cohérence inter-feuilles des netlabels — le point faible classique des hiérarchies) + mise à jour du design doc (« schéma moitiés : FAIT »).
 - [ ] **Étape 4 (commit)** : `git commit -m "feat(v2): schéma moitiés complet — ERC 0"` puis relecture d'ensemble par Mae dans KiCad avant d'attaquer le layout.
 
 ---
+
+## Annexe — Liste de courses feuille `alim` (livrée 2026-07-29, réfs LCSC vérifiées)
+
+| # | Composant | Boîtier | Symbole KiCad | LCSC | Note |
+|---|---|---|---|---|---|
+| 1 | DW01A (protection cellule) | SOT-23-6 | `Battery_Management:DW01A` ✓ officiel | C351410 (PUOLOP) | alt. C2927799 (YONGYUTAI) |
+| 2 | FS8205 (dual N-FET, paire du DW01A) | **SOT23-6** | `rouge_gorge:FS8205` (créé, pinout 1=S1 2=D12 3=S2 4=G2 5=D12 6=G1) | C32254 (Fortune) | alt. TSSOP-8 FS8205A C16052 ; VGS(th) 0,45-1,2 V OK pour DW01A |
+| 3 | TP4056 (chargeur, Rprog 2,4 kΩ → ~500 mA) | ESOP-8 | `Battery_Management:TP4056-42-ESOP8` ✓ officiel | C16581 (TOPPOWER) | pad thermique dessous |
+| 4 | AO3407 (P-FET load sharing) | SOT-23 | `Transistor_FET:AO3401A` (même pinout G/S/D, mettre Value=AO3407) | C351408 (PUOLOP) | alt. C727158 (TWGMC, RDS 87 mΩ) |
+| 5 | SS14 (Schottky VBUS→VSYS) | SMA | `Diode:SS14` ✓ officiel | C2480 (MDD) | générique multi-fab |
+| 6 | MCP1700-3302E/TT (LDO 3,3 V 250 mA, 1,6 µA) | SOT-23 | `Regulator_Linear:MCP1700x-330xxTT` ✓ officiel | C39051 (Microchip) | |
+| 7 | MSK-12C02 (slide switch coupure système) | SMD | `Switch:SW_SPDT` générique | C431540 (SHOU HAN) | empreinte au layout |
+| 8 | R/C du bloc | 0603 sugg. | `Device:R`, `Device:C` | basic parts | 100Ω, 1k, 2,4k, 10k, 2×1M ; 100nF ×3, 1µF ×2, 10µF ×2 |
+| 9 | Cellule 16340 (contacts/holder) | — | `Device:Battery_Cell` | — | contact ressort vs holder = décision layout (design doc) |
+
+Composants `liens` déjà repérés au passage (Tâche 4) : `Power_Protection:USBLC6-2SC6` ✓, `Power_Protection:SRV05-4` ✓, `Connector:USB_C_Receptacle_USB2.0_16P` ✓, `Diode:1N4148W` ✓ (matrice), load switch : `SiP32431DR3` ✓ officiel (l'AP22802 n'a pas de symbole officiel — SiP32431 était l'alternative validée au design doc).
 
 ## Auto-revue du plan (faite)
 

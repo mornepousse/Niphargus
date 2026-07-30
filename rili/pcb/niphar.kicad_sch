@@ -1,0 +1,251 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "7138aad8-3c5f-41d0-9987-adc2f08f0576")
+	(paper "A1")
+	(title_block
+		(title "Corne Cherry")
+		(date "2018-08-25")
+		(rev "2.0")
+		(company "foostan")
+	)
+	(lib_symbols)
+	(sheet
+		(at 17.78 27.94)
+		(size 22.86 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "002e7793-b48a-4c8b-b85c-dccde4948ad0")
+		(property "Sheetname" "P4"
+			(at 17.78 27.2284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sans_titre.kicad_sch"
+			(at 17.78 33.6046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "rili"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 17.78 19.05)
+		(size 22.86 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2468e084-5b75-4a26-9815-971ae3560048")
+		(property "Sheetname" "Matrix"
+			(at 17.78 18.3384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "matrix.kicad_sch"
+			(at 17.018 24.638 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "rili"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 41.91 27.94)
+		(size 22.86 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "8870f3ca-bcd4-4ff5-bd06-20ae9bdd5b44")
+		(property "Sheetname" "s3"
+			(at 41.91 27.2284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "s3.kicad_sch"
+			(at 41.91 33.6046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "rili"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 17.78 38.1)
+		(size 22.86 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c05a1138-8c6c-44e2-ac38-1bed4028aa56")
+		(property "Sheetname" "USB"
+			(at 17.78 37.3884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "usb.kicad_sch"
+			(at 17.78 43.7646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "rili"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 41.91 19.05)
+		(size 22.86 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "d1dace0b-a9b6-45b3-8b77-6cc73528f4f2")
+		(property "Sheetname" "bat"
+			(at 41.91 18.3384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "bat.kicad_sch"
+			(at 41.91 24.7146 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "rili"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
