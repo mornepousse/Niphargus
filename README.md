@@ -1,16 +1,33 @@
-# Rili
+# Niphargus
 
-*La petite rouge sur laquelle on peut compter.*
+*La crevette des cavernes : aveugle, discrète, indestructible.*
 
-Rili est un clavier split sans fil, fin et increvable — ESP32 + nRF24L01+, fallback
-filaire (« rebrancher doit suffire »), robustesse ESD, et une trousse de secours
-d'informaticien cachée derrière la prise USB (clé bootable multi-ISO, token PGP,
-stockage). Refonte complète du **Rouge-Gorge** (v1, ci-dessous), dont ce dépôt
-porte tout l'historique.
+Niphargus est un clavier split sans fil, fin et increvable :
 
-en : Rili is a thin, unkillable wireless split keyboard — ESP32 + nRF24L01+, wired
-fallback, ESD hardening, and a hidden sysadmin survival kit behind the USB port.
-Complete redesign of the Rouge-Gorge (v1, below); this repo carries its full history.
+- **Deux moitiés autonomes** — ESP32-S3-WROOM-1 + nRF24L01+ chacune, batterie
+  16340, scan matrice en sommeil profond (domaine RTC), dongle KaSe côté hôte.
+- **Fallback filaire** : USB-C direct + jack TRRS entre moitiés — « rebrancher
+  doit suffire ». Poignée de main 5 V sur le lien (hot-plug sans étincelles).
+- **Robustesse ESD partout** : TVS sur USB/TRRS, 100 Ω série sur chaque ligne
+  de matrice, plans de masse — la décharge du retour au clavier ne le plantera plus.
+- **Écran Sharp Memory LCD** (droite) : layer + batteries, tient l'image à ~µA
+  sans jamais clignoter. **Trackpad Azoteq TPS43** (gauche), I2C.
+- **La trousse de secours** : un coffre ESP32-P4 derrière un hub USB (CH334R) —
+  clé bootable multi-ISO, token PGP, stockage — qui ne s'allume qu'en filaire.
+
+Refonte complète du **Rouge-Gorge** (v1, 2022, ci-dessous) ; le dépôt porte tout
+l'historique (Rouge-Gorge → rili → Niphargus). Projet KiCad : `rili/pcb/niphar.kicad_pro`.
+Anti-régression : `./scripts/check.sh` (ERC/DRC en baseline ratchet, CI épinglée KiCad 10.0.4).
+
+**État (2026-07)** : schéma v2 en cours (matrice ✓, alim ✓, MCU+radio ✓, USB/hub ✓,
+TRRS ✓, coffre P4 en chantier) — layout et firmware à suivre.
+
+en : Niphargus is a thin, unkillable wireless split keyboard — one ESP32-S3 +
+nRF24L01+ and a 16340 cell per half, USB-C/TRRS wired fallback, ESD hardening
+everywhere, a Sharp memory LCD + Azoteq trackpad, and a hidden sysadmin survival
+kit (multi-ISO boot key, PGP token, storage) behind a USB hub, awake only when
+plugged. Complete redesign of the Rouge-Gorge (v1, below); this repo carries the
+full history.
 
 ---
 
