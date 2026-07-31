@@ -12,3 +12,13 @@ rili/pcb/corne-cherry-backups/
 
 # Dump fournisseur du module dev JC-ESP32P4-M3-C6 (350 Mo, retéléchargeable)
 rili/pcb/JC-ESP32P4-M3-C6/
+
+# KiCad — backups et fichiers transitoires
+*-backups/
+_autosave-*
+*.kicad_sch-bak
+*.kicad_pcb-bak
+fp-info-cache
+
+# Claude Code — fichiers temporaires
+.claude/*.tmp.*
