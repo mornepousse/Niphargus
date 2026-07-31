@@ -38,7 +38,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "sans_titre.kicad_sch"
+		(property "Sheetfile" "p4.kicad_sch"
 			(at 17.78 33.6046 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50,7 +50,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576"
 					(page "4")
 				)
@@ -96,7 +96,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576"
 					(page "6")
 				)
@@ -142,7 +142,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576"
 					(page "2")
 				)
@@ -188,7 +188,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576"
 					(page "3")
 				)
@@ -235,7 +235,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576"
 					(page "5")
 				)

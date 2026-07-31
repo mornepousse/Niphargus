@@ -720,18 +720,18 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "rili.kicad_sch",
-        "name": "rili",
+        "filename": "niphar.kicad_sch",
+        "name": "niphar",
         "uuid": "7138aad8-3c5f-41d0-9987-adc2f08f0576"
       }
     ],
-    "used_designators": "H15-28,P5-8,G1-2,G7-12,SW1,SW53-105,J1-6,D1-3,D49-98,C1-14,#PWR1-14,#PWR17-62,Q1-4,U1-14,R1-45",
+    "used_designators": "R1-45,JP1-2,U1-15,Q1-4,#PWR1-14,#PWR17-73,C1-18,D1-3,D49-98,J1-7,SW1,SW53-105,G1-2,G7-12,P5-8,H15-28,#FLG1",
     "variants": []
   },
   "sheets": [
     [
       "7138aad8-3c5f-41d0-9987-adc2f08f0576",
-      "rili"
+      "niphar"
     ],
     [
       "8870f3ca-bcd4-4ff5-bd06-20ae9bdd5b44",

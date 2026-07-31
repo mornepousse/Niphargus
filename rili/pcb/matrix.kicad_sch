@@ -1132,6 +1132,121 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:VCC"
 			(power global)
 			(pin_names
@@ -1276,40 +1391,16 @@
 		(uuid "02a4b3e7-9311-4a14-86d3-adaf637b74ba")
 	)
 	(junction
-		(at 173.99 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "03021c5c-5bcd-45d4-986b-ab84a3e19e3f")
-	)
-	(junction
-		(at 140.97 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "09b481b6-c6b2-46b9-a02e-a5d33fc76ff3")
-	)
-	(junction
 		(at 114.3 167.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0b11b5f5-ba95-4635-ace2-d254c3e9e7c1")
 	)
 	(junction
-		(at 209.55 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0d3a715c-fca2-4753-ba77-3930f82c03db")
-	)
-	(junction
 		(at 76.2 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0d5992f5-f167-4a74-a281-6834b92d4480")
-	)
-	(junction
-		(at 138.43 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0e4c6c3c-5f51-4cf9-af2a-779649f2d359")
 	)
 	(junction
 		(at 60.96 137.16)
@@ -1342,46 +1433,10 @@
 		(uuid "1d562a77-723f-49cb-a90a-773ae0dcf36d")
 	)
 	(junction
-		(at 173.99 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "255118b1-931e-4735-988e-89fd2864e314")
-	)
-	(junction
-		(at 209.55 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "25cffd89-de92-4d26-b958-1db5e85118e4")
-	)
-	(junction
 		(at 132.08 167.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "28aa6eef-b49c-48b2-b5b1-9cc12177d659")
-	)
-	(junction
-		(at 212.09 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2e1e5ab9-035b-4b76-9ae0-6d5b6e19ec3c")
-	)
-	(junction
-		(at 176.53 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2e48c467-02de-4f84-a527-4472ee279d80")
-	)
-	(junction
-		(at 212.09 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2e743f4c-363c-43a7-a3c8-1262f15d83d2")
-	)
-	(junction
-		(at 194.31 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2ea3fd04-a3db-4d64-8a6f-64042e1dcad6")
 	)
 	(junction
 		(at 111.76 190.5)
@@ -1390,52 +1445,10 @@
 		(uuid "32de0a4b-303f-4a68-8618-2caf51896f8e")
 	)
 	(junction
-		(at 194.31 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "35f82235-a0a8-4fd9-8621-d86363e5d41f")
-	)
-	(junction
-		(at 173.99 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "39c25117-70eb-4116-9b2b-1202f02347c9")
-	)
-	(junction
-		(at 158.75 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3a3a2e18-5955-4b32-91f3-af68dc2aa899")
-	)
-	(junction
 		(at 43.18 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3a569162-53c7-4f08-b910-b813ff002d38")
-	)
-	(junction
-		(at 138.43 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "465b8356-497c-4026-813a-17357ac87672")
-	)
-	(junction
-		(at 156.21 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4736b77e-7647-431a-bb7c-fa1c59d3e5ff")
-	)
-	(junction
-		(at 140.97 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "473f1fd2-8b76-4c36-b2a7-40fbde878c50")
-	)
-	(junction
-		(at 138.43 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "495712bc-b0a8-41bb-afad-d54ec1fbc03a")
 	)
 	(junction
 		(at 93.98 190.5)
@@ -1444,28 +1457,10 @@
 		(uuid "49b0639c-ed4c-4a9d-ad2b-9834ecfc952b")
 	)
 	(junction
-		(at 191.77 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4b885182-b323-4c92-920e-47f7a7f5a2e2")
-	)
-	(junction
 		(at 132.08 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "53cd1b7f-1bac-4fa4-b48c-edb0bcbcaa02")
-	)
-	(junction
-		(at 158.75 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "546d5627-8d2d-454a-b3a0-bc65627d313d")
-	)
-	(junction
-		(at 176.53 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "552e7c8a-2e7a-4209-a3ac-eda5613cd510")
 	)
 	(junction
 		(at 58.42 190.5)
@@ -1474,22 +1469,10 @@
 		(uuid "5c342658-7556-4f37-9ce6-e59f1833f2ee")
 	)
 	(junction
-		(at 123.19 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "610d7e86-149d-4f6f-b2b5-3d9c5c50bc36")
-	)
-	(junction
 		(at 58.42 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "61670e2f-38f0-48e8-a813-2dd002330f8c")
-	)
-	(junction
-		(at 138.43 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "624fba51-7c2c-4e8a-bc1e-bf59ea19d505")
 	)
 	(junction
 		(at 111.76 160.02)
@@ -1534,12 +1517,6 @@
 		(uuid "76befd22-93fc-4c39-ad86-7063802020bb")
 	)
 	(junction
-		(at 140.97 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7a22c3f0-5b7d-4461-a6ce-54577c6e651b")
-	)
-	(junction
 		(at 147.32 144.78)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1550,12 +1527,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "84f858dc-f8c0-4efc-96f5-a3e7a2b1a67f")
-	)
-	(junction
-		(at 191.77 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "888f1b6c-0bb8-4653-b3ad-55f0ce9f77bc")
 	)
 	(junction
 		(at 111.76 175.26)
@@ -1580,24 +1551,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "92f51dd2-8327-47a3-bf17-996e3535150a")
-	)
-	(junction
-		(at 209.55 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "930e76bd-6b40-476a-8fc0-e89537dd8823")
-	)
-	(junction
-		(at 176.53 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "935ad381-3111-4085-b412-bdcc418604c5")
-	)
-	(junction
-		(at 173.99 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "956b3e92-3263-4d09-befc-47b64fc53ab8")
 	)
 	(junction
 		(at 43.18 167.64)
@@ -1630,24 +1583,6 @@
 		(uuid "a5e2ae6f-44bb-4c09-ac39-69f3b00dcc2d")
 	)
 	(junction
-		(at 212.09 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ac4b6b68-1cd7-454a-999c-9e64e5631be9")
-	)
-	(junction
-		(at 123.19 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b2fb079e-5f80-4407-bfad-666c2348652e")
-	)
-	(junction
-		(at 209.55 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b37ea81f-52b4-46f9-8327-8c73ae7025be")
-	)
-	(junction
 		(at 78.74 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1658,12 +1593,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bb8bfe01-fb44-46c6-b09f-b81d01e370dc")
-	)
-	(junction
-		(at 191.77 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bdc49465-2fb7-4ce2-b3ae-23bbf54591e2")
 	)
 	(junction
 		(at 58.42 144.78)
@@ -1678,12 +1607,6 @@
 		(uuid "c2612cbc-2f97-460e-a3e4-d21cc689e626")
 	)
 	(junction
-		(at 156.21 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d167b5b4-326e-44bb-88e3-27bedb9ed8b0")
-	)
-	(junction
 		(at 96.52 167.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1696,46 +1619,10 @@
 		(uuid "d32f636a-44c4-40d1-aa18-8bf7dd644662")
 	)
 	(junction
-		(at 234.95 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d4e1d6d1-d550-49b7-88bd-6b68390a5aee")
-	)
-	(junction
-		(at 158.75 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d6070bf4-a45f-42e7-bdfc-c13bec136d91")
-	)
-	(junction
-		(at 227.33 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "db524e99-2f7e-458c-977d-42aa7f4848fd")
-	)
-	(junction
-		(at 194.31 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dd295f3e-960e-465e-a9c8-19a6d1934a99")
-	)
-	(junction
 		(at 147.32 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e0f474e9-72e9-41fa-999f-9e0ed8c487c0")
-	)
-	(junction
-		(at 227.33 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e38dd87c-a0c3-4fa3-8e89-7759339ed924")
-	)
-	(junction
-		(at 156.21 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e5040f8e-64b0-4007-9f42-41ed01e2ef3c")
 	)
 	(junction
 		(at 129.54 160.02)
@@ -1749,24 +1636,6 @@
 		(color 0 0 0 0)
 		(uuid "f4417362-6419-46fa-9d35-960bb6cf2dac")
 	)
-	(junction
-		(at 123.19 64.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f5a7d145-e056-4646-8d0d-768123705ebf")
-	)
-	(junction
-		(at 156.21 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f8d2bc43-b8f5-401e-9920-b0125da25707")
-	)
-	(junction
-		(at 191.77 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fc39c012-a9b6-4230-a0b6-4dc488f1d5c4")
-	)
 	(wire
 		(pts
 			(xy 114.3 167.64) (xy 114.3 182.88)
@@ -1776,16 +1645,6 @@
 			(type default)
 		)
 		(uuid "00becf4d-fee6-4593-83c7-eb477e996a0a")
-	)
-	(wire
-		(pts
-			(xy 194.31 20.32) (xy 194.31 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00f5463e-735b-445f-8bcc-3f75090e9228")
 	)
 	(wire
 		(pts
@@ -1859,16 +1718,6 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 20.32) (xy 123.19 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d41970b-c6d7-4130-a87d-6263042c530a")
-	)
-	(wire
-		(pts
 			(xy 40.64 175.26) (xy 58.42 175.26)
 		)
 		(stroke
@@ -1929,16 +1778,6 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 29.21) (xy 212.09 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15ad00bd-e77b-48e8-b562-687c4faae650")
-	)
-	(wire
-		(pts
 			(xy 58.42 175.26) (xy 76.2 175.26)
 		)
 		(stroke
@@ -1956,16 +1795,6 @@
 			(type default)
 		)
 		(uuid "1bc5df88-92a5-4bed-b96f-726bea08c75d")
-	)
-	(wire
-		(pts
-			(xy 110.49 72.39) (xy 113.03 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f9820ef-bb83-4bd0-8d57-16abaadd886f")
 	)
 	(wire
 		(pts
@@ -1989,66 +1818,6 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 34.29) (xy 176.53 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "21dfa91c-48fc-4f3f-bd7b-1381a39678d2")
-	)
-	(wire
-		(pts
-			(xy 123.19 29.21) (xy 123.19 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "278bf9b3-856b-49b4-bcd5-6d8385199a9e")
-	)
-	(wire
-		(pts
-			(xy 173.99 57.15) (xy 191.77 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "295e4096-2382-4b00-8d78-9f561fd2e626")
-	)
-	(wire
-		(pts
-			(xy 120.65 87.63) (xy 138.43 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a7c96ad-f2f9-42b2-90de-8e6138b9d341")
-	)
-	(wire
-		(pts
-			(xy 158.75 20.32) (xy 158.75 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2bf87383-78de-4c50-9ca1-5595393f515e")
-	)
-	(wire
-		(pts
-			(xy 120.65 41.91) (xy 138.43 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c220d5a-fe22-4587-85e5-fb592c77e888")
-	)
-	(wire
-		(pts
 			(xy 78.74 152.4) (xy 78.74 167.64)
 		)
 		(stroke
@@ -2069,16 +1838,6 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 64.77) (xy 176.53 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31683a9d-2c47-41b5-88dc-d85573ac8c38")
-	)
-	(wire
-		(pts
 			(xy 114.3 137.16) (xy 114.3 152.4)
 		)
 		(stroke
@@ -2086,26 +1845,6 @@
 			(type default)
 		)
 		(uuid "326f7f27-b6e5-4414-b339-0fa28be4ec8d")
-	)
-	(wire
-		(pts
-			(xy 138.43 87.63) (xy 156.21 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3616f8e8-d3f4-429d-b331-a5760456c116")
-	)
-	(wire
-		(pts
-			(xy 209.55 57.15) (xy 227.33 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b7e8ea3-cf91-4952-9073-9df0e469601b")
 	)
 	(wire
 		(pts
@@ -2119,26 +1858,6 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 20.32) (xy 176.53 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ece2e5a-c368-402b-aa7c-28d996956204")
-	)
-	(wire
-		(pts
-			(xy 212.09 34.29) (xy 212.09 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48cc8b71-d899-4e77-ae70-e14ec4d1eba2")
-	)
-	(wire
-		(pts
 			(xy 76.2 160.02) (xy 93.98 160.02)
 		)
 		(stroke
@@ -2149,26 +1868,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 49.53) (xy 158.75 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4aca4dc9-dbd4-4439-8de5-15285d0eec1c")
-	)
-	(wire
-		(pts
-			(xy 212.09 49.53) (xy 212.09 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c6d998d-d445-4fa7-9572-c7ff5cdaa4f4")
-	)
-	(wire
-		(pts
 			(xy 111.76 144.78) (xy 129.54 144.78)
 		)
 		(stroke
@@ -2176,26 +1875,6 @@
 			(type default)
 		)
 		(uuid "4e76212c-2fce-4359-82f5-a3fe69454872")
-	)
-	(wire
-		(pts
-			(xy 227.33 41.91) (xy 250.19 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f9ff321-ce0d-43c2-ba44-ebe390fde039")
-	)
-	(wire
-		(pts
-			(xy 123.19 49.53) (xy 123.19 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "53701512-c295-490c-a4ab-7363dc762251")
 	)
 	(wire
 		(pts
@@ -2216,16 +1895,6 @@
 			(type default)
 		)
 		(uuid "54fc0959-c1b1-4f9c-a3ce-3501d1741a8a")
-	)
-	(wire
-		(pts
-			(xy 194.31 29.21) (xy 194.31 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "562fdfed-47da-4dd7-abea-8bf1382f5a41")
 	)
 	(wire
 		(pts
@@ -2259,16 +1928,6 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 72.39) (xy 209.55 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ea605d8-5373-4f86-9e97-e42f75a16202")
-	)
-	(wire
-		(pts
 			(xy 76.2 175.26) (xy 93.98 175.26)
 		)
 		(stroke
@@ -2299,26 +1958,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 41.91) (xy 173.99 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6debd3aa-e689-48a1-9c81-d32bcffc9ee7")
-	)
-	(wire
-		(pts
-			(xy 156.21 72.39) (xy 173.99 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f84abd1-2282-4844-ac7e-b58d288a67f6")
-	)
-	(wire
-		(pts
 			(xy 129.54 160.02) (xy 147.32 160.02)
 		)
 		(stroke
@@ -2326,26 +1965,6 @@
 			(type default)
 		)
 		(uuid "6f9c35ad-3fd8-4a35-af6a-49d84a712f70")
-	)
-	(wire
-		(pts
-			(xy 234.95 20.32) (xy 234.95 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "701a14f6-ae8e-44b1-9079-c47c9a568ce6")
-	)
-	(wire
-		(pts
-			(xy 176.53 49.53) (xy 176.53 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7434d2d2-caae-47bb-9721-f70a5bd98fb3")
 	)
 	(wire
 		(pts
@@ -2369,26 +1988,6 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 64.77) (xy 212.09 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b1211ca-a362-4080-a067-e81bb6ab8e35")
-	)
-	(wire
-		(pts
-			(xy 140.97 64.77) (xy 140.97 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d440052-227d-4425-bd10-e465d360511b")
-	)
-	(wire
-		(pts
 			(xy 132.08 152.4) (xy 132.08 167.64)
 		)
 		(stroke
@@ -2396,16 +1995,6 @@
 			(type default)
 		)
 		(uuid "7de84c9d-ee54-4f89-962a-10aae13205bc")
-	)
-	(wire
-		(pts
-			(xy 191.77 57.15) (xy 209.55 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "802dbad9-373c-4ad9-9d4b-a826bf87d0c2")
 	)
 	(wire
 		(pts
@@ -2419,36 +2008,6 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 34.29) (xy 123.19 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82ef05de-a013-4087-90f0-74160df96276")
-	)
-	(wire
-		(pts
-			(xy 191.77 87.63) (xy 209.55 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87114a39-90ff-4fbc-8aa2-2aaa8b82c4c8")
-	)
-	(wire
-		(pts
-			(xy 234.95 34.29) (xy 234.95 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88f98e25-c449-4a57-9013-8e00d82636f9")
-	)
-	(wire
-		(pts
 			(xy 60.96 133.35) (xy 60.96 137.16)
 		)
 		(stroke
@@ -2459,16 +2018,6 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 34.29) (xy 140.97 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89f93264-eafc-412e-825e-ec19f1f1f268")
-	)
-	(wire
-		(pts
 			(xy 147.32 144.78) (xy 170.18 144.78)
 		)
 		(stroke
@@ -2476,56 +2025,6 @@
 			(type default)
 		)
 		(uuid "8aa3c592-3360-4071-a834-05d6ec49ff4f")
-	)
-	(wire
-		(pts
-			(xy 158.75 34.29) (xy 158.75 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d7e46a8-6d91-41e1-8c0e-c9e92a16b57d")
-	)
-	(wire
-		(pts
-			(xy 140.97 29.21) (xy 140.97 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8db2a685-fd1d-4302-90af-6877214b4bf0")
-	)
-	(wire
-		(pts
-			(xy 173.99 87.63) (xy 191.77 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8e1fbc8e-88ca-4e2b-baa5-c1095d811e91")
-	)
-	(wire
-		(pts
-			(xy 194.31 49.53) (xy 194.31 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92850c14-6b48-4f8a-8d2e-887252097fe6")
-	)
-	(wire
-		(pts
-			(xy 158.75 64.77) (xy 158.75 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "93451034-7409-43f3-9dc7-e6d895e6c664")
 	)
 	(wire
 		(pts
@@ -2549,46 +2048,6 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 41.91) (xy 113.03 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9be58959-93fe-46a7-a5d5-df24dfdab447")
-	)
-	(wire
-		(pts
-			(xy 138.43 41.91) (xy 156.21 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e8af8a8-c77a-4b11-b685-4378d2fadd2e")
-	)
-	(wire
-		(pts
-			(xy 110.49 57.15) (xy 113.03 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a0e70108-bfb4-4084-8315-1a7b26964cf7")
-	)
-	(wire
-		(pts
-			(xy 120.65 72.39) (xy 138.43 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2c3dcab-e5c3-49fe-b5c4-4cc5a530b740")
-	)
-	(wire
-		(pts
 			(xy 214.63 126.365) (xy 222.25 126.365)
 		)
 		(stroke
@@ -2596,16 +2055,6 @@
 			(type default)
 		)
 		(uuid "a411cde6-8fad-463e-890e-498279ac88dc")
-	)
-	(wire
-		(pts
-			(xy 140.97 20.32) (xy 140.97 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a55c724a-3d9d-4ef4-a804-ae35f54c7e4f")
 	)
 	(wire
 		(pts
@@ -2636,66 +2085,6 @@
 			(type default)
 		)
 		(uuid "a9051a55-3915-4fb1-b23d-751858cbef48")
-	)
-	(wire
-		(pts
-			(xy 110.49 87.63) (xy 113.03 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa1408d9-4783-4428-b923-c63bac23c2e7")
-	)
-	(wire
-		(pts
-			(xy 158.75 29.21) (xy 158.75 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa3a0cc3-ef96-42af-9549-96e22b07f06f")
-	)
-	(wire
-		(pts
-			(xy 138.43 72.39) (xy 156.21 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abda510e-48df-45b5-9726-30c18695dceb")
-	)
-	(wire
-		(pts
-			(xy 194.31 64.77) (xy 194.31 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae538163-e7da-4979-8774-7adae4a98b22")
-	)
-	(wire
-		(pts
-			(xy 173.99 41.91) (xy 191.77 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af74fdc3-bf82-4511-bb18-225959b2fe1a")
-	)
-	(wire
-		(pts
-			(xy 176.53 29.21) (xy 176.53 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b55f50cf-5678-46fd-b330-a70833136fd8")
 	)
 	(wire
 		(pts
@@ -2739,16 +2128,6 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 72.39) (xy 227.33 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf076a44-42f4-4037-89d0-46b093fca4cd")
-	)
-	(wire
-		(pts
 			(xy 129.54 175.26) (xy 147.32 175.26)
 		)
 		(stroke
@@ -2769,16 +2148,6 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 34.29) (xy 194.31 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8392fec-edd5-46c1-8812-0eca8e439866")
-	)
-	(wire
-		(pts
 			(xy 214.63 128.905) (xy 217.17 128.905)
 		)
 		(stroke
@@ -2786,46 +2155,6 @@
 			(type default)
 		)
 		(uuid "ca39c8f9-933f-405e-a1c9-06edc0320074")
-	)
-	(wire
-		(pts
-			(xy 120.65 57.15) (xy 138.43 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca598bd1-371e-42c7-b332-91d841c14c58")
-	)
-	(wire
-		(pts
-			(xy 138.43 57.15) (xy 156.21 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd9695ec-2e53-40d2-8698-0a6be79f9660")
-	)
-	(wire
-		(pts
-			(xy 191.77 41.91) (xy 209.55 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cf979b08-4a56-4d4f-9fdb-f2d449e8efd4")
-	)
-	(wire
-		(pts
-			(xy 212.09 20.32) (xy 212.09 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d1a87eb5-e2b5-47ba-a737-7a9e78bd4d25")
 	)
 	(wire
 		(pts
@@ -2849,16 +2178,6 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 72.39) (xy 191.77 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5b4cc0b-12e9-45be-a0b5-16c6f32f7988")
-	)
-	(wire
-		(pts
 			(xy 111.76 190.5) (xy 129.54 190.5)
 		)
 		(stroke
@@ -2876,16 +2195,6 @@
 			(type default)
 		)
 		(uuid "df84cedf-bc18-4669-ae34-ec141442dad1")
-	)
-	(wire
-		(pts
-			(xy 227.33 57.15) (xy 250.19 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e1cc96cc-f12a-485e-887d-c2376c73e35e")
 	)
 	(wire
 		(pts
@@ -2919,36 +2228,6 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 41.91) (xy 227.33 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f023db66-6643-4e16-9423-51669949844d")
-	)
-	(wire
-		(pts
-			(xy 156.21 87.63) (xy 173.99 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f236cdcd-dd69-4799-af8e-ea110f11509b")
-	)
-	(wire
-		(pts
-			(xy 123.19 64.77) (xy 123.19 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5f76201-0748-43ee-8618-f9e2411444b8")
-	)
-	(wire
-		(pts
 			(xy 93.98 190.5) (xy 111.76 190.5)
 		)
 		(stroke
@@ -2956,16 +2235,6 @@
 			(type default)
 		)
 		(uuid "f87d58a1-7b18-479b-a9da-45c8f9286008")
-	)
-	(wire
-		(pts
-			(xy 234.95 29.21) (xy 234.95 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f906319c-7d62-4d58-a680-3420952cd37f")
 	)
 	(wire
 		(pts
@@ -2989,26 +2258,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 57.15) (xy 173.99 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fcb098d0-4720-4fb8-acb8-af1e92bf2a98")
-	)
-	(wire
-		(pts
-			(xy 140.97 49.53) (xy 140.97 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd6f7e50-400b-43ec-b2fe-40ff883f6c64")
-	)
-	(wire
-		(pts
 			(xy 78.74 137.16) (xy 78.74 152.4)
 		)
 		(stroke
@@ -3026,40 +2275,6 @@
 			(type default)
 		)
 		(uuid "ff0ce5e6-674c-4ee8-b91a-cb1846e7b209")
-	)
-	(wire
-		(pts
-			(xy 209.55 87.63) (xy 227.33 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff493bcf-eb2f-4c4b-bb40-ff63b1132c4b")
-	)
-	(global_label "col0"
-		(shape input)
-		(at 123.19 20.32 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left)
-		)
-		(uuid "0d413298-92b4-4f2e-954d-90d159a5dbfd")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.19 12.5883 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 	)
 	(global_label "row0_d"
 		(shape input)
@@ -3132,30 +2347,6 @@
 			)
 		)
 	)
-	(global_label "col1"
-		(shape input)
-		(at 140.97 20.32 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left)
-		)
-		(uuid "397f540b-5df4-4d00-86c9-e8cde391f513")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 140.97 12.5883 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "col5_d"
 		(shape input)
 		(at 132.08 133.35 90)
@@ -3180,77 +2371,6 @@
 			)
 		)
 	)
-	(global_label "col6"
-		(shape input)
-		(at 234.95 20.32 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left)
-		)
-		(uuid "4de98b78-c5eb-4729-9815-598e5f91f5ec")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 234.8548 12.5962 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "row0"
-		(shape input)
-		(at 110.49 41.91 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify right)
-		)
-		(uuid "6b028404-83c7-45a8-bd14-7cc6ac435869")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -38.1 7.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "col3"
-		(shape input)
-		(at 176.53 20.32 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left)
-		)
-		(uuid "7eef0fac-2984-41ee-b91b-2dadce2b5c28")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 176.53 12.5883 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "data"
 		(shape input)
 		(at 226.06 130.175 0)
@@ -3264,53 +2384,6 @@
 		(uuid "8c14d393-dd16-4ca7-aa50-14a90516b256")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 127 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "row2"
-		(shape input)
-		(at 110.49 72.39 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify right)
-		)
-		(uuid "8eaf4d7f-c3a7-4fd5-8e96-e45e0146f681")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.3229 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "row1"
-		(shape input)
-		(at 110.49 57.15 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify right)
-		)
-		(uuid "950d6b34-83d6-4853-993c-27b60f99aa24")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -38.1 7.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3369,30 +2442,6 @@
 			)
 		)
 	)
-	(global_label "col5"
-		(shape input)
-		(at 212.09 20.32 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left)
-		)
-		(uuid "d5cff5ba-2a3e-4688-a97d-68472da0786c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 212.09 12.5883 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "col1_d"
 		(shape input)
 		(at 60.96 133.35 90)
@@ -3414,54 +2463,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "col4"
-		(shape input)
-		(at 194.31 20.32 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left)
-		)
-		(uuid "de6c8750-4996-4154-8f2b-fbf2ecb1de63")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.31 12.5883 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "row3"
-		(shape input)
-		(at 110.49 87.63 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify right)
-		)
-		(uuid "e66697e9-04f1-4d76-9825-4a4ac3e35f4c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.3229 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -3512,30 +2513,6 @@
 			)
 		)
 	)
-	(global_label "col2"
-		(shape input)
-		(at 158.75 20.32 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.524 1.524)
-			)
-			(justify left)
-		)
-		(uuid "f5f591af-5084-4a17-9c76-a03a0d827a5f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 158.75 12.5883 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "row3_d"
 		(shape input)
 		(at 30.48 190.5 180)
@@ -3581,3261 +2558,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 148.59 34.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2699")
-		(property "Reference" "SW82"
-			(at 152.4 31.496 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 148.59 36.322 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 148.59 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 148.59 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 148.59 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0b3db461-020b-4dbc-b964-9a6c53e13c9f")
-		)
-		(pin "2"
-			(uuid "159a3844-7ba2-4cbb-b727-493b6abf06b4")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW82")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 156.21 38.1 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e26c6")
-		(property "Reference" "D77"
-			(at 153.67 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 158.75 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 156.21 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 156.21 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 156.21 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "64ba96ee-3521-420f-ba99-b149d6d679b0")
-		)
-		(pin "2"
-			(uuid "85b75240-3be4-48c2-8cae-e3b138606af3")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D77")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 166.37 34.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e27f9")
-		(property "Reference" "SW88"
-			(at 170.18 31.496 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 166.37 36.322 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 166.37 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 166.37 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 166.37 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2aaba9ba-f9c9-4d5f-bb50-15d312470c0c")
-		)
-		(pin "2"
-			(uuid "a05f4459-ca0b-4afa-866b-fe3caef7b6c9")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW88")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 173.99 38.1 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e281f")
-		(property "Reference" "D82"
-			(at 171.45 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 176.53 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 173.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 173.99 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b8e6921e-29f1-45c6-9098-1070da419a31")
-		)
-		(pin "2"
-			(uuid "75ac32dd-4824-45cb-b4c6-9ca9e9aa20d2")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D82")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 184.15 34.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2908")
-		(property "Reference" "SW92"
-			(at 187.96 31.496 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 184.15 36.322 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 184.15 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 184.15 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 184.15 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a0dc6c1b-9205-407c-ae56-64c455ed4bd8")
-		)
-		(pin "2"
-			(uuid "c9641e6e-2519-473c-8c24-502e85c605c4")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW92")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 201.93 34.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2933")
-		(property "Reference" "SW96"
-			(at 205.74 31.496 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 201.93 36.322 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 201.93 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 201.93 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "262c8ce6-9474-40a0-8840-4e3ef2f67b5d")
-		)
-		(pin "2"
-			(uuid "a6212c65-7b18-44d0-a025-fe6625e19b64")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW96")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 219.71 34.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e295e")
-		(property "Reference" "SW100"
-			(at 223.52 31.496 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 219.71 36.322 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 219.71 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 219.71 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 219.71 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "85b3bbde-9266-4c50-86ab-7bc48e8be9ac")
-		)
-		(pin "2"
-			(uuid "0a92e0c4-50fa-47b6-86e8-b75640f9cefd")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW100")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 191.77 38.1 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e29bf")
-		(property "Reference" "D85"
-			(at 189.23 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 194.31 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 191.77 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 191.77 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "359b80fa-31ad-454f-9479-767d0367c9e3")
-		)
-		(pin "2"
-			(uuid "8c377987-034a-4e9f-a360-98f1ffdb1a53")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D85")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 209.55 38.1 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e29f2")
-		(property "Reference" "D89"
-			(at 207.01 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 212.09 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 209.55 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 209.55 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 209.55 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f0cde382-ac73-49c1-8014-95f647c99568")
-		)
-		(pin "2"
-			(uuid "edf629fb-a552-46c5-bd22-ee11f9774c10")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D89")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 227.33 38.1 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2a33")
-		(property "Reference" "D93"
-			(at 224.79 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 229.87 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 227.33 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 227.33 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 227.33 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "220ef7a1-231d-4330-acea-fc4f5bb3db5b")
-		)
-		(pin "2"
-			(uuid "9f6a6617-59e5-4186-98b0-996bf9ae1d4c")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D93")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 130.81 34.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2b19")
-		(property "Reference" "SW74"
-			(at 134.62 31.496 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 130.81 36.322 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 130.81 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 130.81 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 130.81 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8dd9c050-862b-4713-b54b-c3af0ca0e5a5")
-		)
-		(pin "2"
-			(uuid "6a0eaa2f-842f-4530-ae38-6c83395590ee")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW74")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 138.43 38.1 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2b5b")
-		(property "Reference" "D69"
-			(at 135.89 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 140.97 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 138.43 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 138.43 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 138.43 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "967eab9b-ccdc-494c-bb26-f93736dba580")
-		)
-		(pin "2"
-			(uuid "23184ed4-f8d9-4b8c-8589-8fcdf1d84085")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D69")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 148.59 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d26")
-		(property "Reference" "SW83"
-			(at 152.4 46.736 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 148.59 51.562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 148.59 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 148.59 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 148.59 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d1ee2bd8-ee5d-4e2c-934e-fba6de3b702c")
-		)
-		(pin "2"
-			(uuid "feb2215a-4c28-4a04-b294-deff6f3e2368")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW83")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 156.21 53.34 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d2c")
-		(property "Reference" "D78"
-			(at 153.67 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 158.75 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 156.21 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 156.21 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 156.21 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8d97dc60-98cc-4d5d-8b64-e5e9d9e69b4f")
-		)
-		(pin "2"
-			(uuid "8b909959-10dc-4384-b44d-8e6541d3800e")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D78")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 166.37 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d32")
-		(property "Reference" "SW89"
-			(at 170.18 46.736 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 166.37 51.562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 166.37 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 166.37 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 166.37 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "571af6a9-3a16-4122-aafe-d894abe593a3")
-		)
-		(pin "2"
-			(uuid "c967e575-e1a0-465a-9beb-cb28147fb084")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW89")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 173.99 53.34 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d38")
-		(property "Reference" "D83"
-			(at 171.45 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 176.53 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 173.99 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 173.99 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8e1fe616-5518-4b6d-b84c-df10996ae3fa")
-		)
-		(pin "2"
-			(uuid "625ac348-7af4-4f13-8c93-35a030603a37")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D83")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 184.15 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d3e")
-		(property "Reference" "SW93"
-			(at 187.96 46.736 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 184.15 51.562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 184.15 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 184.15 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 184.15 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1bb9a9f6-f0d7-4291-9d1c-da1390bbc5b3")
-		)
-		(pin "2"
-			(uuid "9e152921-c799-40b6-ac96-e65931b1a5e7")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW93")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 201.93 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d44")
-		(property "Reference" "SW97"
-			(at 205.74 46.736 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 201.93 51.562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 201.93 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 201.93 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c582b991-acf7-4c6f-a02e-b58d37b1946c")
-		)
-		(pin "2"
-			(uuid "cc077f9e-1ad3-412f-9530-7db46ac669fe")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW97")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 219.71 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d4a")
-		(property "Reference" "SW101"
-			(at 223.52 46.736 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 219.71 51.562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 219.71 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 219.71 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 219.71 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "59a67f46-2e22-458e-84de-641bc49203b6")
-		)
-		(pin "2"
-			(uuid "50a5cfed-c57a-4cce-a421-be1b1cf267dd")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 191.77 53.34 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d56")
-		(property "Reference" "D86"
-			(at 189.23 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 194.31 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 191.77 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 191.77 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ddbbaab7-b3a2-4a14-9aa4-34d38eabc63b")
-		)
-		(pin "2"
-			(uuid "c802eda0-1318-4b4e-9438-82ddbc23ea7c")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D86")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 209.55 53.34 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d5c")
-		(property "Reference" "D90"
-			(at 207.01 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 212.09 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 209.55 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 209.55 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 209.55 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a7b015ac-60fb-4331-bf22-f883e9d06fbf")
-		)
-		(pin "2"
-			(uuid "89b63679-9d69-4f1b-a11f-6ed342c7115c")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D90")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 227.33 53.34 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d62")
-		(property "Reference" "D94"
-			(at 224.79 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 229.87 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 227.33 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 227.33 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 227.33 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c65b994d-8d61-4b70-bcd6-eb9b03223b09")
-		)
-		(pin "2"
-			(uuid "848ac042-f0c2-4db6-90af-77511a9e6efa")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D94")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 130.81 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d6e")
-		(property "Reference" "SW75"
-			(at 134.62 46.736 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 130.81 51.562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 130.81 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 130.81 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 130.81 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "430e2eed-d596-4988-895e-9fdc43128fc0")
-		)
-		(pin "2"
-			(uuid "a0c0829f-a8cf-4a66-91d5-87b7d2d89515")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW75")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 138.43 53.34 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e2d74")
-		(property "Reference" "D70"
-			(at 135.89 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 140.97 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 138.43 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 138.43 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 138.43 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b9d2e9a0-ea1d-4e0a-8582-1a42b111c0c0")
-		)
-		(pin "2"
-			(uuid "0535defe-0456-4d09-a112-08210df5cc93")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D70")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 148.59 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35b1")
-		(property "Reference" "SW84"
-			(at 152.4 61.976 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 148.59 66.802 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 148.59 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 148.59 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 148.59 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9b7e366c-b843-4c16-9ac0-ef5857815591")
-		)
-		(pin "2"
-			(uuid "2e60797f-b1e4-4893-bb17-10aa63fffe12")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW84")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 156.21 68.58 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35b7")
-		(property "Reference" "D79"
-			(at 153.67 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 158.75 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 156.21 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 156.21 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 156.21 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d1b9f15a-4984-44fc-8769-e55b3ba1fc54")
-		)
-		(pin "2"
-			(uuid "1f0456fc-fa62-47b5-b49e-29b6a8bda2c8")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D79")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 166.37 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35bd")
-		(property "Reference" "SW90"
-			(at 170.18 61.976 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 166.37 66.802 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 166.37 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 166.37 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 166.37 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "de6e5aac-a3c4-4be7-a894-650e081a14b5")
-		)
-		(pin "2"
-			(uuid "46bb0d22-baf8-4008-a9d5-d2f2358c870d")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW90")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 173.99 68.58 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35c3")
-		(property "Reference" "D84"
-			(at 171.45 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 176.53 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 173.99 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 173.99 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "baf42507-deb2-439f-88be-433abc2baabb")
-		)
-		(pin "2"
-			(uuid "918438b7-72bc-4304-ae1d-cd36027a2522")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D84")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 184.15 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35c9")
-		(property "Reference" "SW94"
-			(at 187.96 61.976 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 184.15 66.802 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 184.15 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 184.15 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 184.15 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c2e7eeca-98e7-4063-8dbc-c02abc1147e2")
-		)
-		(pin "2"
-			(uuid "66e29f31-5f36-4ea9-a562-22b3a0cd5565")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW94")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 201.93 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35cf")
-		(property "Reference" "SW98"
-			(at 205.74 61.976 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 201.93 66.802 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 201.93 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 201.93 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5f5132e7-8504-4350-bd02-e312170b77e5")
-		)
-		(pin "2"
-			(uuid "223a8a88-3886-4ea3-ad25-8d0e0fa22dae")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW98")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 219.71 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35d5")
-		(property "Reference" "SW102"
-			(at 223.52 61.976 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 219.71 66.802 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 219.71 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 219.71 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 219.71 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f613c93a-4dca-4ee2-8ebf-16b8db28e5ad")
-		)
-		(pin "2"
-			(uuid "582ddc9c-4fee-44d3-aef5-bd35f45f3895")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 191.77 68.58 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35e1")
-		(property "Reference" "D87"
-			(at 189.23 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 194.31 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 191.77 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 191.77 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a5e2bc2f-47de-41da-b3b2-6b4e547a574a")
-		)
-		(pin "2"
-			(uuid "38a891bf-69e3-49c0-a972-9fc9fa3cec00")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D87")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 209.55 68.58 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35e7")
-		(property "Reference" "D91"
-			(at 207.01 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 212.09 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 209.55 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 209.55 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 209.55 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "39aeb126-f2b9-49aa-b64b-368bb238b42a")
-		)
-		(pin "2"
-			(uuid "f51627da-6898-4b7f-955b-608309e20c03")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D91")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 227.33 68.58 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35ed")
-		(property "Reference" "D95"
-			(at 224.79 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 229.87 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 227.33 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 227.33 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 227.33 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6a822235-e687-424e-b779-73089606e76a")
-		)
-		(pin "2"
-			(uuid "b26b7e35-f5ba-4c60-9da8-641248c3501d")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D95")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 130.81 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35f9")
-		(property "Reference" "SW76"
-			(at 134.62 61.976 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 130.81 66.802 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 130.81 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 130.81 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 130.81 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a134a0fd-82d2-4e2d-a9d4-9e4d524361ac")
-		)
-		(pin "2"
-			(uuid "3f5d06a7-afe4-4e2e-b52e-35195b64e170")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW76")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 138.43 68.58 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e35ff")
-		(property "Reference" "D71"
-			(at 135.89 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 140.97 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 138.43 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 138.43 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 138.43 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e3fc32d2-8ebc-44a8-8380-cbc773b04204")
-		)
-		(pin "2"
-			(uuid "bd816173-53ac-4ef8-9e8a-d8f365fba0e0")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D71")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 201.93 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e37a4")
-		(property "Reference" "SW99"
-			(at 205.74 77.216 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 201.93 82.042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 201.93 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 201.93 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "957ab5a1-1671-418c-b5c8-97942ffd5f2f")
-		)
-		(pin "2"
-			(uuid "c4af4114-7f11-41c0-8bfc-0ed76e172f8d")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW99")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 209.55 83.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e37aa")
-		(property "Reference" "D92"
-			(at 207.01 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 212.09 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 209.55 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 209.55 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 209.55 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0642fb0c-4dc4-4c15-8ca9-456c55d946a7")
-		)
-		(pin "2"
-			(uuid "4d34f38f-951a-4ae7-af9f-9f0dbedad180")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D92")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 219.71 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e37b0")
-		(property "Reference" "SW103"
-			(at 223.52 77.216 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 219.71 82.042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 219.71 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 219.71 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 219.71 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f652dc01-764b-441b-afda-3b8678b1f5d3")
-		)
-		(pin "2"
-			(uuid "316468f2-5fcd-480f-b88e-624078d14ffb")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 227.33 83.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e37b6")
-		(property "Reference" "D96"
-			(at 224.79 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 229.87 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 227.33 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 227.33 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 227.33 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "12f94d31-619e-4e74-81ba-2d8de6e1f971")
-		)
-		(pin "2"
-			(uuid "cd907289-b933-4ccc-8e7a-78293f818bbc")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D96")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 184.15 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e37ec")
-		(property "Reference" "SW95"
-			(at 187.96 77.216 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 184.15 82.042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 184.15 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 184.15 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 184.15 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d683b84a-ddf7-4a4b-835b-03fbaa5dd6d4")
-		)
-		(pin "2"
-			(uuid "3bca57b3-5fc6-4e23-abd6-02cab4081f02")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW95")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 191.77 83.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005a5e37f2")
-		(property "Reference" "D88"
-			(at 189.23 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 194.31 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 191.77 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 191.77 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 191.77 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "46dfcf8a-dd67-4144-84fd-1c2844f45862")
-		)
-		(pin "2"
-			(uuid "b687ac73-7e98-4d08-83c3-a0618426bec5")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D88")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -6905,7 +2627,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H15")
 					(unit 1)
@@ -6979,7 +2701,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H16")
 					(unit 1)
@@ -7053,7 +2775,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H17")
 					(unit 1)
@@ -7127,7 +2849,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H18")
 					(unit 1)
@@ -7201,7 +2923,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H19")
 					(unit 1)
@@ -7275,7 +2997,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H20")
 					(unit 1)
@@ -7349,164 +3071,9 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 130.81 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005d43081d")
-		(property "Reference" "SW77"
-			(at 134.62 77.216 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 130.81 82.042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 130.81 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 130.81 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 130.81 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b7c6d916-8960-4ca0-a980-cb0818ca4eb1")
-		)
-		(pin "2"
-			(uuid "c50ea217-6e77-420a-9f10-f4f79cf24cb4")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW77")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 138.43 83.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005d430823")
-		(property "Reference" "D72"
-			(at 135.89 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 140.97 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 138.43 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 138.43 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 138.43 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ed3cc6a0-d15b-41b9-ac9a-3baf4d08cf42")
-		)
-		(pin "2"
-			(uuid "33803f7b-f457-42ec-96e2-c49e8d78dca9")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D72")
 					(unit 1)
 				)
 			)
@@ -7581,7 +3148,7 @@
 			(uuid "b6bdc5b5-839d-41f9-a6be-4a64702913b8")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW58")
 					(unit 1)
@@ -7658,87 +3225,9 @@
 			(uuid "2763c58a-1db1-4d2d-a9d6-6a7820364243")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW62")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 156.21 83.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "06611678-d46a-4826-8752-ffe628cfaeb8")
-		(property "Reference" "U13"
-			(at 153.67 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 158.75 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 156.21 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 156.21 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 156.21 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2472299a-3eed-4690-a32c-126f6ac743a6")
-		)
-		(pin "2"
-			(uuid "26dc020c-5537-4cab-b0b2-894e9995b51d")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "U13")
 					(unit 1)
 				)
 			)
@@ -7816,91 +3305,9 @@
 			(uuid "720ab4ba-b26f-436c-9433-ed567d2d72fc")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "R33")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 123.19 25.4 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "090cebf1-978d-48a4-b428-8d25522474b4")
-		(property "Reference" "R39"
-			(at 125.73 24.1299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100R"
-			(at 125.73 26.6699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 124.968 25.4 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 123.19 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 123.19 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "423b8ede-ac51-4f55-922a-2143119543b7")
-		)
-		(pin "1"
-			(uuid "28d82ae2-b5f9-4b2e-a8aa-71a1513fa779")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R39")
 					(unit 1)
 				)
 			)
@@ -7975,7 +3382,7 @@
 			(uuid "ddb5b8a2-9fdd-4ebb-b0a3-81aa63c0f670")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW69")
 					(unit 1)
@@ -8053,7 +3460,7 @@
 			(uuid "5be0d957-0042-4c99-8615-e0a44231a823")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D59")
 					(unit 1)
@@ -8131,7 +3538,7 @@
 			(uuid "42c4787b-e08a-4f58-a109-7ea7a43ba2b8")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D66")
 					(unit 1)
@@ -8205,7 +3612,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "G12")
 					(unit 1)
@@ -8282,7 +3689,7 @@
 			(uuid "6058a3ab-2d55-477e-bf9c-17dcd3d94e43")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW55")
 					(unit 1)
@@ -8356,7 +3763,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H28")
 					(unit 1)
@@ -8434,7 +3841,7 @@
 			(uuid "8d04d4f4-b4fc-4e72-a029-d5b4e2a6f88f")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D68")
 					(unit 1)
@@ -8518,7 +3925,7 @@
 			(uuid "69ea2a2a-0fb5-40d4-9115-9cf9434fb48f")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "J5")
 					(unit 1)
@@ -8595,7 +4002,7 @@
 			(uuid "65f4b9d2-73dd-4dd8-bb94-7d9fe324a123")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW86")
 					(unit 1)
@@ -8672,7 +4079,7 @@
 			(uuid "1e5e9714-059a-44c5-9121-fcbefc897ace")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW56")
 					(unit 1)
@@ -8749,7 +4156,7 @@
 			(uuid "883408dc-1255-49d8-a086-1744afd3fa82")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW65")
 					(unit 1)
@@ -8826,7 +4233,7 @@
 			(uuid "4e096026-35bd-44c3-89b5-55470ab8781b")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW87")
 					(unit 1)
@@ -8903,7 +4310,7 @@
 			(uuid "eb41b1f1-74cd-4f4b-99e2-0e25d3fbae46")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW59")
 					(unit 1)
@@ -8977,7 +4384,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "G9")
 					(unit 1)
@@ -9053,91 +4460,9 @@
 			(uuid "e9cbcb63-32cb-430d-bcba-5386f0c407d6")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 140.97 25.4 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "372901ea-d165-491e-b4db-9b0a4766cb50")
-		(property "Reference" "R40"
-			(at 143.51 24.1299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100R"
-			(at 143.51 26.6699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 142.748 25.4 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 140.97 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 140.97 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "18dbaa01-0867-4bb2-a3cc-c9ce922f3353")
-		)
-		(pin "1"
-			(uuid "45f83393-bd05-48f1-98b2-121bab38ffe6")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -9213,7 +4538,7 @@
 			(uuid "f3f18d38-6a1a-4f74-9ef2-7da57760b343")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D75")
 					(unit 1)
@@ -9287,7 +4612,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "G1")
 					(unit 1)
@@ -9364,7 +4689,7 @@
 			(uuid "6a92bc69-988a-4247-934a-56a14860c3b5")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW72")
 					(unit 1)
@@ -9442,7 +4767,7 @@
 			(uuid "f00e370f-c321-4f80-b656-082b082411d6")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D56")
 					(unit 1)
@@ -9519,7 +4844,7 @@
 			(uuid "3b852664-d25d-4909-9039-0afbfd7350ef")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW67")
 					(unit 1)
@@ -9596,7 +4921,7 @@
 			(uuid "b912b10a-38d1-4198-afaf-1559c6ba3e57")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW78")
 					(unit 1)
@@ -9673,89 +4998,9 @@
 			(uuid "192dfc3a-8ed3-4e92-aa08-e4690e569fcc")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW68")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 116.84 57.15 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4b7a7fca-8fbc-425c-b8f4-7b235c78ac45")
-		(property "Reference" "R36"
-			(at 116.84 50.8 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100R"
-			(at 116.84 53.34 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 116.84 58.928 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 116.84 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "f8ee4c8c-ee7d-4169-9af6-7043429c0ab6")
-		)
-		(pin "1"
-			(uuid "6f2723b7-9c26-4ecf-97e7-0391b0279cda")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R36")
 					(unit 1)
 				)
 			)
@@ -9831,7 +5076,7 @@
 			(uuid "bc1ea1a0-9876-4115-ab90-2774fb0cfd92")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D80")
 					(unit 1)
@@ -9905,7 +5150,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H24")
 					(unit 1)
@@ -9982,7 +5227,7 @@
 			(uuid "c1aad3ce-e862-4b12-abe8-538523d11389")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW64")
 					(unit 1)
@@ -10056,7 +5301,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "G8")
 					(unit 1)
@@ -10131,7 +5376,7 @@
 			(uuid "01ce4754-c5be-4474-86b9-7b2ead5d248d")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "P5")
 					(unit 1)
@@ -10208,7 +5453,7 @@
 			(uuid "042acc4c-0289-441c-afd7-4d7d96ab0f26")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW73")
 					(unit 1)
@@ -10285,7 +5530,7 @@
 			(uuid "369a64ef-1f7e-45a0-b251-48b603568942")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW79")
 					(unit 1)
@@ -10363,164 +5608,9 @@
 			(uuid "adece68d-2328-4022-88f3-316adeb6c930")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "U12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 250.19 53.34 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6039b617-33ff-41b0-8502-b9401e1b6c15")
-		(property "Reference" "D98"
-			(at 247.65 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 252.73 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 250.19 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 250.19 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 250.19 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4e7dee72-829a-482e-84d3-289de80681cc")
-		)
-		(pin "2"
-			(uuid "2ec366c5-71db-4549-9c88-a17924a38ee5")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D98")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 242.57 49.53 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "64ae3995-a86d-492a-ab9a-745f104015f2")
-		(property "Reference" "SW105"
-			(at 246.38 46.736 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 242.57 51.562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 242.57 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 242.57 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 242.57 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "aac8252c-eb46-479f-8995-acae8bd1c5d0")
-		)
-		(pin "2"
-			(uuid "4c472f91-8051-441c-86c8-a8a663a737de")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW105")
 					(unit 1)
 				)
 			)
@@ -10596,91 +5686,9 @@
 			(uuid "e088db4e-64d4-4adb-83de-7d688d3c0be3")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "U11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 212.09 25.4 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "65bec783-ed56-4b99-bae2-cf8f0a43d24a")
-		(property "Reference" "R44"
-			(at 214.63 24.1299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100R"
-			(at 214.63 26.6699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 213.868 25.4 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 212.09 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 212.09 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "7dc425f0-de6d-42d5-ab1c-4a2684e9a37f")
-		)
-		(pin "1"
-			(uuid "c12b1455-c196-42c0-8a51-9174c3659bac")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -10756,7 +5764,7 @@
 			(uuid "9c09bc3e-e47c-4461-b61b-ab6bf18695f4")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D65")
 					(unit 1)
@@ -10833,9 +5841,85 @@
 			(uuid "f85c470d-0adf-4ef2-884a-25020b58cbc4")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 217.17 125.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6f06159c-f047-49d7-833a-100cbb1d980b")
+		(property "Reference" "#PWR0971"
+			(at 219.71 125.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC"
+			(at 219.71 127.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 217.17 125.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 125.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 217.17 125.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d6e658b0-2f97-459b-91de-dc13ced961c4")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
+					(reference "#PWR0971")
 					(unit 1)
 				)
 			)
@@ -10907,7 +5991,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H22")
 					(unit 1)
@@ -10985,7 +6069,7 @@
 			(uuid "6d22580e-dd42-45f8-85ff-91fde706b400")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D73")
 					(unit 1)
@@ -11063,7 +6147,7 @@
 			(uuid "b9e0d5b1-5bd6-4d38-a7c4-6808b0e8c884")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D57")
 					(unit 1)
@@ -11140,7 +6224,7 @@
 			(uuid "86f4b4d4-5a81-4a07-9020-906f6727ccae")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW63")
 					(unit 1)
@@ -11218,7 +6302,7 @@
 			(uuid "81efdd5e-64a8-49d3-ab52-9b3066ed44b7")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D63")
 					(unit 1)
@@ -11295,7 +6379,7 @@
 			(uuid "01f81bd4-ba66-4d7f-9c17-ea0d66a1b4f6")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW71")
 					(unit 1)
@@ -11369,7 +6453,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "G2")
 					(unit 1)
@@ -11444,166 +6528,9 @@
 			(uuid "dc71077c-6080-4442-a966-933c3d3ceec6")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "P6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 116.84 41.91 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7fd357c8-b31b-40a6-9a44-a5f4525d157b")
-		(property "Reference" "R35"
-			(at 116.84 35.56 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100R"
-			(at 116.84 38.1 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 116.84 43.688 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 116.84 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "4310c8fc-c77c-4fa3-a952-1884b0811742")
-		)
-		(pin "1"
-			(uuid "f814b0b0-4ea6-4d21-aa6a-9ff7fdc8b7a2")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R35")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 166.37 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "84087be8-c9b0-49b5-ad5a-8280e6ecdace")
-		(property "Reference" "SW91"
-			(at 170.18 77.216 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 166.37 82.042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 166.37 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 166.37 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 166.37 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cdd7494f-777e-4ef0-93ce-aa65f338e970")
-		)
-		(pin "2"
-			(uuid "93cce94e-0c3f-41dc-8490-393328c0cf60")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW91")
 					(unit 1)
 				)
 			)
@@ -11677,7 +6604,7 @@
 			(uuid "0fd1d0f6-edee-438c-b51b-043aa47f9c02")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "#PWR015")
 					(unit 1)
@@ -11755,7 +6682,7 @@
 			(uuid "503f1f3a-92df-4ebe-9820-8718d1dd09a8")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D58")
 					(unit 1)
@@ -11829,7 +6756,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H23")
 					(unit 1)
@@ -11906,7 +6833,7 @@
 			(uuid "8b34a852-b298-47c6-bb30-fe3182ca140a")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW70")
 					(unit 1)
@@ -11984,7 +6911,7 @@
 			(uuid "80906584-4ca5-4492-88a8-3177e6b4d6e0")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D61")
 					(unit 1)
@@ -12062,164 +6989,9 @@
 			(uuid "638641cd-0213-4e08-8310-8ef4b0bba6cf")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D67")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 173.99 83.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9774ceba-618c-4465-aedd-bbe420982ae2")
-		(property "Reference" "U14"
-			(at 171.45 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 176.53 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 173.99 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 83.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 173.99 83.82 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3770624d-5af6-4c5c-9fdc-5e47859fa8e0")
-		)
-		(pin "2"
-			(uuid "97070ff9-2bce-42a9-a85b-9fe0fe5a18d3")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "U14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 148.59 80.01 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "97c07dfe-2139-4253-ac76-375fe6ea4129")
-		(property "Reference" "SW85"
-			(at 152.4 77.216 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 148.59 82.042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 148.59 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 148.59 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 148.59 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c1163bf8-f52e-45e4-a016-1d884ebc6c99")
-		)
-		(pin "2"
-			(uuid "80eccfa8-2a68-4eef-9c73-77fe81d13a5f")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW85")
 					(unit 1)
 				)
 			)
@@ -12297,89 +7069,9 @@
 			(uuid "1282bd0e-57e7-4d34-8bac-bf402570078e")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "R32")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 116.84 87.63 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9e3468e1-b248-4888-a0a7-ecf9ae2a99ed")
-		(property "Reference" "R38"
-			(at 116.84 81.28 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100R"
-			(at 116.84 83.82 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 116.84 89.408 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 116.84 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "efec397a-a59b-4b3f-8713-466f98a1982b")
-		)
-		(pin "1"
-			(uuid "02c558f8-1545-44af-9e36-9329ec933407")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -12455,7 +7147,7 @@
 			(uuid "78b3c762-43c3-452f-a09d-2e55f550ce34")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D64")
 					(unit 1)
@@ -12533,7 +7225,7 @@
 			(uuid "b0b0817e-4dbe-461f-aae3-11c935e6ccad")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D74")
 					(unit 1)
@@ -12607,7 +7299,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "G10")
 					(unit 1)
@@ -12684,7 +7376,7 @@
 			(uuid "eb928e6f-1bbe-46dd-a20c-4542676ffa4a")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW61")
 					(unit 1)
@@ -12764,7 +7456,7 @@
 			(uuid "e7bda93f-b806-4619-9c9e-71a320f74c22")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "R31")
 					(unit 1)
@@ -12841,7 +7533,7 @@
 			(uuid "b024f859-6da3-4a44-ae21-7ea5a426d228")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW80")
 					(unit 1)
@@ -12850,8 +7542,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 158.75 25.4 180)
+		(lib_id "power:PWR_FLAG")
+		(at 217.17 125.09 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12859,32 +7551,30 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a7ad6a29-74e4-4f40-9215-0265cb5aee35")
-		(property "Reference" "R41"
-			(at 161.29 24.1299 0)
+		(uuid "aaff3052-026d-46a5-80ac-740502499c05")
+		(property "Reference" "#FLG0970"
+			(at 219.71 125.09 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "100R"
-			(at 161.29 26.6699 0)
+		(property "Value" "PWR_FLAG"
+			(at 219.71 127.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 160.528 25.4 90)
+		(property "Footprint" ""
+			(at 217.17 125.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12895,7 +7585,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 25.4 0)
+			(at 217.17 125.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12905,9 +7595,8 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 158.75 25.4 0)
-			(hide yes)
+		(property "Description" ""
+			(at 217.17 125.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12915,181 +7604,14 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "2"
-			(uuid "0aa8b8ec-5d5b-4eaf-a451-eda53010e572")
 		)
 		(pin "1"
-			(uuid "84aecf22-dfd5-40f6-a428-53183d9d58a0")
+			(uuid "429db0ec-46c2-4acc-9532-3533a259420f")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R41")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 194.31 25.4 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a831461f-cea9-49b5-94ac-0cf3a1eeb03a")
-		(property "Reference" "R43"
-			(at 196.85 24.1299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100R"
-			(at 196.85 26.6699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 196.088 25.4 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 194.31 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 194.31 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "c0416920-5ee5-4fc3-a4fa-4c546d2261fb")
-		)
-		(pin "1"
-			(uuid "77fc27ac-3dd2-4496-9c30-fa0e77fc5677")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R43")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 234.95 25.4 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a9c88c08-f817-4f3b-b858-b1d6f6a1f061")
-		(property "Reference" "R45"
-			(at 237.49 24.1299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100R"
-			(at 237.49 26.6699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 236.728 25.4 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 234.95 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 234.95 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "59164814-a19e-4107-a329-25e70916adef")
-		)
-		(pin "1"
-			(uuid "3af02b64-2d18-4d17-853d-db536fed636f")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R45")
+					(reference "#FLG0970")
 					(unit 1)
 				)
 			)
@@ -13161,7 +7683,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "G7")
 					(unit 1)
@@ -13235,7 +7757,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H25")
 					(unit 1)
@@ -13313,7 +7835,7 @@
 			(uuid "3d1a6054-0729-46d0-b606-ddd56d1fb3fb")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D60")
 					(unit 1)
@@ -13387,7 +7909,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H26")
 					(unit 1)
@@ -13464,7 +7986,7 @@
 			(uuid "c7c7e21f-e1a9-467d-bea7-b0fe2d996c9f")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW60")
 					(unit 1)
@@ -13541,7 +8063,7 @@
 			(uuid "2ef8a27a-a399-44f7-8a9d-2fd10a8ecf5e")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW54")
 					(unit 1)
@@ -13618,7 +8140,7 @@
 			(uuid "971d73d0-9318-4d68-b7b0-7e637b1a2dca")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW81")
 					(unit 1)
@@ -13696,7 +8218,7 @@
 			(uuid "0cfb7c44-e573-44d4-b756-82c2384cfeaa")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D76")
 					(unit 1)
@@ -13774,7 +8296,7 @@
 			(uuid "be236f1d-5d78-4f43-95e7-88cd93078f92")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D81")
 					(unit 1)
@@ -13852,7 +8374,7 @@
 			(uuid "54388af2-032c-41b2-86b4-65cc90d056d5")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D55")
 					(unit 1)
@@ -13930,7 +8452,7 @@
 			(uuid "8f3a2493-f87a-4f1e-85a0-a8ed31bc97e7")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D51")
 					(unit 1)
@@ -14010,7 +8532,7 @@
 			(uuid "084b734b-e8b6-4f6b-9c79-7562543d75c5")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "R34")
 					(unit 1)
@@ -14084,7 +8606,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "G11")
 					(unit 1)
@@ -14162,7 +8684,7 @@
 			(uuid "4946354e-4cf8-49e3-b3c4-421f8bcdde9e")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D52")
 					(unit 1)
@@ -14240,326 +8762,9 @@
 			(uuid "35330409-ca7e-4bea-ab06-b1729d9991d2")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D62")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 116.84 72.39 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e2f3ac55-20dd-4231-b595-39c9bb9c83dd")
-		(property "Reference" "R37"
-			(at 116.84 66.04 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100R"
-			(at 116.84 68.58 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 116.84 74.168 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 116.84 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 116.84 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d9bcc451-f015-4e69-b82b-764826b994af")
-		)
-		(pin "1"
-			(uuid "919ead3a-03fc-4eac-a1a6-d3eace281619")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "corne-cherry-rescue:SW_PUSH-kbd-corne-cherry-rescue")
-		(at 242.57 34.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e4154389-7c47-47c3-86ed-d9c457132d6a")
-		(property "Reference" "SW104"
-			(at 246.38 31.496 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_PUSH"
-			(at 242.57 36.322 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
-			(at 242.57 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 242.57 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 242.57 34.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2710fc40-33f8-48ae-9ce3-069fcbdb60db")
-		)
-		(pin "2"
-			(uuid "0ad910c8-b1a5-4faf-a162-05f84c5ffe3b")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "SW104")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 250.19 38.1 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e75e7ea9-a5cb-4b26-8718-21274dd366d7")
-		(property "Reference" "D97"
-			(at 247.65 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D"
-			(at 252.73 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
-			(at 250.19 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 250.19 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 250.19 38.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8fd01959-4e41-4d9c-be28-50a505cf719f")
-		)
-		(pin "2"
-			(uuid "bf0b29de-66ac-45bf-9d95-5f4d15468039")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "D97")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 176.53 25.4 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eb6a871d-8106-466b-9b78-b87b9238a9b5")
-		(property "Reference" "R42"
-			(at 179.07 24.1299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100R"
-			(at 179.07 26.6699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 178.308 25.4 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 176.53 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 176.53 25.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "2db71790-2d2a-4f55-9db4-9ee0a596adb6")
-		)
-		(pin "1"
-			(uuid "bb8aef58-61b1-4691-b89d-3522bb12dc33")
-		)
-		(instances
-			(project "rili"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
-					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -14635,7 +8840,7 @@
 			(uuid "cabe0904-2bb6-4c17-aa8f-4d525a42d1ea")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D53")
 					(unit 1)
@@ -14713,7 +8918,7 @@
 			(uuid "2ce85640-188e-4725-82d2-e313f7fee4ad")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "D54")
 					(unit 1)
@@ -14787,7 +8992,7 @@
 			)
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "H27")
 					(unit 1)
@@ -14864,7 +9069,7 @@
 			(uuid "a72d98b6-8b0c-48ba-ac6c-d32365a53a69")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/2468e084-5b75-4a26-9815-971ae3560048"
 					(reference "SW66")
 					(unit 1)

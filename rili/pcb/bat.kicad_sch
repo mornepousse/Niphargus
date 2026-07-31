@@ -2634,6 +2634,121 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "rouge_gorge:FS8205"
 			(pin_names
 				(offset 1.016)
@@ -3612,6 +3727,82 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 78.74 170.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1306d2e9-9a15-48f4-85ef-606438224b30")
+		(property "Reference" "#FLG0975"
+			(at 81.28 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 81.28 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 78.74 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "493bb488-a706-4a5b-ba6b-3ec3b3db137a")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
+					(reference "#FLG0975")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 40.64 120.65 0)
 		(unit 1)
@@ -3681,7 +3872,7 @@
 			(uuid "ab3fbd17-30f6-4532-a16d-7adc66eacafb")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR050")
 					(unit 1)
@@ -3759,7 +3950,7 @@
 			(uuid "d630d350-90b5-4055-86cf-e1f88c6ad61a")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR037")
 					(unit 1)
@@ -3841,7 +4032,7 @@
 			(uuid "04fbfb7a-dd68-4573-a87d-b81adaadf656")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "R1")
 					(unit 1)
@@ -3918,7 +4109,7 @@
 			(uuid "dd868a0e-f97b-4861-955c-77145d435d9d")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR034")
 					(unit 1)
@@ -3998,7 +4189,7 @@
 			(uuid "0d3e143a-ccd6-482e-85f1-ce4b881dfeb2")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "R2")
 					(unit 1)
@@ -4078,7 +4269,7 @@
 			(uuid "b3a441eb-a023-4ce5-9240-5fc97678882c")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "C14")
 					(unit 1)
@@ -4160,7 +4351,7 @@
 			(uuid "08ebe039-80a7-4b14-8147-86cd8a1b288b")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "R6")
 					(unit 1)
@@ -4263,7 +4454,7 @@
 			(uuid "cdef81e2-d2d8-47dc-afaa-63fd189bd7ce")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "U3")
 					(unit 1)
@@ -4341,7 +4532,7 @@
 			(uuid "9ca97dfd-2853-4b31-98b8-50c8be7f171c")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR049")
 					(unit 1)
@@ -4421,7 +4612,7 @@
 			(uuid "3d359eb4-cd16-40d6-bda4-29f7be020503")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "C6")
 					(unit 1)
@@ -4512,7 +4703,7 @@
 			(uuid "037b9067-65b6-4a32-bdd0-8ae52618e760")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "D1")
 					(unit 1)
@@ -4592,7 +4783,7 @@
 			(uuid "8e7cb3ae-6230-4bbc-8fff-e59f724d529b")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "R4")
 					(unit 1)
@@ -4670,7 +4861,7 @@
 			(uuid "9bc905f1-8f75-469f-b93d-4ce836bd4111")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR046")
 					(unit 1)
@@ -4748,7 +4939,7 @@
 			(uuid "7d0c4d6d-c76a-44d5-a41a-5dee8d4b1b5f")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR048")
 					(unit 1)
@@ -4826,9 +5017,85 @@
 			(uuid "3e69db74-0510-4e6d-a777-998c307ac4c5")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 31.75 24.13 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6d84015b-1df5-41c5-bba0-b4d3f5ed1fc5")
+		(property "Reference" "#FLG0974"
+			(at 34.29 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 34.29 26.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 31.75 24.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fd625aa1-4cb3-48c0-9609-a5608b5ec5af")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
+					(reference "#FLG0974")
 					(unit 1)
 				)
 			)
@@ -4908,7 +5175,7 @@
 			(uuid "702a3493-c7a6-480d-8149-9f7168f50c1b")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "C13")
 					(unit 1)
@@ -4990,7 +5257,7 @@
 			(uuid "d21508c6-d18d-4ceb-a9a5-adfe158295cb")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "C12")
 					(unit 1)
@@ -5068,7 +5335,7 @@
 			(uuid "08e01baa-4143-47ab-9a5a-c0266a51e0c1")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR035")
 					(unit 1)
@@ -5148,7 +5415,7 @@
 			(uuid "a4df4686-d233-4ba2-a160-aee8328aee18")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "R7")
 					(unit 1)
@@ -5226,7 +5493,7 @@
 			(uuid "832acd51-5aa7-433d-ba77-09d23d02232c")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR036")
 					(unit 1)
@@ -5304,7 +5571,7 @@
 			(uuid "275f5852-4213-439c-916b-8ebafced80d4")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR038")
 					(unit 1)
@@ -5382,7 +5649,7 @@
 			(uuid "d2c2b017-6501-4142-9488-1f348b260f20")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR047")
 					(unit 1)
@@ -5460,7 +5727,7 @@
 			(uuid "b8a7e3ae-f32f-4783-809a-8623705babce")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR032")
 					(unit 1)
@@ -5538,7 +5805,7 @@
 			(uuid "2abc07e3-31a4-4573-b03d-26acc4e37e19")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR022")
 					(unit 1)
@@ -5618,7 +5885,7 @@
 			(uuid "ae9ae783-1d82-40f6-9796-41445964b0e8")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "J1")
 					(unit 1)
@@ -5698,7 +5965,7 @@
 			(uuid "306d7ea3-00f9-47e5-a6d8-0709cb4e0bbe")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "R3")
 					(unit 1)
@@ -5776,7 +6043,7 @@
 			(uuid "9f8b7dcd-6252-4776-b823-06bdcedb9788")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR027")
 					(unit 1)
@@ -5855,7 +6122,7 @@
 			(uuid "a0716b05-d76c-4571-bc72-c9bd5285248b")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "D2")
 					(unit 1)
@@ -5933,7 +6200,7 @@
 			(uuid "69ac5ebb-9a9b-4b0c-94b7-97e39e58b40c")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR040")
 					(unit 1)
@@ -6016,7 +6283,7 @@
 			(uuid "acb89bba-f825-4590-a455-e14aaef09cc4")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "U4")
 					(unit 1)
@@ -6094,7 +6361,7 @@
 			(uuid "9dae0860-507d-42b5-9d62-e5bf792cbf83")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR028")
 					(unit 1)
@@ -6172,7 +6439,7 @@
 			(uuid "d7e5dbf2-c36e-48e9-a463-4544e3aebaa2")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR044")
 					(unit 1)
@@ -6250,7 +6517,7 @@
 			(uuid "e741bf92-1d4d-47e0-b57f-3f0f31a184cc")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR033")
 					(unit 1)
@@ -6328,7 +6595,7 @@
 			(uuid "f27f6120-d89d-4497-806f-8d25ac5d69f8")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR041")
 					(unit 1)
@@ -6410,7 +6677,7 @@
 			(uuid "5ff1feab-1fc7-4d0b-b5b7-7a333571407a")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "R5")
 					(unit 1)
@@ -6492,7 +6759,7 @@
 			(uuid "7e0ef876-d4b1-4e32-b554-d26310de8c34")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "C11")
 					(unit 1)
@@ -6570,7 +6837,7 @@
 			(uuid "e2247a05-87e9-4b2b-925b-ab6bcd136671")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR029")
 					(unit 1)
@@ -6648,7 +6915,7 @@
 			(uuid "9d399f75-259a-4249-87a7-10d675c681d7")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR031")
 					(unit 1)
@@ -6735,9 +7002,85 @@
 			(uuid "a60b478a-a9f6-4cb3-8822-6c09742a1b0b")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 241.3 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d7e97cf5-04e6-4e0b-af0e-774647da40dc")
+		(property "Reference" "#FLG0976"
+			(at 243.84 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 243.84 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 241.3 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 241.3 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1c14b35a-93b9-4141-a72a-0a8146b83f16")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
+					(reference "#FLG0976")
 					(unit 1)
 				)
 			)
@@ -6826,7 +7169,7 @@
 			(uuid "c0ab5d5a-5ae9-4e23-97c1-e74b71741b59")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "Q4")
 					(unit 1)
@@ -6909,7 +7252,7 @@
 			(uuid "cc18b0fb-a1a8-4540-b2de-c89b1c42a4e1")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "SW1")
 					(unit 1)
@@ -6989,7 +7332,7 @@
 			(uuid "0f4c325e-2f9c-4f7c-8f9b-5635933a780d")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR043")
 					(unit 1)
@@ -7067,7 +7410,7 @@
 			(uuid "7f0e3875-67cf-472a-9f1b-3f390bb67bc1")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR030")
 					(unit 1)
@@ -7159,7 +7502,7 @@
 			(uuid "bd0f17ca-0b29-4696-b717-bc3fdf332555")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "U5")
 					(unit 1)
@@ -7237,7 +7580,7 @@
 			(uuid "69feb26e-00d7-4e01-9271-c19e53ee82ef")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR042")
 					(unit 1)
@@ -7315,7 +7658,7 @@
 			(uuid "11b42aed-5df9-4080-a2fa-d31fb68755e7")
 		)
 		(instances
-			(project "rili"
+			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR045")
 					(unit 1)

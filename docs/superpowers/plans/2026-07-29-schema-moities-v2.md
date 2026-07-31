@@ -27,14 +27,23 @@ v# Schéma KiCad des moitiés Rouge-Gorge v2 — Plan d'implémentation
 | Lignes matrice ROW0-3 (sorties scan) | 1, 2, 4, 5 | RTC ✓ (scan ULP en sommeil) |
 | Colonnes matrice COL0-6 (entrées, pull-down) | 6, 7, 8, 9, 10, 11, 12 | RTC ✓ (réveil EXT1 any-high) |
 | Jauge batterie (ADC) | 13 | ADC2 — OK car WiFi jamais actif |
-| Détection VBUS | 14 | RTC ✓ (réveil au branchement) |
+| ~~Détection VBUS~~ → **CS écran (net `CS_DPL`)** | 14 | VBUS_DET abandonné (2026-07-31) ; CS dédié, actif HAUT — câblé ✓ |
 | UART lien TX / RX | 17 / 18 | — |
 | USB D− / D+ | 19 / 20 | pins USB natifs (fixe) |
 | EN du load switch 5 V (poignée de main) | 21 | — |
 | nRF24 : CE / CSN | 15 / 16 | libres, hors strapping |
-| nRF24 : SCK / MOSI / MISO / IRQ | 38 / 40 / 39 / 41 | GPIO matrix (SPI routable partout) ; 39-42 = JTAG, OK car debug via USB-JTAG ; MOSI/MISO tels que dessinés par Mae (équivalent, matrice GPIO) |
-| Boot (pad de test) | 0 | strapping — pull-up 10k, pad |
-| Interdits | 3, 45, 46 (strapping), 43/44 (UART0 debug → pads de test), 35-37 (PSRAM octale), 33/34 (absents du module) | |
+| SPI partagé nRF24+LCD : SCK / MOSI+SI / MISO / IRQ | 38 / **40** / 39 / 41 | GPIO matrix ; MOSI/MISO tels que dessinés par Mae ; le LCD (write-only) partage SCK et MOSI |
+| TP_RDY (trackpad, gauche) | **42** | plus de partage — le CS écran a son pin dédié (14) ; CS LCD actif HAUT |
+| Trackpad I2C : SDA / SCL (gauche) | **47 / 48** | ex-lien UART S3↔P4, abandonné (2026-07-30) |
+| Boot / prog (J_PROG) | 0, 43, 44 | strapping — pull-up 10k sur 0 |
+| Interdits | 3, 45, 46 (strapping), 35-37 (PSRAM octale), 33/34 (absents du module) | |
+
+**Périphériques (décisions 2026-07-30)** : écran **Sharp LS011B7DH03** à droite (SCS=42 actif haut,
+SCLK=38, SI=40, DISP→3V3, EXTMODE/EXTCOMIN→GND, VCOM logiciel) ; trackpad **Azoteq TPS43-201A-S**
+à gauche (FPC 6-pin : RDY=42, NRST=RC pull-up+100nF, SDA=47, SCL=48) ; **le S3 est PLEIN** —
+« batterie pleine » se lit via VBAT_SENSE en ADC (≥ ~4,15 V), pas de GPIO pour STDBY.
+**Restructure Mae** : matrice gauche déplacée DANS la feuille s3 (câblage direct SW→100R→MCU,
+nets anonymes) ; la feuille Matrix ne porte plus que la droite (`col*_d`/`row*_d`, en attente du 2ᵉ MCU).
 
 ---
 
