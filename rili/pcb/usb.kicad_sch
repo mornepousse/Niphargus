@@ -3003,7 +3003,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "01e9f232-998a-43f7-9125-edb51e47f14a")
-		(property "Reference" "R16"
+		(property "Reference" "R50"
 			(at 63.5 29.21 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3065,7 +3065,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "R16")
+					(reference "R50")
 					(unit 1)
 				)
 			)
@@ -3082,7 +3082,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "084f242b-1daf-43c4-a6f7-4f3f685f879c")
-		(property "Reference" "#FLG0973"
+		(property "Reference" "#FLG02"
 			(at 72.39 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -3141,7 +3141,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#FLG0973")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -3159,7 +3159,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ef028ae-ddcc-43b4-8c58-af58f13eb91d")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR058"
 			(at 74.93 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -3219,7 +3219,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR053")
+					(reference "#PWR058")
 					(unit 1)
 				)
 			)
@@ -3236,7 +3236,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1f654105-8e65-47e6-a5b0-2ab9a912e0f2")
-		(property "Reference" "U2"
+		(property "Reference" "U14"
 			(at 86.7411 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3294,6 +3294,28 @@
 				)
 			)
 		)
+		(property "LCSC" "C7519"
+			(at 85.09 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C7519.html"
+			(at 85.09 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "621bec30-2166-4773-9684-750b60f481af")
 		)
@@ -3315,7 +3337,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "U2")
+					(reference "U14")
 					(unit 1)
 				)
 			)
@@ -3333,7 +3355,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3eb65bff-177f-4a67-b684-7a13e1ca3b02")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR063"
 			(at 85.09 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -3393,7 +3415,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR056")
+					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -3411,7 +3433,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "40c7eb57-640e-4660-9e4c-0bb05b8581a7")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR057"
 			(at 69.85 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -3471,7 +3493,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR013")
+					(reference "#PWR057")
 					(unit 1)
 				)
 			)
@@ -3489,7 +3511,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "457a0177-7c93-429d-8e4e-baed57e49808")
-		(property "Reference" "#PWR057"
+		(property "Reference" "#PWR054"
 			(at 44.45 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -3549,7 +3571,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR057")
+					(reference "#PWR054")
 					(unit 1)
 				)
 			)
@@ -3567,7 +3589,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5159abf4-6826-47ee-b174-37a694dc1b82")
-		(property "Reference" "R17"
+		(property "Reference" "R52"
 			(at 63.5 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3629,7 +3651,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "R17")
+					(reference "R52")
 					(unit 1)
 				)
 			)
@@ -3647,7 +3669,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "58c44891-941d-4b37-9e01-bff526538fe7")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR061"
 			(at 85.09 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -3707,7 +3729,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR055")
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -3725,7 +3747,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5c9d652e-2efa-495c-b6f7-c1e51459b01d")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR056"
 			(at 69.85 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -3785,7 +3807,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR04")
+					(reference "#PWR056")
 					(unit 1)
 				)
 			)
@@ -3803,7 +3825,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6a2d0908-6416-436d-b2c2-300f4f2ac3c1")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR052"
 			(at 33.02 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -3863,7 +3885,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR054")
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -3881,7 +3903,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6e60ea02-90a4-49ff-b8ce-ed845b083bfb")
-		(property "Reference" "J3"
+		(property "Reference" "J8"
 			(at 33.02 22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3901,7 +3923,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12"
 			(at 36.83 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -3924,6 +3946,28 @@
 			)
 		)
 		(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
+			(at 33.02 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C165948"
+			(at 33.02 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C165948.html"
 			(at 33.02 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -3988,7 +4032,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "J3")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -4006,7 +4050,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "854d687a-e29a-49f9-a191-6424a82408ab")
-		(property "Reference" "C7"
+		(property "Reference" "C13"
 			(at 60.96 109.22 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4068,7 +4112,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "C7")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -4086,7 +4130,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ae63274-c0c6-49e2-9582-ae672bb50dbd")
-		(property "Reference" "#PWR058"
+		(property "Reference" "#PWR053"
 			(at 38.1 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -4146,7 +4190,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR058")
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
@@ -4163,7 +4207,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b5899263-e05d-4401-bd4e-c27872fca00d")
-		(property "Reference" "R18"
+		(property "Reference" "R48"
 			(at 49.53 148.59 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4183,7 +4227,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 49.53 150.368 90)
 			(hide yes)
 			(show_name no)
@@ -4225,7 +4269,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "R18")
+					(reference "R48")
 					(unit 1)
 				)
 			)
@@ -4243,7 +4287,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f02ad92b-417c-43da-99af-2d8405777d2c")
-		(property "Reference" "U7"
+		(property "Reference" "U13"
 			(at 71.9933 163.83 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4289,6 +4333,28 @@
 			)
 		)
 		(property "Description" "USB HUB controller, QSOP-16"
+			(at 69.85 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C4154405"
+			(at 69.85 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C4154405.html"
 			(at 69.85 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -4350,7 +4416,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "U7")
+					(reference "U13")
 					(unit 1)
 				)
 			)
@@ -4367,7 +4433,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f97eb142-4554-4267-919c-f9d281be36fd")
-		(property "Reference" "R19"
+		(property "Reference" "R49"
 			(at 49.53 153.67 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4387,7 +4453,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 49.53 155.448 90)
 			(hide yes)
 			(show_name no)
@@ -4429,7 +4495,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "R19")
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -4448,7 +4514,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fb17ad6d-3a5a-4f16-945d-94123c7db2e3")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR055"
 			(at 43.18 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -4508,7 +4574,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR051")
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)

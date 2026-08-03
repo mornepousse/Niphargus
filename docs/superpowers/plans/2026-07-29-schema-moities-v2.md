@@ -164,6 +164,27 @@ Contenu (voir carte des pins en tête de plan — elle est normative) :
 
 Composants `liens` déjà repérés au passage (Tâche 4) : `Power_Protection:USBLC6-2SC6` ✓, `Power_Protection:SRV05-4` ✓, `Connector:USB_C_Receptacle_USB2.0_16P` ✓, `Diode:1N4148W` ✓ (matrice), load switch : `SiP32431DR3` ✓ officiel (l'AP22802 n'a pas de symbole officiel — SiP32431 était l'alternative validée au design doc).
 
+## Annexe — Liste de courses BOM complète v2 (2026-08-01, réfs LCSC vérifiées en ligne)
+
+Complète l'annexe alim ci-dessus (DW01A, FS8205, TP4056, AO3407, SS14, MCP1700, MSK-12C02 déjà référencés). Quantités pour LE PANNEAU (2 moitiés) :
+
+| Qté | Composant | Boîtier | LCSC | Note |
+|---|---|---|---|---|
+| 2 | ESP32-S3-WROOM-1-**N8R2** | module CMS | **C2913204** | ⚠️ l'empreinte au schéma est `WROOM-1U` (antenne externe u.FL) — si c'est voulu, prendre le 1U-N8R2 **C3013944** ; sinon corriger l'empreinte vers WROOM-1 (antenne PCB, reco clavier) et prendre C2913204 |
+| 1 | CH334R (hub USB 2.0 4 ports) | QSOP-16 | **C4154405** | ~0,30 $ |
+| 2 | USBLC6-2SC6 (ESD USB) | SOT-23-6 | **C7519** (ST) | éviter les clones à 2 lettres près |
+| 2 | SRV05-4 (ESD TRRS) | SOT-23-6 | **C13612** (Semtech .TCT) | alt. budget : Leiditech C384887, Bourns C118757 |
+| 1 | AMS1117-3.3 (LDO coffre P4) | SOT-223 | **C6186** (AMS) | |
+| 2 | SiP32431DR3-T1GE3 (load switch 5 V lien) | SC-70-6 | **C141606** (Vishay) | |
+| 2 | USB-C TYPE-C-31-M-12 (16P, USB 2.0) | CMS + 4 pattes | **C165948** (HRO) | = exactement l'empreinte `USB_C_Receptacle_HRO_TYPE-C-31-M-12` du schéma |
+| 1 | microSD Würth 693072010801 (hinge) | CMS | — PAS sur LCSC | Mouser/Farnell/DigiKey ; alt. LCSC push-push TF-01A **C91145** (HRO) mais il faudra CHANGER l'empreinte avant routage |
+| 2 | nRF24L01+ (module breakout 2×4) | module | — AliExpress | comme v1 ; empreinte `MaeLid:NRF24L01` |
+| 1 | Module ESP32-P4 `JC-ESP32P4-M3` | module | — AliExpress/Taobao | empreinte V0.2 déjà sur le PCB |
+| 2 | Écran Sharp LS011B7DH03 | FPC | — Mouser/DigiKey | 1 monté à droite (populate-per-half) |
+| 1 | Trackpad Azoteq TPS43-201A-S | FPC 6 pin ZIF | — Mouser/DigiKey | gauche seulement + connecteur ZIF 6P 0,5 mm à référencer au layout |
+| 52+4 | Switchs Choc/MX + diodes matrice + jack TRRS MJ-4PP-9 | — | — AliExpress | filière v1 (README) ; diodes matrice hors BOM kicad (symboles legacy) |
+| ~60 | R/C/LED 0603-0805-1206 (100Ω, 100k, 10k, 1k, 2k4, 4,7k, 5k1, 1M ; 100nF, 1µF, 10µF, 22µF ; LED 0805) | 0603/0805/1206 | basic parts JLC | prendre les « Basic » du catalogue pour éviter les frais extended si assemblage JLC |
+
 ## Auto-revue du plan (faite)
 
 - **Couverture du spec** : §4 alim ✓ (T1) ; §2 cœur S3 + nRF24 ✓ (T2) ; matrice/ULP ✓ (carte des pins + T3) ; §5 lien poignée de main ✓ (T4) ; §6 ESD couches 1-3 ✓ (T1/T3/T4 ; couche 0 = layout, hors plan) ; §7 zéro header ✓ (contraintes globales) ; coffre/§8 exclus explicitement (points ouverts) ; §10 tripwire ✓ (T0 + chaque tâche).

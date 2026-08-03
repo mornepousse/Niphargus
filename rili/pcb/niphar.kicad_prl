@@ -48,7 +48,7 @@
       "drc_warnings",
       "shapes"
     ],
-    "visible_layers": "00000000_00000000_0ffff7ff_ffffffff",
+    "visible_layers": "ffffffff_ffffffff_ffffffff_ff7fffff",
     "zone_display_mode": 1
   },
   "git": {
@@ -58,11 +58,13 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "rili.kicad_prl",
+    "filename": "niphar.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
     "col_hidden": [
+      false,
+      false,
       false,
       false,
       false,
@@ -84,7 +86,9 @@
       6,
       7,
       8,
-      9
+      9,
+      10,
+      11
     ],
     "col_widths": [],
     "custom_group_rules": [],

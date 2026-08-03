@@ -1547,6 +1547,307 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:SD05C-01F"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SD05C-01F"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SOD-323"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sd_c_datasheet.pdf.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "5V, 450W Discrete Bidirectional TVS Diode, SOD-323"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "transient voltage suppressor thyrector transil"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "D?SOD?323*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SD05C-01F_0_1"
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy 0 0) (xy -2.54 1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 2.54 -1.27) (xy 0 0) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SD05C-01F_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Mechanical:MountingHole_Pad_MP"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad_MP"
+				(at 0 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole with connection as pad named MP"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_MP_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_MP_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "MP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_Espressif:ESP32-S3-WROOM-1"
 			(pin_names
 				(offset 1.016)
@@ -4185,16 +4486,16 @@
 		(uuid "ceb3e07a-c7d2-4501-b882-a76454650630")
 	)
 	(junction
-		(at 66.04 181.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "051412f2-f49b-4439-9a73-56a3fdd550e5")
-	)
-	(junction
 		(at 83.82 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0a26fb0f-d766-4ce2-be87-1b1810bf9cd7")
+	)
+	(junction
+		(at 86.36 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0a349a8d-752f-49a0-bb7b-c5d9b6e41108")
 	)
 	(junction
 		(at 137.16 166.37)
@@ -4209,10 +4510,16 @@
 		(uuid "0bd1a8b7-37db-4fad-9c86-04583f1dac42")
 	)
 	(junction
-		(at 66.04 196.85)
+		(at 66.04 212.09)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "155cf39b-872f-4efb-805b-31e376ce615e")
+		(uuid "0bd49d20-210f-46eb-8e8b-7675242cca3d")
+	)
+	(junction
+		(at 162.56 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1105b1b7-21cb-4400-bc87-40db5d09c08f")
 	)
 	(junction
 		(at 137.16 212.09)
@@ -4221,10 +4528,22 @@
 		(uuid "2437efa7-085d-4800-960d-4a5127f6811d")
 	)
 	(junction
+		(at 48.26 212.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "263f29f8-3671-403f-bc1a-b545339562e3")
+	)
+	(junction
 		(at 121.92 189.23)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "29e7bce9-daeb-4a15-8e40-323b7779916c")
+	)
+	(junction
+		(at 104.14 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2f8b125e-f6a4-43dd-aa10-adbe15e082f6")
 	)
 	(junction
 		(at 104.14 173.99)
@@ -4239,6 +4558,30 @@
 		(uuid "355863bb-2631-4c3f-924b-2b69dd9ba1d6")
 	)
 	(junction
+		(at 86.36 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "363df8cf-c72c-4b8c-aa4e-fc545332e870")
+	)
+	(junction
+		(at 50.8 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3a68028c-3a44-4c1a-8a9c-c90f2d6344c1")
+	)
+	(junction
+		(at 66.04 181.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3da6be96-ef14-4fdb-8479-0de219890559")
+	)
+	(junction
+		(at 66.04 166.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "464c8b60-4cdb-4f81-b3bd-628c89596499")
+	)
+	(junction
 		(at 119.38 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4251,10 +4594,16 @@
 		(uuid "4e36bc4c-f1e7-4ac4-a21c-0ada7801cd3a")
 	)
 	(junction
-		(at 86.36 158.75)
+		(at 162.56 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "55eab4ca-ee80-4ee7-94d7-9c12444fd297")
+		(uuid "553fbea5-17b5-491a-a620-4ef552e175a7")
+	)
+	(junction
+		(at 68.58 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5d3862fc-134f-4f12-9f9c-eb1d9a8379a2")
 	)
 	(junction
 		(at 119.38 212.09)
@@ -4269,6 +4618,12 @@
 		(uuid "6a73fa06-15bc-4cb0-8677-90385f9f80f0")
 	)
 	(junction
+		(at 66.04 196.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6b18a3bf-c028-4886-88ad-a7416daf9169")
+	)
+	(junction
 		(at 101.6 212.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4281,10 +4636,22 @@
 		(uuid "6bf26ba6-1ca8-461c-97b1-4002fff7c930")
 	)
 	(junction
+		(at 48.26 166.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e65120c-5cf2-4dc1-98eb-46d70756a9ff")
+	)
+	(junction
 		(at 364.49 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6e7afce5-a956-405c-a5c8-ccd42339faea")
+	)
+	(junction
+		(at 68.58 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6ffae9b3-c4fa-4811-abed-89e9b6560f60")
 	)
 	(junction
 		(at 119.38 196.85)
@@ -4305,10 +4672,10 @@
 		(uuid "73a69c51-c0be-4289-a1f4-71bb517e7d26")
 	)
 	(junction
-		(at 68.58 158.75)
+		(at 139.7 143.51)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "764b1565-048d-4c26-9785-6d802b65ddf2")
+		(uuid "74b4fbef-91a4-443c-90d7-7a4c3f81a654")
 	)
 	(junction
 		(at 60.96 33.02)
@@ -4329,6 +4696,12 @@
 		(uuid "84c4ed95-621f-477f-8962-0f4cb70448dd")
 	)
 	(junction
+		(at 121.92 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "888a7db9-4a6c-41e4-a6cd-72ed0c389060")
+	)
+	(junction
 		(at 154.94 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4347,22 +4720,10 @@
 		(uuid "96e6f094-1218-4ae4-9d7f-232d0f320cbc")
 	)
 	(junction
-		(at 50.8 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9eb030b0-b6da-4c7d-af82-19a77993d0d9")
-	)
-	(junction
 		(at 83.82 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a0610a5a-95fd-4ba8-b760-f2394e8fa79a")
-	)
-	(junction
-		(at 139.7 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a822ca76-edb4-405b-8bb7-9d63236f6ed0")
 	)
 	(junction
 		(at 261.62 50.8)
@@ -4407,10 +4768,22 @@
 		(uuid "c0a4af09-832e-4c70-8521-f02d0447d7b2")
 	)
 	(junction
+		(at 48.26 196.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c2a6709c-749e-4c28-b0d1-bfb76cea382a")
+	)
+	(junction
 		(at 83.82 196.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c6d374d8-8631-488b-8573-392a309f615c")
+	)
+	(junction
+		(at 121.92 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c9621494-7b56-404e-a8ea-bd114fcb75bc")
 	)
 	(junction
 		(at 101.6 196.85)
@@ -4425,34 +4798,28 @@
 		(uuid "ceac4668-b0c9-4758-a39b-159e14b3e884")
 	)
 	(junction
+		(at 50.8 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dbfa0475-08bc-4700-9ee6-084e583f0155")
+	)
+	(junction
+		(at 139.7 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dde87b56-105b-4bb1-9ef1-6dd3279cbd9c")
+	)
+	(junction
 		(at 104.14 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e23bc0af-0343-496f-bf03-34f25abf6822")
-	)
-	(junction
-		(at 66.04 166.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e46bba39-c826-493a-8aa6-8805424c209b")
+		(uuid "e11d2ecf-5440-4974-93ff-474bcaad65c5")
 	)
 	(junction
 		(at 137.16 196.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e70124da-83e1-4c90-a0e9-01ddbc380d82")
-	)
-	(junction
-		(at 162.56 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e93c92a6-c874-4418-947a-bb9eaa93a680")
-	)
-	(junction
-		(at 121.92 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "edc71c54-2ec7-4aea-9224-2465c4280883")
 	)
 	(junction
 		(at 194.31 48.26)
@@ -4473,10 +4840,10 @@
 		(uuid "f486b735-db0e-42fa-8111-66c94a19872a")
 	)
 	(junction
-		(at 66.04 212.09)
+		(at 48.26 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f5f084f2-27b5-48f6-83da-79b736a55178")
+		(uuid "f5cfc236-2042-4423-9fbf-98939a7a5db4")
 	)
 	(junction
 		(at 45.72 33.02)
@@ -4534,7 +4901,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 196.85) (xy 40.64 196.85)
+			(xy 26.67 196.85) (xy 30.48 196.85)
 		)
 		(stroke
 			(width 0)
@@ -4574,6 +4941,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 212.09) (xy 66.04 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05d77d8d-4a7e-41e4-a1c6-c0ce0fa36c42")
+	)
+	(wire
+		(pts
 			(xy 86.36 173.99) (xy 86.36 189.23)
 		)
 		(stroke
@@ -4604,7 +4981,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 181.61) (xy 40.64 181.61)
+			(xy 25.4 181.61) (xy 30.48 181.61)
 		)
 		(stroke
 			(width 0)
@@ -4734,13 +5111,13 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 212.09) (xy 66.04 212.09)
+			(xy 129.54 143.51) (xy 129.54 147.32)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2329996a-7d23-46c0-a110-62e908548866")
+		(uuid "22e69c6b-f1be-417e-9399-e20f4bd9ea59")
 	)
 	(wire
 		(pts
@@ -4764,7 +5141,27 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 153.67) (xy 162.56 158.75)
+			(xy 93.98 143.51) (xy 93.98 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25a70b91-d09e-4e83-a8dd-1b866402c96f")
+	)
+	(wire
+		(pts
+			(xy 38.1 181.61) (xy 48.26 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26a5496a-e8a8-4e97-a294-571e9de55f4f")
+	)
+	(wire
+		(pts
+			(xy 162.56 143.51) (xy 162.56 158.75)
 		)
 		(stroke
 			(width 0)
@@ -4794,6 +5191,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 196.85) (xy 66.04 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28b6ae81-73f3-4650-a527-734239ab447b")
+	)
+	(wire
+		(pts
 			(xy 323.85 39.37) (xy 320.04 39.37)
 		)
 		(stroke
@@ -4801,6 +5208,16 @@
 			(type default)
 		)
 		(uuid "2982471d-3979-441f-8c99-81300c7da292")
+	)
+	(wire
+		(pts
+			(xy 170.18 143.51) (xy 170.18 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29f97085-d86a-42af-bc3b-004a2ff2bcec")
 	)
 	(wire
 		(pts
@@ -4814,7 +5231,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 144.78) (xy 68.58 146.05)
+			(xy 68.58 134.62) (xy 68.58 135.89)
 		)
 		(stroke
 			(width 0)
@@ -4844,23 +5261,23 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 153.67) (xy 50.8 158.75)
+			(xy 76.2 143.51) (xy 76.2 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d2841af-acd6-41b5-988b-be639b4ef160")
+	)
+	(wire
+		(pts
+			(xy 50.8 143.51) (xy 50.8 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2dbe18bd-d5e4-43e9-9162-a2ef0986536c")
-	)
-	(wire
-		(pts
-			(xy 48.26 181.61) (xy 66.04 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "310f2f79-5f84-4c87-9bf5-972f3b41e6bd")
 	)
 	(wire
 		(pts
@@ -4954,6 +5371,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 143.51) (xy 147.32 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "416ccc9a-2817-4f33-a583-96939d7dd1dd")
+	)
+	(wire
+		(pts
 			(xy 364.49 63.5) (xy 368.3 63.5)
 		)
 		(stroke
@@ -4961,16 +5388,6 @@
 			(type default)
 		)
 		(uuid "44cad2e8-2a71-4161-b7d7-bfa4af8162a1")
-	)
-	(wire
-		(pts
-			(xy 48.26 196.85) (xy 66.04 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4512e211-5242-4667-9d9b-445bd55411ba")
 	)
 	(wire
 		(pts
@@ -5004,7 +5421,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 153.67) (xy 68.58 158.75)
+			(xy 68.58 143.51) (xy 68.58 158.75)
 		)
 		(stroke
 			(width 0)
@@ -5014,7 +5431,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 212.09) (xy 40.64 212.09)
+			(xy 25.4 212.09) (xy 30.48 212.09)
 		)
 		(stroke
 			(width 0)
@@ -5081,6 +5498,16 @@
 			(type default)
 		)
 		(uuid "4fcf4d04-53cd-4565-a55c-07864aafb2d4")
+	)
+	(wire
+		(pts
+			(xy 38.1 212.09) (xy 48.26 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "518fb1a3-4e9e-4d27-bb59-7798fc5c494a")
 	)
 	(wire
 		(pts
@@ -5274,7 +5701,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 166.37) (xy 66.04 166.37)
+			(xy 38.1 166.37) (xy 48.26 166.37)
 		)
 		(stroke
 			(width 0)
@@ -5284,7 +5711,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 153.67) (xy 121.92 158.75)
+			(xy 121.92 143.51) (xy 121.92 158.75)
 		)
 		(stroke
 			(width 0)
@@ -5314,7 +5741,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 153.67) (xy 104.14 158.75)
+			(xy 104.14 143.51) (xy 104.14 158.75)
 		)
 		(stroke
 			(width 0)
@@ -5334,7 +5761,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 144.78) (xy 50.8 146.05)
+			(xy 50.8 134.62) (xy 50.8 135.89)
 		)
 		(stroke
 			(width 0)
@@ -5434,13 +5861,23 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 144.78) (xy 104.14 146.05)
+			(xy 104.14 134.62) (xy 104.14 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7e016b8b-878e-4d49-8b48-cd7edd0ec600")
+	)
+	(wire
+		(pts
+			(xy 111.76 143.51) (xy 111.76 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ebd8efb-8bea-4d44-a5fc-0d5aaf857e06")
 	)
 	(wire
 		(pts
@@ -5504,7 +5941,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 166.37) (xy 40.64 166.37)
+			(xy 24.13 166.37) (xy 30.48 166.37)
 		)
 		(stroke
 			(width 0)
@@ -5574,7 +6011,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 144.78) (xy 121.92 146.05)
+			(xy 121.92 134.62) (xy 121.92 135.89)
 		)
 		(stroke
 			(width 0)
@@ -5684,7 +6121,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 153.67) (xy 139.7 158.75)
+			(xy 139.7 143.51) (xy 139.7 158.75)
 		)
 		(stroke
 			(width 0)
@@ -5701,6 +6138,26 @@
 			(type default)
 		)
 		(uuid "b707d70d-f838-48c7-869a-d6af2ae8aaaa")
+	)
+	(wire
+		(pts
+			(xy 38.1 196.85) (xy 48.26 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9c1332f-c1d6-439e-9ed3-cdae49d93120")
+	)
+	(wire
+		(pts
+			(xy 48.26 181.61) (xy 66.04 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba85ff9d-87b7-4114-9138-94f93eaf2c59")
 	)
 	(wire
 		(pts
@@ -5754,7 +6211,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 144.78) (xy 162.56 146.05)
+			(xy 162.56 134.62) (xy 162.56 135.89)
 		)
 		(stroke
 			(width 0)
@@ -5764,7 +6221,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 153.67) (xy 86.36 158.75)
+			(xy 86.36 143.51) (xy 86.36 158.75)
 		)
 		(stroke
 			(width 0)
@@ -5824,6 +6281,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 143.51) (xy 58.42 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1896cab-54b6-4fe8-925a-0ebf0856c634")
+	)
+	(wire
+		(pts
 			(xy 172.72 104.14) (xy 184.15 104.14)
 		)
 		(stroke
@@ -5864,7 +6331,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 144.78) (xy 86.36 146.05)
+			(xy 86.36 134.62) (xy 86.36 135.89)
 		)
 		(stroke
 			(width 0)
@@ -6004,6 +6471,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 166.37) (xy 66.04 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1145a94-b949-4db9-be7e-c44a3fd97fcc")
+	)
+	(wire
+		(pts
 			(xy 339.09 60.96) (xy 368.3 60.96)
 		)
 		(stroke
@@ -6044,7 +6521,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 144.78) (xy 139.7 146.05)
+			(xy 139.7 134.62) (xy 139.7 135.89)
 		)
 		(stroke
 			(width 0)
@@ -6133,7 +6610,7 @@
 		(uuid "07f12142-2ab2-4a5c-a87d-e7a83f141159")
 	)
 	(label "col0"
-		(at 50.8 146.05 0)
+		(at 50.8 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6143,7 +6620,7 @@
 		(uuid "0fef9017-e269-4555-ad18-37e78c694b96")
 	)
 	(label "col1"
-		(at 68.58 146.05 0)
+		(at 68.58 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6193,7 +6670,7 @@
 		(uuid "2a6b6841-9b81-40b0-b89e-c176ac69b9be")
 	)
 	(label "row0"
-		(at 184.15 50.8 0)
+		(at 184.15 53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6203,7 +6680,7 @@
 		(uuid "3383b026-8bfe-43ca-9976-b148f8bc047b")
 	)
 	(label "row1"
-		(at 35.56 181.61 0)
+		(at 25.4 181.61 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6253,7 +6730,7 @@
 		(uuid "42868daa-8cf3-4d66-bdf4-5a87d3684943")
 	)
 	(label "col5"
-		(at 184.15 76.2 0)
+		(at 184.15 73.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6263,7 +6740,7 @@
 		(uuid "4bc70115-028a-4dd9-9b74-ea80804a3ccc")
 	)
 	(label "col2"
-		(at 86.36 146.05 0)
+		(at 86.36 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6353,7 +6830,7 @@
 		(uuid "699b05f6-765e-4cee-94f6-0356a99263cd")
 	)
 	(label "col6"
-		(at 184.15 78.74 0)
+		(at 184.15 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6383,7 +6860,7 @@
 		(uuid "711aba0a-3318-47df-9aff-e8eb4bc1ea6a")
 	)
 	(label "row2"
-		(at 36.83 196.85 0)
+		(at 26.67 196.85 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6403,7 +6880,7 @@
 		(uuid "7d9e6126-dff0-47dc-96bd-1a50975b027d")
 	)
 	(label "row3"
-		(at 35.56 212.09 0)
+		(at 25.4 212.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6423,7 +6900,7 @@
 		(uuid "862c88ff-51f7-4f7e-ae14-a4eb03efece3")
 	)
 	(label "col5"
-		(at 139.7 146.05 0)
+		(at 139.7 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6493,7 +6970,7 @@
 		(uuid "9b0661f4-6094-4b99-94c2-d6d152f3b8aa")
 	)
 	(label "col4"
-		(at 121.92 146.05 0)
+		(at 121.92 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6503,7 +6980,7 @@
 		(uuid "a30942ba-f8a1-4a8f-8820-a96f72a96c83")
 	)
 	(label "row0"
-		(at 34.29 166.37 0)
+		(at 24.13 166.37 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6543,7 +7020,7 @@
 		(uuid "b67b42d2-7b5b-4943-8eab-008bfadaca4c")
 	)
 	(label "col4"
-		(at 184.15 73.66 0)
+		(at 184.15 76.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6573,7 +7050,7 @@
 		(uuid "c2b34fde-8500-47ad-8415-aec289e7ae5f")
 	)
 	(label "col6"
-		(at 162.56 146.05 0)
+		(at 162.56 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6583,7 +7060,7 @@
 		(uuid "c777adce-7906-4701-9058-e3210476de3e")
 	)
 	(label "row1"
-		(at 184.15 53.34 0)
+		(at 184.15 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6613,7 +7090,7 @@
 		(uuid "dbae191c-68b6-4c89-9d0b-56bb47b3cbc8")
 	)
 	(label "col3"
-		(at 104.14 146.05 0)
+		(at 104.14 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6725,7 +7202,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "003ffa05-5c5a-489b-a485-4db74747e085")
-		(property "Reference" "D288"
+		(property "Reference" "D27"
 			(at 116.84 208.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6745,7 +7222,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 119.38 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -6786,7 +7263,86 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D288")
+					(reference "D27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad_MP")
+		(at 232.41 224.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "00d002dc-7901-41b4-a347-40347126b50e")
+		(property "Reference" "H3"
+			(at 234.95 222.2499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad_MP"
+			(at 234.95 224.7899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
+			(at 232.41 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 232.41 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection as pad named MP"
+			(at 232.41 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "MP"
+			(uuid "66900bd1-de25-42ba-9a6c-6388322ec474")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -6803,7 +7359,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "015d7d86-ceac-4860-bc88-d91fe3f86537")
-		(property "Reference" "D272"
+		(property "Reference" "D7"
 			(at 63.5 208.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6823,7 +7379,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 66.04 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -6864,7 +7420,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D272")
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -6882,7 +7438,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0581e648-4e0f-4f2f-92f5-62319191f960")
-		(property "Reference" "#PWR0924"
+		(property "Reference" "#PWR03"
 			(at 45.72 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -6942,7 +7498,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0924")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -6959,7 +7515,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "06336ebc-a707-4c9d-aa3e-a29f3070f1c8")
-		(property "Reference" "D282"
+		(property "Reference" "D15"
 			(at 99.06 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6979,7 +7535,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 101.6 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -7020,7 +7576,84 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D282")
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 58.42 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "06f2b5dc-a3a5-41f1-abcd-055bdc177085")
+		(property "Reference" "#PWR0911"
+			(at 58.42 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 58.42 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 58.42 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 58.42 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d2313aea-5011-4da8-8fce-a4bd1885770c")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0911")
 					(unit 1)
 				)
 			)
@@ -7037,7 +7670,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0a404787-9604-4ae1-9ca1-292e361ceaed")
-		(property "Reference" "SW283"
+		(property "Reference" "SW11"
 			(at 80.01 171.196 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7057,7 +7690,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 76.2 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -7097,7 +7730,84 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW283")
+					(reference "SW11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 48.26 204.47 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0ba0ca2e-d8fe-4d7b-9452-f1f73dbc4072")
+		(property "Reference" "#PWR0920"
+			(at 48.26 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 208.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 48.26 204.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b1d04aa2-1117-4395-afc5-bcc2b9e44df0")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0920")
 					(unit 1)
 				)
 			)
@@ -7115,7 +7825,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "104409c8-bab8-41b4-80ef-04678ec54d05")
-		(property "Reference" "U201"
+		(property "Reference" "U5"
 			(at 129.1433 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7160,6 +7870,39 @@
 			)
 		)
 		(property "Description" "2.4 GHz WiFi (802.11 b/g/n) and Bluetooth ® 5 (LE) module Built around ESP32S3 series of SoCs, Xtensa ® dualcore 32bit LX7 microprocessor Flash up to 16 MB, PSRAM up to 8 MB 36 GPIOs, rich set of peripherals Onboard PCB antenna"
+			(at 127 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2913204"
+			(at 127 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2913204.html"
+			(at 127 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note achat" "N8R2 ; si antenne externe (empreinte 1U) : C3013944"
 			(at 127 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -7296,7 +8039,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "U201")
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -7313,7 +8056,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "11aacb4d-8278-445f-9d0f-3a12bf9e6b98")
-		(property "Reference" "U213"
+		(property "Reference" "U1"
 			(at 81.28 208.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7333,7 +8076,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 83.82 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -7374,7 +8117,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "U213")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -7392,7 +8135,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "128cfe96-7652-406a-96d8-325db119829c")
-		(property "Reference" "R221"
+		(property "Reference" "R44"
 			(at 334.01 54.61 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7454,7 +8197,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R221")
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -7472,7 +8215,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "12cf6360-c3c6-4bf5-a33f-db91259524ca")
-		(property "Reference" "#PWR0926"
+		(property "Reference" "#PWR035"
 			(at 271.78 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -7532,7 +8275,84 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0926")
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 111.76 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1b82d40c-aa48-427f-91bf-ab1b37b0465f")
+		(property "Reference" "#PWR0914"
+			(at 111.76 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 111.76 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 111.76 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c1da9c82-26e4-40d2-ad4a-5b62bb1beb94")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0914")
 					(unit 1)
 				)
 			)
@@ -7549,7 +8369,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1d1dc444-3fe6-4883-af00-d189f255deee")
-		(property "Reference" "D271"
+		(property "Reference" "D5"
 			(at 63.5 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7569,7 +8389,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 66.04 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -7610,7 +8430,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D271")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -7628,7 +8448,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "202bfde1-7955-43c5-8bb6-ed60b77eaa1f")
-		(property "Reference" "#PWR0918"
+		(property "Reference" "#PWR019"
 			(at 208.28 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -7688,7 +8508,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0918")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -7696,7 +8516,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 86.36 149.86 180)
+		(at 86.36 139.7 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7704,10 +8524,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "22267c6b-d778-414c-b513-0dd780b59c84")
-		(property "Reference" "R241"
-			(at 88.9 148.5899 0)
+		(property "Reference" "R19"
+			(at 88.9 138.4299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7718,7 +8537,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 88.9 151.1299 0)
+			(at 80.01 139.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7729,7 +8548,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 88.138 149.86 90)
+			(at 88.138 139.7 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7740,7 +8559,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 149.86 0)
+			(at 86.36 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7751,7 +8570,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 86.36 149.86 0)
+			(at 86.36 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7770,7 +8589,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R241")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -7787,7 +8606,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "237ee1c0-d74f-4df3-baa5-df832849f134")
-		(property "Reference" "R210"
+		(property "Reference" "R17"
 			(at 77.47 49.53 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7849,7 +8668,108 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R210")
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 125.73 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "23d93cbf-0f82-472d-9ab4-ef82324f17a8")
+		(property "Reference" "D115"
+			(at 125.73 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 125.73 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 125.73 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 125.73 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 125.73 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 125.73 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 125.73 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fe2b3f74-4081-4e0e-a3a5-2c5d225fcd23")
+		)
+		(pin "2"
+			(uuid "e36a13d9-6728-47a5-b44c-28cb93483089")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D115")
 					(unit 1)
 				)
 			)
@@ -7866,7 +8786,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "24517755-faf2-4da1-aeaa-20ce35b53884")
-		(property "Reference" "SW292"
+		(property "Reference" "SW25"
 			(at 115.57 155.956 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7886,7 +8806,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 111.76 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -7926,7 +8846,341 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW292")
+					(reference "SW25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 203.2 227.33 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "260e4f95-e66c-44ca-98f8-28115b7c3280")
+		(property "Reference" "#PWR0128"
+			(at 203.2 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 203.2 232.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.2 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 203.2 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "adba98b4-e670-4ea2-9720-f55505f17c6e")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0128")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 232.41 242.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "274f771f-81c0-4fd8-8534-c0e3e805bb13")
+		(property "Reference" "#PWR0131"
+			(at 232.41 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 232.41 247.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 232.41 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 232.41 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 232.41 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "09551c58-3369-4e11-b8f8-4fc3df38486e")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0131")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 72.39 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "29e1ad35-2fed-4889-aa82-a5aa28508cd0")
+		(property "Reference" "D112"
+			(at 72.136 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 72.39 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 72.39 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 72.39 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 72.39 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 72.39 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 72.39 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6cdd4da9-01a3-477e-bfa8-e41fda41fa5d")
+		)
+		(pin "2"
+			(uuid "d0770fd3-a5ba-4a00-a9fb-a5573c9d4f9a")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D112")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 129.54 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2c2bdda5-6702-4e41-a5f4-255b5dc79539")
+		(property "Reference" "#PWR0915"
+			(at 129.54 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 129.54 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 129.54 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "50820070-a393-4221-a632-5bbb8e2b5c6a")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0915")
 					(unit 1)
 				)
 			)
@@ -7943,7 +9197,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2e439434-8fad-4b56-b5be-6efd8b15ed42")
-		(property "Reference" "D298"
+		(property "Reference" "D47"
 			(at 175.26 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7963,7 +9217,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 177.8 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -8004,7 +9258,108 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D298")
+					(reference "D47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 48.26 185.42 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2e96e874-275a-4534-9337-ff2a969d4808")
+		(property "Reference" "D119"
+			(at 51.054 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 48.26 182.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 48.26 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 48.26 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 48.26 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 48.26 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "362f0866-096d-400b-8eae-da4b40eb09cf")
+		)
+		(pin "2"
+			(uuid "943eb9ad-2478-4a0b-9fd8-3b15c54e9935")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D119")
 					(unit 1)
 				)
 			)
@@ -8022,7 +9377,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "347642d3-6a7b-4d9f-81ec-cb1de73f7c14")
-		(property "Reference" "R208"
+		(property "Reference" "R1"
 			(at 29.972 32.004 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8084,7 +9439,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R208")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -8101,7 +9456,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "353f27d2-8b53-4895-9d52-a998639976f1")
-		(property "Reference" "SW277"
+		(property "Reference" "SW7"
 			(at 62.23 201.676 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8121,7 +9476,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 58.42 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -8161,7 +9516,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW277")
+					(reference "SW7")
 					(unit 1)
 				)
 			)
@@ -8169,7 +9524,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 44.45 181.61 90)
+		(at 34.29 181.61 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8179,8 +9534,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "354de7cb-c0d8-401d-b558-0dbb3959e758")
-		(property "Reference" "R236"
-			(at 44.45 175.26 90)
+		(property "Reference" "R5"
+			(at 34.29 175.26 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8190,7 +9545,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 44.45 177.8 90)
+			(at 34.29 177.8 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8200,7 +9555,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 44.45 183.388 90)
+			(at 34.29 183.388 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8211,7 +9566,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 181.61 0)
+			(at 34.29 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8222,7 +9577,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 44.45 181.61 0)
+			(at 34.29 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8241,7 +9596,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R236")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -8258,7 +9613,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "36b26ee3-86a1-42c4-9ac2-33d00f62d0fc")
-		(property "Reference" "D269"
+		(property "Reference" "D1"
 			(at 63.5 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8278,7 +9633,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 66.04 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -8319,7 +9674,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D269")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -8337,7 +9692,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "38234c56-5d0c-4cf7-a6d9-9435b973414a")
-		(property "Reference" "#PWR0963"
+		(property "Reference" "#PWR029"
 			(at 259.08 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -8397,7 +9752,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0963")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -8416,7 +9771,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3983715e-637c-429b-b77f-dd7d9d6ee4a2")
-		(property "Reference" "#PWR0960"
+		(property "Reference" "#PWR043"
 			(at 351.79 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -8476,7 +9831,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0960")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -8493,7 +9848,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3acd389a-72aa-43cf-b6da-d6472ee07e54")
-		(property "Reference" "D289"
+		(property "Reference" "D29"
 			(at 134.62 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8513,7 +9868,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 137.16 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -8554,7 +9909,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D289")
+					(reference "D29")
 					(unit 1)
 				)
 			)
@@ -8562,7 +9917,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 68.58 149.86 180)
+		(at 68.58 139.7 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8570,10 +9925,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3d38a06b-8c79-48f5-be62-c3bbcd2d279a")
-		(property "Reference" "R240"
-			(at 71.12 148.5899 0)
+		(property "Reference" "R13"
+			(at 71.12 138.4299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8584,7 +9938,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 71.12 151.1299 0)
+			(at 61.976 139.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8595,7 +9949,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 70.358 149.86 90)
+			(at 70.358 139.7 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8606,7 +9960,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 149.86 0)
+			(at 68.58 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8617,7 +9971,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 68.58 149.86 0)
+			(at 68.58 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8636,7 +9990,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R240")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -8654,7 +10008,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3d626da8-6acb-42b0-99e2-0941c63801d6")
-		(property "Reference" "#PWR0923"
+		(property "Reference" "#PWR05"
 			(at 55.88 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -8714,7 +10068,108 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0923")
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 166.37 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3db1f283-3f26-4ebd-aee5-8f072f54ef68")
+		(property "Reference" "D117"
+			(at 166.37 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 166.37 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 166.37 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 166.37 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 166.37 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 166.37 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 166.37 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "187a8237-b884-4cec-bdd1-d1441e3fc5e9")
+		)
+		(pin "2"
+			(uuid "59a0dce0-0b8c-42a8-85ae-257e42af35ac")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D117")
 					(unit 1)
 				)
 			)
@@ -8731,7 +10186,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3f43b30e-1712-449c-9bb6-3ace7102b724")
-		(property "Reference" "D287"
+		(property "Reference" "D25"
 			(at 116.84 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8751,7 +10206,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 119.38 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -8792,7 +10247,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D287")
+					(reference "D25")
 					(unit 1)
 				)
 			)
@@ -8809,7 +10264,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3f663ed2-83f8-4678-bf45-23f0667ca0b4")
-		(property "Reference" "D290"
+		(property "Reference" "D31"
 			(at 134.62 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8829,7 +10284,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 137.16 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -8870,7 +10325,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D290")
+					(reference "D31")
 					(unit 1)
 				)
 			)
@@ -8888,7 +10343,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3fd3482b-8e8c-4f28-9cdd-f41bfabe572a")
-		(property "Reference" "#PWR0962"
+		(property "Reference" "#PWR037"
 			(at 274.32 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -8948,7 +10403,85 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0962")
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 232.41 227.33 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "40065f33-6bd6-465a-b2c4-83cf8a22772e")
+		(property "Reference" "#PWR0130"
+			(at 232.41 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 232.41 232.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 232.41 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 232.41 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 232.41 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9d9c6d35-f9d4-41be-9caa-146f3f5cb757")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0130")
 					(unit 1)
 				)
 			)
@@ -8965,7 +10498,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "412c6a2f-fe7a-497c-ad8d-8a004f3d504d")
-		(property "Reference" "SW294"
+		(property "Reference" "SW29"
 			(at 115.57 186.436 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8985,7 +10518,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 111.76 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -9025,7 +10558,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW294")
+					(reference "SW29")
 					(unit 1)
 				)
 			)
@@ -9043,7 +10576,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "455b62fd-54f2-4f16-9c3c-79252deee463")
-		(property "Reference" "J204"
+		(property "Reference" "J5"
 			(at 382.27 60.3249 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9065,7 +10598,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "EKR82-footprint:MJ-4PP-9_rev3"
 			(at 373.38 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -9098,6 +10631,28 @@
 				)
 			)
 		)
+		(property "Achat" "jack TRRS MJ-4PP-9 AliExpress"
+			(at 373.38 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://fr.aliexpress.com/item/33029465106.html"
+			(at 373.38 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "R1"
 			(uuid "1c1641ff-c2a5-44e6-93df-7f80856c0830")
 		)
@@ -9113,7 +10668,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "J204")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -9132,7 +10687,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4975318d-4cc0-4bb7-a380-a767d0e6a692")
-		(property "Reference" "#PWR0908"
+		(property "Reference" "#PWR045"
 			(at 351.79 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -9192,7 +10747,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0908")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -9210,7 +10765,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "49e6f8f9-805a-4274-89b4-d454df861421")
-		(property "Reference" "U210"
+		(property "Reference" "U11"
 			(at 354.33 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9263,6 +10818,28 @@
 				)
 			)
 		)
+		(property "LCSC" "C141606"
+			(at 354.33 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C141606.html"
+			(at 354.33 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "c5a16498-5e36-47be-ae03-50974b530b01")
 		)
@@ -9284,7 +10861,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "U210")
+					(reference "U11")
 					(unit 1)
 				)
 			)
@@ -9301,7 +10878,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4cfd0c58-f703-46b8-ac25-2b557d623c69")
-		(property "Reference" "R214"
+		(property "Reference" "R38"
 			(at 231.394 71.374 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9363,7 +10940,86 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R214")
+					(reference "R38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad_MP")
+		(at 203.2 240.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4daf326c-8c6d-4e51-acee-d2571ce7893a")
+		(property "Reference" "H2"
+			(at 205.74 237.4899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad_MP"
+			(at 205.74 240.0299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
+			(at 203.2 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection as pad named MP"
+			(at 203.2 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "MP"
+			(uuid "0e9e3174-88ea-44e0-a9dc-e6be606731c7")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -9380,7 +11036,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4f6eb34c-720b-43f2-8a91-418d8aa45c49")
-		(property "Reference" "D278"
+		(property "Reference" "D12"
 			(at 81.28 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9400,7 +11056,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 83.82 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -9441,7 +11097,107 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D278")
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 54.61 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "51014b2d-520b-4362-88f2-6d1a9cffbba7")
+		(property "Reference" "D111"
+			(at 54.61 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 54.61 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 54.61 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 54.61 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 54.61 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 54.61 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6d088976-d672-4ce1-b18e-c440ffb16ecc")
+		)
+		(pin "2"
+			(uuid "bedd71ce-8cfc-4103-846c-9749dad1d458")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D111")
 					(unit 1)
 				)
 			)
@@ -9458,7 +11214,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5209160f-2b42-40bc-8a21-7c6f9100385e")
-		(property "Reference" "R209"
+		(property "Reference" "R15"
 			(at 77.47 46.99 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9520,15 +11276,15 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R209")
+					(reference "R15")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 50.8 149.86 180)
+		(lib_id "power:GND")
+		(at 48.26 219.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9536,32 +11292,30 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "54cca2b0-1a52-4fa9-909b-2f9492d216df")
-		(property "Reference" "R239"
-			(at 53.34 148.5899 0)
+		(uuid "53e037e1-a37d-45f0-9b49-cc224fae9a38")
+		(property "Reference" "#PWR0921"
+			(at 48.26 219.71 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "100R"
-			(at 53.34 151.1299 0)
+		(property "Value" "GND"
+			(at 48.26 223.012 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 52.578 149.86 90)
+		(property "Footprint" ""
+			(at 48.26 219.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9572,7 +11326,86 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 149.86 0)
+			(at 48.26 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 48.26 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0ef5e81d-6cd5-46ee-bd9d-4baf43cceb54")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0921")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 50.8 139.7 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "54cca2b0-1a52-4fa9-909b-2f9492d216df")
+		(property "Reference" "R12"
+			(at 53.34 138.4299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100R"
+			(at 53.34 140.9699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 52.578 139.7 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9583,7 +11416,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 50.8 149.86 0)
+			(at 50.8 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9602,7 +11435,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R239")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -9619,7 +11452,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5547c120-2683-417a-84df-ca1c5e75473d")
-		(property "Reference" "D286"
+		(property "Reference" "D23"
 			(at 116.84 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9639,7 +11472,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 119.38 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -9680,7 +11513,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D286")
+					(reference "D23")
 					(unit 1)
 				)
 			)
@@ -9698,7 +11531,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "56018eb8-8dd7-4c6a-be3e-4c010bd3da4e")
-		(property "Reference" "#PWR0909"
+		(property "Reference" "#PWR041"
 			(at 344.17 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -9758,7 +11591,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0909")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -9775,7 +11608,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "576eefd7-1702-43a2-8f86-0814492ab07a")
-		(property "Reference" "U208"
+		(property "Reference" "U7"
 			(at 255.27 66.0399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9832,6 +11665,17 @@
 				)
 			)
 		)
+		(property "Achat" "module nRF24L01+ AliExpress (2x4 pin)"
+			(at 245.11 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "12b4b503-6554-47dd-a942-a2e8d3100fac")
 		)
@@ -9859,7 +11703,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "U208")
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -9876,7 +11720,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5f69ea6d-04b9-447f-99e2-05b37add8324")
-		(property "Reference" "SW288"
+		(property "Reference" "SW18"
 			(at 97.79 155.956 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9896,7 +11740,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 93.98 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -9936,7 +11780,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW288")
+					(reference "SW18")
 					(unit 1)
 				)
 			)
@@ -9955,7 +11799,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "643c1a71-35e8-4b0c-9453-6afc46cddad8")
-		(property "Reference" "#PWR0919"
+		(property "Reference" "#PWR07"
 			(at 58.42 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -10015,7 +11859,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0919")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -10033,7 +11877,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64fa6519-8e0f-49a3-8a6d-eff4b163654d")
-		(property "Reference" "#PWR0925"
+		(property "Reference" "#PWR031"
 			(at 261.62 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -10093,7 +11937,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0925")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -10101,7 +11945,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 44.45 166.37 90)
+		(at 34.29 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10111,8 +11955,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6619445d-d617-4494-bc9d-5ee328457507")
-		(property "Reference" "R235"
-			(at 44.45 160.02 90)
+		(property "Reference" "R3"
+			(at 34.29 160.02 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10122,7 +11966,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 44.45 162.56 90)
+			(at 34.29 162.56 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10132,7 +11976,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 44.45 168.148 90)
+			(at 34.29 168.148 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10143,7 +11987,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 166.37 0)
+			(at 34.29 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10154,7 +11998,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 44.45 166.37 0)
+			(at 34.29 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10173,7 +12017,161 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R235")
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 48.26 189.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "697a7c3d-5951-4bf0-a53b-f408d7e6a1cb")
+		(property "Reference" "#PWR0919"
+			(at 48.26 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 192.786 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 48.26 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "99e0db16-acfc-4573-91fb-1631e1f2cdaf")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0919")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 48.26 173.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "69d4c3f4-5f1f-43e0-b262-efe04c6768c8")
+		(property "Reference" "#PWR0918"
+			(at 48.26 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 177.546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 48.26 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9fbd0ab7-c475-4299-918f-54f97343eadf")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0918")
 					(unit 1)
 				)
 			)
@@ -10190,7 +12188,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6f7e2c11-3682-4285-83d2-f318aa858c15")
-		(property "Reference" "SW302"
+		(property "Reference" "SW46"
 			(at 151.13 186.436 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10210,7 +12208,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 147.32 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -10250,7 +12248,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW302")
+					(reference "SW46")
 					(unit 1)
 				)
 			)
@@ -10268,7 +12266,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "708c84ed-9c77-406a-bf87-44ef205bc3ea")
-		(property "Reference" "#PWR0921"
+		(property "Reference" "#PWR026"
 			(at 245.11 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -10328,7 +12326,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0921")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -10345,7 +12343,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "708da9c8-a0aa-444b-ab7b-4423ed96654d")
-		(property "Reference" "SW284"
+		(property "Reference" "SW13"
 			(at 80.01 186.436 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10365,7 +12363,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 76.2 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -10405,7 +12403,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW284")
+					(reference "SW13")
 					(unit 1)
 				)
 			)
@@ -10422,7 +12420,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "70ab0710-ae85-4f8f-a732-f8e8aacda1dd")
-		(property "Reference" "C204"
+		(property "Reference" "C12"
 			(at 272.542 58.674 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10486,7 +12484,109 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "C204")
+					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 143.51 143.51 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "70d27a93-cbdc-4af8-b00c-d4945ab57c52")
+		(property "Reference" "D116"
+			(at 143.51 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 143.51 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 143.51 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 143.51 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 143.51 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 143.51 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 143.51 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8dce7709-177c-439c-9730-50bd7d089fbd")
+		)
+		(pin "2"
+			(uuid "946b8d75-d86a-446d-a40b-7bf9b6fdae65")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D116")
 					(unit 1)
 				)
 			)
@@ -10503,7 +12603,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "72f460f6-061e-45de-9d73-771123a3ee8b")
-		(property "Reference" "C203"
+		(property "Reference" "C7"
 			(at 261.874 58.674 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10567,7 +12667,85 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "C203")
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 203.2 242.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7330ccbf-d717-4af4-8ec6-a45ff2bf8d6a")
+		(property "Reference" "#PWR0129"
+			(at 203.2 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 203.2 247.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.2 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 203.2 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "885b1f42-0841-40dc-b476-1da26a56b631")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0129")
 					(unit 1)
 				)
 			)
@@ -10585,7 +12763,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "747de6b2-9fa7-4b5e-846f-52ab31d1008d")
-		(property "Reference" "R220"
+		(property "Reference" "R46"
 			(at 334.01 69.85 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10647,7 +12825,84 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R220")
+					(reference "R46")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 93.98 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "778c5805-95d2-427c-8fa9-a27e2e6acfad")
+		(property "Reference" "#PWR0913"
+			(at 93.98 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 93.98 150.876 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 93.98 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2d833cb2-4634-4717-b667-9a4023983d79")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0913")
 					(unit 1)
 				)
 			)
@@ -10664,7 +12919,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7795a249-6031-43af-9a9e-d0fa4edddff5")
-		(property "Reference" "SW300"
+		(property "Reference" "SW42"
 			(at 151.13 155.956 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10684,7 +12939,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 147.32 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -10724,7 +12979,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW300")
+					(reference "SW42")
 					(unit 1)
 				)
 			)
@@ -10741,7 +12996,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "79d7636a-c6aa-4254-8cb8-4f1371b7b034")
-		(property "Reference" "SW282"
+		(property "Reference" "SW9"
 			(at 80.01 155.956 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10761,7 +13016,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 76.2 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -10801,7 +13056,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW282")
+					(reference "SW9")
 					(unit 1)
 				)
 			)
@@ -10820,7 +13075,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7a6eaa82-9550-429e-a649-d93bb154b6d7")
-		(property "Reference" "#PWR0917"
+		(property "Reference" "#PWR02"
 			(at 24.13 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -10880,7 +13135,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0917")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -10897,7 +13152,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7c8bd632-aad8-46b8-8a54-50c061615d29")
-		(property "Reference" "SW290"
+		(property "Reference" "SW22"
 			(at 97.79 186.436 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10917,7 +13172,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 93.98 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -10957,7 +13212,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW290")
+					(reference "SW22")
 					(unit 1)
 				)
 			)
@@ -10974,7 +13229,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7ded6b78-3393-4d4a-8a98-34a845a0f4ab")
-		(property "Reference" "SW289"
+		(property "Reference" "SW20"
 			(at 97.79 171.196 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10994,7 +13249,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 93.98 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -11034,7 +13289,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW289")
+					(reference "SW20")
 					(unit 1)
 				)
 			)
@@ -11052,7 +13307,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7fd191c2-764d-43a5-ae76-c3b119d49ac1")
-		(property "Reference" "#PWR0961"
+		(property "Reference" "#PWR040"
 			(at 320.04 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -11112,7 +13367,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0961")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -11129,7 +13384,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "816c9e51-d797-4d93-a841-e5a1c6a36663")
-		(property "Reference" "R213"
+		(property "Reference" "R37"
 			(at 231.394 66.294 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11191,7 +13446,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R213")
+					(reference "R37")
 					(unit 1)
 				)
 			)
@@ -11209,7 +13464,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8363a3ba-bdbc-4e96-9efe-5046d144209b")
-		(property "Reference" "#PWR0903"
+		(property "Reference" "#PWR09"
 			(at 58.42 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -11269,7 +13524,108 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0903")
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 107.95 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "83835cb9-e705-44f2-9738-6e951cb24367")
+		(property "Reference" "D114"
+			(at 107.95 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 107.95 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 107.95 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 107.95 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 107.95 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 107.95 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 107.95 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e9cb8783-27d6-449e-9ed6-6529e0e0ac2d")
+		)
+		(pin "2"
+			(uuid "90aa775a-182b-4f76-8db5-6402d6206723")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D114")
 					(unit 1)
 				)
 			)
@@ -11286,7 +13642,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8b853877-910c-40ab-b338-f77b9e6ccc4b")
-		(property "Reference" "SW285"
+		(property "Reference" "SW16"
 			(at 80.01 201.676 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11306,7 +13662,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 76.2 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -11346,7 +13702,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW285")
+					(reference "SW16")
 					(unit 1)
 				)
 			)
@@ -11363,7 +13719,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8cc24829-3ac4-40d1-a466-d230fa8fb71a")
-		(property "Reference" "SW274"
+		(property "Reference" "SW2"
 			(at 62.23 155.956 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11383,7 +13739,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 58.42 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -11423,7 +13779,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW274")
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -11440,7 +13796,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8d79d798-ecb5-4462-bdc3-ce21796a8927")
-		(property "Reference" "SW275"
+		(property "Reference" "SW4"
 			(at 62.23 171.196 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11460,7 +13816,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 58.42 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -11500,7 +13856,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW275")
+					(reference "SW4")
 					(unit 1)
 				)
 			)
@@ -11517,7 +13873,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "95eb28cc-c03a-4b7b-b008-f55417b088d3")
-		(property "Reference" "D293"
+		(property "Reference" "D37"
 			(at 152.4 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11537,7 +13893,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 154.94 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -11578,7 +13934,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D293")
+					(reference "D37")
 					(unit 1)
 				)
 			)
@@ -11595,7 +13951,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "97e47b6a-3437-45bd-b079-4efc21d612e9")
-		(property "Reference" "D295"
+		(property "Reference" "D42"
 			(at 152.4 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11615,7 +13971,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 154.94 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -11656,7 +14012,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D295")
+					(reference "D42")
 					(unit 1)
 				)
 			)
@@ -11673,7 +14029,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9fbe1407-853f-4447-b670-2db08befec18")
-		(property "Reference" "U214"
+		(property "Reference" "U4"
 			(at 99.06 208.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11693,7 +14049,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 101.6 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -11734,7 +14090,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "U214")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -11751,7 +14107,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a1cd6dce-d78d-4bdf-8526-4a442e8a2872")
-		(property "Reference" "SW291"
+		(property "Reference" "SW23"
 			(at 97.79 201.676 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11771,7 +14127,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 93.98 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -11811,7 +14167,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW291")
+					(reference "SW23")
 					(unit 1)
 				)
 			)
@@ -11829,7 +14185,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a29bca11-809b-41b0-ad15-a1f4633c4fa6")
-		(property "Reference" "J207"
+		(property "Reference" "J4"
 			(at 249.555 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11900,7 +14256,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "J207")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -11917,7 +14273,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a6234aa4-3399-4c20-9718-de702eb70ef5")
-		(property "Reference" "D292"
+		(property "Reference" "D35"
 			(at 134.62 208.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11937,7 +14293,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 137.16 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -11978,7 +14334,86 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D292")
+					(reference "D35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad_MP")
+		(at 203.2 224.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7bf403d-73cc-4e37-a6be-7631c5138292")
+		(property "Reference" "H1"
+			(at 205.74 222.2499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad_MP"
+			(at 205.74 224.7899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
+			(at 203.2 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection as pad named MP"
+			(at 203.2 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "MP"
+			(uuid "aeec5711-13ff-4b96-b9fd-0396d7d77889")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -11995,7 +14430,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aa644c56-d09c-487d-9c2a-f3e982412df5")
-		(property "Reference" "D279"
+		(property "Reference" "D14"
 			(at 81.28 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12015,7 +14450,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 83.82 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -12056,7 +14491,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D279")
+					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -12073,7 +14508,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ab24d314-fd22-4087-b982-25bb9bffdf43")
-		(property "Reference" "SW301"
+		(property "Reference" "SW44"
 			(at 151.13 171.196 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12093,7 +14528,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 147.32 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -12133,7 +14568,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW301")
+					(reference "SW44")
 					(unit 1)
 				)
 			)
@@ -12150,7 +14585,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ae5b419f-9886-4469-a61e-17d5e59a21db")
-		(property "Reference" "SW299"
+		(property "Reference" "SW39"
 			(at 133.35 201.676 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12170,7 +14605,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 129.54 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -12210,7 +14645,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW299")
+					(reference "SW39")
 					(unit 1)
 				)
 			)
@@ -12227,7 +14662,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b0a0b7b1-fb9b-4cce-8e4a-ab4bb3bafb73")
-		(property "Reference" "SW298"
+		(property "Reference" "SW37"
 			(at 133.35 186.436 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12247,7 +14682,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 129.54 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -12287,7 +14722,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW298")
+					(reference "SW37")
 					(unit 1)
 				)
 			)
@@ -12304,7 +14739,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b17e0087-eafe-43cd-a76b-e18c0bbe398c")
-		(property "Reference" "C205"
+		(property "Reference" "C10"
 			(at 271.272 146.304 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12368,7 +14803,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "C205")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -12385,7 +14820,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b1b8539c-eef1-4a38-bd19-f8de68d0d821")
-		(property "Reference" "R212"
+		(property "Reference" "R33"
 			(at 202.438 49.784 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12447,7 +14882,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R212")
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -12455,7 +14890,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 44.45 196.85 90)
+		(at 34.29 196.85 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12465,8 +14900,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b62b9e0e-0334-4a04-b2ad-e0455b1cc90e")
-		(property "Reference" "R237"
-			(at 44.45 190.5 90)
+		(property "Reference" "R8"
+			(at 34.29 190.5 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12476,7 +14911,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 44.45 193.04 90)
+			(at 34.29 193.04 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12486,7 +14921,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 44.45 198.628 90)
+			(at 34.29 198.628 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12497,7 +14932,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 196.85 0)
+			(at 34.29 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12508,7 +14943,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 44.45 196.85 0)
+			(at 34.29 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12527,7 +14962,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R237")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -12544,7 +14979,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b6769f6a-a9b2-4f5a-81d5-38d8fbf42f4b")
-		(property "Reference" "D294"
+		(property "Reference" "D39"
 			(at 152.4 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12564,7 +14999,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 154.94 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -12605,7 +15040,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D294")
+					(reference "D39")
 					(unit 1)
 				)
 			)
@@ -12613,7 +15048,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 121.92 149.86 180)
+		(at 121.92 139.7 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12621,10 +15056,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b791e8bb-c291-4f42-9c3f-4c16ae873ee6")
-		(property "Reference" "R243"
-			(at 124.46 148.5899 0)
+		(property "Reference" "R24"
+			(at 124.46 138.4299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12635,7 +15069,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 124.46 151.1299 0)
+			(at 115.57 139.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12646,7 +15080,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 123.698 149.86 90)
+			(at 123.698 139.7 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12657,7 +15091,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 149.86 0)
+			(at 121.92 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12668,7 +15102,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 121.92 149.86 0)
+			(at 121.92 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12687,7 +15121,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R243")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -12704,7 +15138,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bebc9fb9-67e2-4b40-843d-df2111c3909f")
-		(property "Reference" "R215"
+		(property "Reference" "R40"
 			(at 231.648 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12766,7 +15200,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R215")
+					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -12783,7 +15217,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bfa72369-46de-4008-b51e-a5774ab67418")
-		(property "Reference" "SW295"
+		(property "Reference" "SW32"
 			(at 115.57 201.676 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12803,7 +15237,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 111.76 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -12843,7 +15277,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW295")
+					(reference "SW32")
 					(unit 1)
 				)
 			)
@@ -12860,7 +15294,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c2966e1a-0b10-4a31-8ab0-7acf8a72ec3d")
-		(property "Reference" "D297"
+		(property "Reference" "D45"
 			(at 175.26 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12880,7 +15314,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 177.8 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -12921,7 +15355,163 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D297")
+					(reference "D45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad_MP")
+		(at 232.41 240.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5c5b78f-afb2-451e-b0e8-3c16eaa9917b")
+		(property "Reference" "H4"
+			(at 234.95 237.4899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad_MP"
+			(at 234.95 240.0299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
+			(at 232.41 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 232.41 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection as pad named MP"
+			(at 232.41 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "MP"
+			(uuid "958816b0-4dce-4478-9710-89fee08a4a12")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 76.2 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c64628ec-1931-49c9-9572-bf62d14293e6")
+		(property "Reference" "#PWR0912"
+			(at 76.2 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 76.2 150.876 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.2 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 76.2 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "87e80eb5-e63b-46c5-8d29-682f1ec4cada")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0912")
 					(unit 1)
 				)
 			)
@@ -12939,7 +15529,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c70e695d-1c3f-4a5d-9816-928767712d29")
-		(property "Reference" "J202"
+		(property "Reference" "J2"
 			(at 44.45 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13013,7 +15603,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "J202")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -13030,7 +15620,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c818fe34-78ac-492f-97e6-0da98e03ab04")
-		(property "Reference" "D277"
+		(property "Reference" "D10"
 			(at 81.28 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13050,7 +15640,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 83.82 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -13091,7 +15681,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D277")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -13108,7 +15698,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c81ff8a4-adc1-40ec-a7ab-5d790c0271af")
-		(property "Reference" "D283"
+		(property "Reference" "D17"
 			(at 99.06 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13128,7 +15718,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 101.6 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -13169,7 +15759,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D283")
+					(reference "D17")
 					(unit 1)
 				)
 			)
@@ -13187,7 +15777,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c90a1336-cabc-4fca-a79d-632ce66383d3")
-		(property "Reference" "#PWR0959"
+		(property "Reference" "#PWR050"
 			(at 368.3 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -13247,7 +15837,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0959")
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -13264,7 +15854,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c9268903-c1f8-4b3f-8889-bc26948eb6a3")
-		(property "Reference" "SW296"
+		(property "Reference" "SW34"
 			(at 133.35 155.956 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13284,7 +15874,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 129.54 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -13324,7 +15914,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW296")
+					(reference "SW34")
 					(unit 1)
 				)
 			)
@@ -13341,7 +15931,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c96e28d4-82f7-4677-94b1-c7c5948e70ea")
-		(property "Reference" "D284"
+		(property "Reference" "D19"
 			(at 99.06 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13361,7 +15951,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 101.6 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -13402,7 +15992,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D284")
+					(reference "D19")
 					(unit 1)
 				)
 			)
@@ -13420,7 +16010,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ca73af09-1f5d-43cd-bbf0-f1297d094d52")
-		(property "Reference" "#PWR0964"
+		(property "Reference" "#PWR034"
 			(at 270.51 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -13480,7 +16070,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0964")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -13497,7 +16087,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cba7dd03-d986-4ba6-973d-45b9747fc309")
-		(property "Reference" "SW305"
+		(property "Reference" "SW51"
 			(at 173.99 171.196 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13517,7 +16107,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 170.18 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -13557,7 +16147,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW305")
+					(reference "SW51")
 					(unit 1)
 				)
 			)
@@ -13575,7 +16165,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cde0cc0f-3f24-40a4-9666-a35d053b9805")
-		(property "Reference" "#PWR0952"
+		(property "Reference" "#PWR048"
 			(at 354.33 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -13635,7 +16225,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0952")
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -13654,7 +16244,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ce2c30f8-e723-4766-aa77-9b6fdd3aa1e8")
-		(property "Reference" "U209"
+		(property "Reference" "U10"
 			(at 348.6719 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13709,6 +16299,39 @@
 				)
 			)
 		)
+		(property "LCSC" "C13612"
+			(at 351.79 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C13612.html"
+			(at 351.79 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note achat" "alt. budget Leiditech C384887"
+			(at 351.79 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "8962d3d8-1e50-45d9-8b1b-ff313173fdfe")
 		)
@@ -13730,7 +16353,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "U209")
+					(reference "U10")
 					(unit 1)
 				)
 			)
@@ -13748,7 +16371,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf8b08e2-a5b5-40e1-b638-828e4634d542")
-		(property "Reference" "#PWR0914"
+		(property "Reference" "#PWR027"
 			(at 245.11 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -13808,7 +16431,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0914")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -13825,7 +16448,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cf9c1f5b-bb3c-481c-b9d5-3bc027426946")
-		(property "Reference" "C201"
+		(property "Reference" "C2"
 			(at 45.974 39.116 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13889,7 +16512,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "C201")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -13897,7 +16520,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 139.7 149.86 180)
+		(at 139.7 139.7 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13905,10 +16528,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d2e899a0-b81f-4d72-a115-a19cf00a15fb")
-		(property "Reference" "R244"
-			(at 142.24 148.5899 0)
+		(property "Reference" "R26"
+			(at 142.24 138.4299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13919,7 +16541,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 142.24 151.1299 0)
+			(at 133.35 139.954 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13930,7 +16552,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 141.478 149.86 90)
+			(at 141.478 139.7 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13941,7 +16563,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 149.86 0)
+			(at 139.7 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13952,7 +16574,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 139.7 149.86 0)
+			(at 139.7 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13971,7 +16593,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R244")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -13988,7 +16610,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d5a51def-010f-40fd-b15c-90ba8be4cbdb")
-		(property "Reference" "SW276"
+		(property "Reference" "SW6"
 			(at 62.23 186.436 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14008,7 +16630,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 58.42 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -14048,7 +16670,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW276")
+					(reference "SW6")
 					(unit 1)
 				)
 			)
@@ -14065,7 +16687,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d7bab636-7037-4c7c-b1b7-16087722ef40")
-		(property "Reference" "R211"
+		(property "Reference" "R31"
 			(at 185.928 92.964 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14127,7 +16749,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R211")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -14144,7 +16766,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d9032dd4-28d1-41a2-879b-4d3a6a3e4439")
-		(property "Reference" "SW304"
+		(property "Reference" "SW50"
 			(at 173.99 155.956 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14164,7 +16786,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 170.18 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -14204,7 +16826,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW304")
+					(reference "SW50")
 					(unit 1)
 				)
 			)
@@ -14212,7 +16834,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 44.45 212.09 90)
+		(at 34.29 212.09 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14222,8 +16844,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dbacc454-29b6-44ea-8e00-6f517ae2ed4a")
-		(property "Reference" "R238"
-			(at 44.45 205.74 90)
+		(property "Reference" "R10"
+			(at 34.29 205.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14233,7 +16855,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 44.45 208.28 90)
+			(at 34.29 208.28 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14243,7 +16865,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 44.45 213.868 90)
+			(at 34.29 213.868 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14254,7 +16876,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 212.09 0)
+			(at 34.29 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14265,7 +16887,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 44.45 212.09 0)
+			(at 34.29 212.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14284,7 +16906,84 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R238")
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 170.18 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dbdad6a8-45cd-4988-ae1b-fe98ee7d0f91")
+		(property "Reference" "#PWR0917"
+			(at 170.18 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 170.18 150.876 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 170.18 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "abbc5011-cbdb-4fbb-b406-070fdbfb267e")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0917")
 					(unit 1)
 				)
 			)
@@ -14301,7 +17000,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e0016269-ab46-4999-b928-5768ab4ca608")
-		(property "Reference" "D270"
+		(property "Reference" "D4"
 			(at 63.5 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14321,7 +17020,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 66.04 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -14362,7 +17061,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D270")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -14370,7 +17069,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 104.14 149.86 180)
+		(at 104.14 139.7 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14378,10 +17077,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "e1fa6b16-8b76-4aae-a6c1-d3d482f5acba")
-		(property "Reference" "R242"
-			(at 106.68 148.5899 0)
+		(property "Reference" "R22"
+			(at 106.68 138.4299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14392,7 +17090,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 106.68 151.1299 0)
+			(at 98.044 139.954 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14403,7 +17101,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 105.918 149.86 90)
+			(at 105.918 139.7 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14414,7 +17112,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 149.86 0)
+			(at 104.14 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14425,7 +17123,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 104.14 149.86 0)
+			(at 104.14 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14444,7 +17142,311 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R242")
+					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 48.26 200.66 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e5e74b12-8afd-4ad0-865e-c5c17e023655")
+		(property "Reference" "D120"
+			(at 51.054 200.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 48.26 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 48.26 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 48.26 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 200.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 48.26 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 48.26 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "61563f18-c666-46f2-92e0-a0048f575c21")
+		)
+		(pin "2"
+			(uuid "a4fa2c88-b7c2-4f97-b634-65ca4202c0e9")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D120")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 90.17 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e77d8c1c-9378-4d84-93f5-3e6bc5f7a914")
+		(property "Reference" "D113"
+			(at 90.17 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 90.17 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 90.17 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 90.17 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 90.17 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 90.17 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "64922fa1-5d8c-4ecb-a428-0a42496c63a5")
+		)
+		(pin "2"
+			(uuid "757d385b-5955-47f2-839e-533880eea83b")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 48.26 215.9 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e930f1d5-812e-424f-b7e3-d5c492b5c620")
+		(property "Reference" "D121"
+			(at 45.72 215.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 48.26 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 48.26 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 48.26 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 215.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 48.26 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 48.26 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bee35a5a-7c3c-4411-8600-ee64303220ca")
+		)
+		(pin "2"
+			(uuid "13db0707-d263-4c73-9de8-7f2565ae11d2")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D121")
 					(unit 1)
 				)
 			)
@@ -14462,7 +17464,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ecf2c392-f769-4526-a773-7f0b30bdb8cc")
-		(property "Reference" "#PWR0901"
+		(property "Reference" "#PWR015"
 			(at 127 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -14522,7 +17524,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0901")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -14539,7 +17541,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ee27d97a-5ab4-40ee-ab43-8691023594e2")
-		(property "Reference" "D291"
+		(property "Reference" "D34"
 			(at 134.62 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14559,7 +17561,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 137.16 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -14600,7 +17602,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D291")
+					(reference "D34")
 					(unit 1)
 				)
 			)
@@ -14617,7 +17619,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "efeaa545-e947-406a-8578-99a271ef5d45")
-		(property "Reference" "D296"
+		(property "Reference" "D44"
 			(at 152.4 208.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14637,7 +17639,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 154.94 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -14678,7 +17680,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D296")
+					(reference "D44")
 					(unit 1)
 				)
 			)
@@ -14696,7 +17698,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f029a32d-794b-427e-94d8-de8b87807214")
-		(property "Reference" "R222"
+		(property "Reference" "R43"
 			(at 327.66 33.02 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14758,7 +17760,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R222")
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -14766,7 +17768,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 162.56 149.86 180)
+		(at 162.56 139.7 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14774,10 +17776,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f2c29029-f5bd-4fe3-ba1e-1b6fb9b07e8e")
-		(property "Reference" "R245"
-			(at 165.1 148.5899 0)
+		(property "Reference" "R28"
+			(at 165.1 138.4299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14788,7 +17789,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 165.1 151.1299 0)
+			(at 155.702 139.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14799,7 +17800,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 164.338 149.86 90)
+			(at 164.338 139.7 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14810,7 +17811,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 149.86 0)
+			(at 162.56 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14821,7 +17822,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 162.56 149.86 0)
+			(at 162.56 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14840,7 +17841,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "R245")
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -14857,7 +17858,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f339a88d-fb16-4bfb-8257-55cf0ffac7a3")
-		(property "Reference" "SW297"
+		(property "Reference" "SW36"
 			(at 133.35 171.196 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14877,7 +17878,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 129.54 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -14917,7 +17918,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW297")
+					(reference "SW36")
 					(unit 1)
 				)
 			)
@@ -14934,7 +17935,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f498a559-38f4-45ad-9452-a449167238a7")
-		(property "Reference" "C202"
+		(property "Reference" "C4"
 			(at 52.832 39.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14998,7 +17999,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "C202")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -15017,7 +18018,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f5d0527c-6280-4ce7-8dc4-ef4f61d062a6")
-		(property "Reference" "#PWR0920"
+		(property "Reference" "#PWR014"
 			(at 127 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -15077,7 +18078,84 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#PWR0920")
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 147.32 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f70400b8-9dff-40d3-8e17-0ca460bd6000")
+		(property "Reference" "#PWR0916"
+			(at 147.32 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 147.32 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 147.32 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5831f388-1174-4d99-bb94-2346d46b68d4")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "#PWR0916")
 					(unit 1)
 				)
 			)
@@ -15094,7 +18172,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f98dc778-80cd-4619-89d7-17e10e93c7bb")
-		(property "Reference" "D285"
+		(property "Reference" "D22"
 			(at 116.84 162.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15114,7 +18192,7 @@
 				)
 			)
 		)
-		(property "Footprint" "EKR82-footprint:Diode_TH_SOD123EKR"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 119.38 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -15155,7 +18233,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "D285")
+					(reference "D22")
 					(unit 1)
 				)
 			)
@@ -15172,7 +18250,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fa4f9fca-3b5d-4b3f-b964-87cb8531b318")
-		(property "Reference" "SW293"
+		(property "Reference" "SW28"
 			(at 115.57 171.196 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15192,7 +18270,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 111.76 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -15232,7 +18310,109 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW293")
+					(reference "SW28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SD05C-01F")
+		(at 48.26 170.18 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fa64f97b-8162-4b16-a403-fc99cbedef4b")
+		(property "Reference" "D118"
+			(at 45.72 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SD05C-01F"
+			(at 48.26 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 48.26 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/products/overvoltage-protection/tvs-diode-arrays/general-purpose/sdc/sd05c-01ftg"
+			(at 48.26 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2827707"
+			(at 48.26 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Lien" "https://lcsc.com/product-detail/C2827707.html"
+			(at 48.26 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d7ae9800-26b9-4eeb-a5b5-f454913c45f4")
+		)
+		(pin "2"
+			(uuid "5c40be67-84e6-4200-917f-03041c861478")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
+					(reference "D118")
 					(unit 1)
 				)
 			)
@@ -15249,7 +18429,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fcba5b41-226e-49fc-bfaa-44487ef93061")
-		(property "Reference" "SW303"
+		(property "Reference" "SW48"
 			(at 151.13 201.676 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15269,7 +18449,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PMW3360:SW_Hotswap_Kailh_Choc_V1V2_1.00u"
+		(property "Footprint" "key:SW_Cherry_MX_1.00u_PCB"
 			(at 147.32 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -15309,44 +18489,7 @@
 		(instances
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "SW303")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 344.17 29.21 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "95a697c6-721b-42e5-a4cd-4766dfb464f7")
-		(property "Reference" "#FLG0990"
-			(at 346.71000000000004 29.21 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "Value" "PWR_FLAG"
-			(at 346.71000000000004 31.75 0)
-			(effects (font (size 1.27 1.27)))
-		)
-		(property "Footprint" ""
-			(at 344.17 29.21 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(property "Datasheet" ""
-			(at 344.17 29.21 0)
-			(effects (font (size 1.27 1.27)) (hide yes))
-		)
-		(pin "1"
-			(uuid "743ea15a-2e30-4fb6-bcbd-04091dcd4fff")
-		)
-		(instances
-			(project "niphar"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/1eb67f2e-2bb4-4787-b00e-c8cc7b8b84ca"
-					(reference "#FLG0990")
+					(reference "SW48")
 					(unit 1)
 				)
 			)
