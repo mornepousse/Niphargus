@@ -22,3 +22,6 @@ fp-info-cache
 
 # Claude Code — fichiers temporaires
 .claude/*.tmp.*
+
+# cache du plugin kicad-jlcpcb-tools
+rili/pcb/jlcpcb/
