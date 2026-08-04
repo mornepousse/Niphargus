@@ -6,6 +6,14 @@ Stratégie (2026-08-04) : **TME d'abord** (réductions de Mae) via `commande-tme
 AO3407, MSK-12C02) + l'USB-C HRO verrouillé par l'empreinte. Quantités = commande pour
 2 builds ; `Qty per board` = besoin réel d'un clavier.
 
+MàJ 2026-08-04 : liens TME remplacés par les VRAIES pages produit (vérifiées une à une
+par recherche web — l'URL de recherche `?search=` ne marche pas). Les CONDENSATEURS
+Samsung CL sont retournés au CSV LCSC : chez TME toute la série NNNC est en fin de vie
+(« hardly available », remplaçants NNND, deux réfs retirées). Résistances 1M et 100k en
+0805 : série W absente de TME → série S équivalente (0805S8F...). microSD : ligne TME
+= Hirose DM3AT-SF-PEJM5(40) — suppose le changement d'empreinte (option A, patch p4 à
+demander) ; sinon option B = Würth 693072010801 chez Farnell/RS.
+
 Substitutions faites pour TME : AMS1117-3.3 → **LD1117S33TR** (ST, même boîtier/pinout,
 mettre à jour la Value du symbole U17 un jour) ; SD05C-01FTG → **SD05C.TCT** (Semtech,
 même fonction/boîtier). Le trackpad Azoteq existe aussi chez LCSC (C7073363, ~7 $) mais
