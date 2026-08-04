@@ -19,7 +19,14 @@ mettre à jour la Value du symbole U17 un jour) ; SD05C-01FTG → **SD05C.TCT** 
 même fonction/boîtier). Le trackpad Azoteq existe aussi chez LCSC (C7073363, ~7 $) mais
 était en rupture au 2026-08-04 — keycapsss reste le plan A (nappe incluse).
 
-## ⚠️ Décision antenne AVANT de commander la ligne WROOM
+## ✅ RÉGLÉ (2026-08-04) : modules ESP32 et microSD déjà en stock chez Mae
+
+Les WROOM (empreinte 1U posée = son matériel) et le connecteur microSD Würth
+693072010801 sont dans ses tiroirs — lignes retirées des commandes, empreintes
+de la carte conformes au matériel réel. (Si les modules sont des 1U : penser
+aux antennes u.FL si pas déjà en stock.)
+
+## (archive) ~~Décision antenne AVANT de commander la ligne WROOM~~
 
 L'empreinte posée sur la carte est la **WROOM-1U** (antenne externe u.FL — cohérent avec
 le décrochement de contour fait le 03/08 ?).

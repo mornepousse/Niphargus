@@ -1,10 +1,8 @@
 Symbol,Quantity,Description,Package,Qty per board,Notes,Link
-ESP32-S3-WROOM-1-N8R2,5,Module Espressif WiFi/BT antenne PCB,Module,2,le 1U (antenne ext.) est PAS en stock TME - point pour l'antenne integree,https://www.tme.eu/en/details/esp32s3-wrm1-8r2/iot-wifi-bluetooth-modules/espressif/esp32-s3-wroom-1-n8r2/
 SD05C.TCT,50,TVS bidir 5V Semtech,SOD-323,22,equivalent du SD05C-01FTG,https://www.tme.eu/en/details/sd05c.tct/bidirectional-smd-transil-diodes/semtech/
 SRV05-4.TCT,5,TVS array Semtech,SOT-23-6,2,,https://www.tme.eu/en/details/srv05-4.tct/protection-diodes-arrays/semtech/
 USBLC6-2SC6,5,ESD USB ST,SOT-23-6,2,~216k en stock,https://www.tme.eu/en/details/usblc6-2sc6/protection-diodes-arrays/stmicroelectronics/
 FH12-6S-0.5SH(55),3,ZIF Hirose 6P 0.5mm contacts bas,SMD,1,trackpad,https://www.tme.eu/en/details/fh12-6s-0.5sh-55/connectors-ffc-fpc-0-5mm/hirose/fh12-6s-0-5sh-55/
-DM3AT-SF-PEJM5(40),2,microSD Hirose push-push,SMD,1,remplace la Wurth (absente TME) - NECESSITE le changement d'empreinte p4 (option A) sinon Wurth via Farnell,https://www.tme.eu/en/details/dm3at-sf-pejm5-40/card-connectors/hirose/dm3at-sf-pejm5-40/
 LD1117S33TR,3,LDO 3.3V ST,SOT-223,1,remplacant direct AMS1117-3.3 (meme pinout SOT-223),https://www.tme.com/us/en-us/details/ld1117s33tr/ldo-fixed-voltage-regulators/stmicroelectronics/
 SIP32431DR3-T1GE3,5,Load switch Vishay,SC-70-6,2,,https://www.tme.com/us/en-us/details/sip32431dr3-t1ge3/power-switches-integrated-circuits/vishay/
 MCP1700T-3302E/TT,5,LDO 3.3V 250mA Microchip,SOT-23,2,,https://www.tme.eu/en/details/mcp1700t-3302e_tt/ldo-fixed-voltage-regulators/microchip-technology/
