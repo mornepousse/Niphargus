@@ -1,8 +1,8 @@
-LCSC Part Number,Quantity,Description,Package,Qty per board,Notes
-C4154405,3,CH334R hub USB 2.0,QSOP-16,1,WCH - introuvable hors Chine
-C16581,5,TP4056-42-ESOP8,ESOP-8,2,
-C351410,5,DW01A,SOT-23-6,2,
-C32254,5,FS8205,SOT-23-6,2,
-C351408,5,AO3407,SOT-23,2,
-C431540,5,MSK-12C02,SMD,2,SHOU HAN
-C165948,5,USB-C TYPE-C-31-M-12 16P,SMD,2,HRO - VERROUILLE par l'empreinte de la carte
+LCSC Part Number,Quantity,Description,Package,Qty per board,Notes,Link
+C4154405,3,CH334R hub USB 2.0,QSOP-16,1,WCH - introuvable hors Chine,https://lcsc.com/product-detail/C4154405.html
+C16581,5,TP4056-42-ESOP8,ESOP-8,2,,https://lcsc.com/product-detail/C16581.html
+C351410,5,DW01A,SOT-23-6,2,,https://lcsc.com/product-detail/C351410.html
+C32254,5,FS8205,SOT-23-6,2,,https://lcsc.com/product-detail/C32254.html
+C351408,5,AO3407,SOT-23,2,,https://lcsc.com/product-detail/C351408.html
+C431540,5,MSK-12C02,SMD,2,SHOU HAN,https://lcsc.com/product-detail/C431540.html
+C165948,5,USB-C TYPE-C-31-M-12 16P,SMD,2,HRO - VERROUILLE par l'empreinte de la carte,https://lcsc.com/product-detail/C165948.html

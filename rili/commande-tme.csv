@@ -1,28 +1,28 @@
-Symbol,Quantity,Description,Package,Qty per board,Notes
-ESP32-S3-WROOM-1-N8R2,5,Module Espressif WiFi/BT,Module,2,ou 1U-N8R2 si antenne externe - voir note antenne
-SD05C.TCT,50,TVS bidir 5V Semtech,SOD-323,22,equivalent du SD05C-01FTG
-SRV05-4.TCT,5,TVS array Semtech,SOT-23-6,2,
-USBLC6-2SC6,5,ESD USB ST,SOT-23-6,2,
-FH12-6S-0.5SH(55),3,ZIF Hirose 6P 0.5mm contacts bas,SMD,1,trackpad
-693072010801,2,microSD Wurth hinge,SMD,1,1 + rechange
-LD1117S33TR,3,LDO 3.3V ST,SOT-223,1,remplacant direct AMS1117-3.3 (meme pinout SOT-223)
-SIP32431DR3-T1GE3,5,Load switch Vishay,SC-70-6,2,
-MCP1700T-3302E/TT,5,LDO 3.3V 250mA Microchip,SOT-23,2,
-SS14,5,Schottky 1A 40V,SMA,2,generique multi-marques chez TME
-1N4148W,200,Diode matrice,SOD-123,52,
-1N4148W-133,0,alt Vishay si rupture,SOD-123,0,
-0603WAF1000T5E,200,100R 1% Royalohm,0603,40,
-0603WAF1002T5E,100,10k 1% Royalohm,0603,11,
-0603WAF5101T5E,100,5k1 1% Royalohm,0603,4,CC USB-C
-0603WAF4701T5E,100,4k7 1% Royalohm,0603,2,I2C trackpad
-0805W8F2401T5E,100,2k4 1% Royalohm,0805,2,PROG TP4056
-0805W8F1001T5E,100,1k 1% Royalohm,0805,4,
-0805W8F1004T5E,100,1M 1% Royalohm,0805,4,jauge VBAT_SENSE
-0603WAF1003T5E,100,100k 1% Royalohm,0603,4,
-0805W8F1003T5E,100,100k 1% Royalohm,0805,2,
-CL10B104KB8NNNC,200,100nF X7R 50V Samsung,0603,7,
-CL21B104KBCNNNC,100,100nF X7R 50V Samsung,0805,3,
-CL10A105KB8NNNC,200,1uF Samsung,0603,6,
-CL21A105KAFNNC,100,1uF Samsung,0805,7,
-CL31A106KAHNNNE,100,10uF X5R 25V Samsung,1206,4,ou equivalent Yageo si rupture
-CL21A226MAQNNNE,50,22uF X5R 25V Samsung,0805,1,a souder sur le pad 1206 (sortie AMS1117)
+Symbol,Quantity,Description,Package,Qty per board,Notes,Link
+ESP32-S3-WROOM-1-N8R2,5,Module Espressif WiFi/BT,Module,2,ou 1U-N8R2 si antenne externe - voir note antenne,https://www.tme.eu/fr/katalog/?search=ESP32-S3-WROOM-1-N8R2
+SD05C.TCT,50,TVS bidir 5V Semtech,SOD-323,22,equivalent du SD05C-01FTG,https://www.tme.eu/fr/katalog/?search=SD05C.TCT
+SRV05-4.TCT,5,TVS array Semtech,SOT-23-6,2,,https://www.tme.eu/fr/katalog/?search=SRV05-4.TCT
+USBLC6-2SC6,5,ESD USB ST,SOT-23-6,2,,https://www.tme.eu/fr/katalog/?search=USBLC6-2SC6
+FH12-6S-0.5SH(55),3,ZIF Hirose 6P 0.5mm contacts bas,SMD,1,trackpad,https://www.tme.eu/fr/katalog/?search=FH12-6S-0.5SH%2855%29
+693072010801,2,microSD Wurth hinge,SMD,1,1 + rechange,https://www.tme.eu/fr/katalog/?search=693072010801
+LD1117S33TR,3,LDO 3.3V ST,SOT-223,1,remplacant direct AMS1117-3.3 (meme pinout SOT-223),https://www.tme.eu/fr/katalog/?search=LD1117S33TR
+SIP32431DR3-T1GE3,5,Load switch Vishay,SC-70-6,2,,https://www.tme.eu/fr/katalog/?search=SIP32431DR3-T1GE3
+MCP1700T-3302E/TT,5,LDO 3.3V 250mA Microchip,SOT-23,2,,https://www.tme.eu/fr/katalog/?search=MCP1700T-3302E/TT
+SS14,5,Schottky 1A 40V,SMA,2,generique multi-marques chez TME,https://www.tme.eu/fr/katalog/?search=SS14
+1N4148W,200,Diode matrice,SOD-123,52,,https://www.tme.eu/fr/katalog/?search=1N4148W
+1N4148W-133,0,alt Vishay si rupture,SOD-123,0,,https://www.tme.eu/fr/katalog/?search=1N4148W-133
+0603WAF1000T5E,200,100R 1% Royalohm,0603,40,,https://www.tme.eu/fr/katalog/?search=0603WAF1000T5E
+0603WAF1002T5E,100,10k 1% Royalohm,0603,11,,https://www.tme.eu/fr/katalog/?search=0603WAF1002T5E
+0603WAF5101T5E,100,5k1 1% Royalohm,0603,4,CC USB-C,https://www.tme.eu/fr/katalog/?search=0603WAF5101T5E
+0603WAF4701T5E,100,4k7 1% Royalohm,0603,2,I2C trackpad,https://www.tme.eu/fr/katalog/?search=0603WAF4701T5E
+0805W8F2401T5E,100,2k4 1% Royalohm,0805,2,PROG TP4056,https://www.tme.eu/fr/katalog/?search=0805W8F2401T5E
+0805W8F1001T5E,100,1k 1% Royalohm,0805,4,,https://www.tme.eu/fr/katalog/?search=0805W8F1001T5E
+0805W8F1004T5E,100,1M 1% Royalohm,0805,4,jauge VBAT_SENSE,https://www.tme.eu/fr/katalog/?search=0805W8F1004T5E
+0603WAF1003T5E,100,100k 1% Royalohm,0603,4,,https://www.tme.eu/fr/katalog/?search=0603WAF1003T5E
+0805W8F1003T5E,100,100k 1% Royalohm,0805,2,,https://www.tme.eu/fr/katalog/?search=0805W8F1003T5E
+CL10B104KB8NNNC,200,100nF X7R 50V Samsung,0603,7,,https://www.tme.eu/fr/katalog/?search=CL10B104KB8NNNC
+CL21B104KBCNNNC,100,100nF X7R 50V Samsung,0805,3,,https://www.tme.eu/fr/katalog/?search=CL21B104KBCNNNC
+CL10A105KB8NNNC,200,1uF Samsung,0603,6,,https://www.tme.eu/fr/katalog/?search=CL10A105KB8NNNC
+CL21A105KAFNNC,100,1uF Samsung,0805,7,,https://www.tme.eu/fr/katalog/?search=CL21A105KAFNNC
+CL31A106KAHNNNE,100,10uF X5R 25V Samsung,1206,4,ou equivalent Yageo si rupture,https://www.tme.eu/fr/katalog/?search=CL31A106KAHNNNE
+CL21A226MAQNNNE,50,22uF X5R 25V Samsung,0805,1,a souder sur le pad 1206 (sortie AMS1117),https://www.tme.eu/fr/katalog/?search=CL21A226MAQNNNE
