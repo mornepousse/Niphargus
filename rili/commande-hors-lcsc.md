@@ -43,6 +43,9 @@ Couleur au goût : chercher « LED 0805 » chez LCSC et prendre une référence 
 
 ## Hors LCSC
 
+(Les lignes AliExpress sont désormais détaillées dans `commande-ali.csv` — colonne
+Statut : « à vérifier tiroir » pour ce que Mae possède peut-être déjà.)
+
 | Qté | Quoi | Où | Note |
 |---|---|---|---|
 | 2 | module nRF24L01+ (2×4 pin) | AliExpress | filière v1 (README) |
