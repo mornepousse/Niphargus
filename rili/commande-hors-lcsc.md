@@ -1,8 +1,15 @@
-# Niphargus v2 — notes de commande (compagnon de `commande-lcsc.csv`)
+# Niphargus v2 — notes de commande (compagnon des CSV)
 
-Généré du schéma le 2026-08-03 (commit c803b77). Le CSV voisin est prêt pour l'outil
-BOM de LCSC : colonnes `LCSC Part Number` + `Quantity` (quantité de COMMANDE, marges
-incluses pour 2 builds) ; `Qty per board` = besoin réel pour 1 clavier complet.
+Stratégie (2026-08-04) : **TME d'abord** (réductions de Mae) via `commande-tme.csv`
+(colonne `Symbol` = MPN fabricant, à coller dans la recherche ou l'import panier TME) ;
+`commande-lcsc.csv` ne garde que l'introuvable hors Chine (WCH, TP4056, DW01A, FS8205,
+AO3407, MSK-12C02) + l'USB-C HRO verrouillé par l'empreinte. Quantités = commande pour
+2 builds ; `Qty per board` = besoin réel d'un clavier.
+
+Substitutions faites pour TME : AMS1117-3.3 → **LD1117S33TR** (ST, même boîtier/pinout,
+mettre à jour la Value du symbole U17 un jour) ; SD05C-01FTG → **SD05C.TCT** (Semtech,
+même fonction/boîtier). Le trackpad Azoteq existe aussi chez LCSC (C7073363, ~7 $) mais
+était en rupture au 2026-08-04 — keycapsss reste le plan A (nappe incluse).
 
 ## ⚠️ Décision antenne AVANT de commander la ligne WROOM
 
