@@ -729,7 +729,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "${QUANTITY}"
+      "sort_field": "Value"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -784,7 +784,7 @@
         "uuid": "7138aad8-3c5f-41d0-9987-adc2f08f0576"
       }
     ],
-    "used_designators": "R1-73,JP1-2,U1-23,Q1-4,#PWR1-135,C1-28,D1-98,J1-12,SW1-105,G1-2,G7-12,P5-8,H1-8,H15-28,#FLG1-8",
+    "used_designators": "#FLG1-8,H1-8,H15-28,P5-8,G1-2,G7-12,SW1-105,J1-12,D1-98,C1-28,#PWR1-135,Q1-4,U1-23,JP1-2,R1-73",
     "variants": []
   },
   "sheets": [
