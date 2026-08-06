@@ -5,7 +5,7 @@ USBLC6-2SC6,5,ESD USB ST,SOT-23-6,2,~216k en stock,https://www.tme.eu/en/details
 FH12-6S-0.5SH(55),3,ZIF Hirose 6P 0.5mm contacts bas,SMD,1,trackpad,https://www.tme.eu/en/details/fh12-6s-0.5sh-55/connectors-ffc-fpc-0-5mm/hirose/fh12-6s-0-5sh-55/
 LD1117S33TR,3,LDO 3.3V ST,SOT-223,1,remplacant direct AMS1117-3.3 (meme pinout SOT-223),https://www.tme.com/us/en-us/details/ld1117s33tr/ldo-fixed-voltage-regulators/stmicroelectronics/
 SIP32431DR3-T1GE3,5,Load switch Vishay,SC-70-6,2,,https://www.tme.com/us/en-us/details/sip32431dr3-t1ge3/power-switches-integrated-circuits/vishay/
-MCP1700T-3302E/TT,5,LDO 3.3V 250mA Microchip,SOT-23,2,,https://www.tme.eu/en/details/mcp1700t-3302e_tt/ldo-fixed-voltage-regulators/microchip-technology/
+MCP1700T-3302E/MB,5,LDO 3.3V 250mA Microchip,SOT-89,2,"ATTENTION variante /MB (SOT-89) - la /TT (SOT-23) ne va PAS sur la carte",https://www.tme.eu/en/details/mcp1700t-3302e_mb/ldo-fixed-voltage-regulators/microchip-technology/
 SS14,5,Schottky 1A 40V onsemi,SMA,2,symbole TME SS14-FAI,https://www.tme.eu/en/details/ss14-fai/smd-schottky-diodes/onsemi/ss14/
 1N4148W,200,Diode matrice Lite-On,SOD-123,52,symbole TME 1N4148W-LIT,https://www.tme.eu/en/details/1n4148w-lit/smd-universal-diodes/diodes-lite-on-semiconductor/1n4148w/
 0603WAF1000T5E,200,100R 1% Royalohm,0603,40,,https://www.tme.eu/en/details/0603waf1000t5e/smd-resistors/royalohm/
