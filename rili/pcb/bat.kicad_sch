@@ -2979,6 +2979,12 @@
 		(uuid "6e7d92d0-cbec-4a1f-94eb-70a97cbfafcf")
 	)
 	(junction
+		(at 31.75 24.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "968ba3b9-fc3b-4b23-b5ca-554eb4239172")
+	)
+	(junction
 		(at 69.85 170.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3729,6 +3735,84 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+BATT")
+		(at 87.63 22.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0ace8d2b-6300-41ae-bda4-8bc26638860f")
+		(property "Reference" "#PWR0922"
+			(at 83.82 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+BATT"
+			(at 83.82 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
+			(at 83.82 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1252ffcd-d75f-41b0-ae71-3e5fc63279fb")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
+					(reference "#PWR0922")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -5055,7 +5139,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 31.75 24.13 0)
+		(at 31.75 24.13 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5065,7 +5149,7 @@
 		(dnp no)
 		(uuid "6d84015b-1df5-41c5-bba0-b4d3f5ed1fc5")
 		(property "Reference" "#FLG03"
-			(at 34.29 24.13 0)
+			(at 31.75 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5076,7 +5160,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 34.29 26.67 0)
+			(at 42.672 26.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7490,6 +7574,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 87.63 26.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f8c5a484-9804-4998-8899-8c043a5c4c0e")
+		(property "Reference" "C29"
+			(at 85.344 23.622 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF"
+			(at 91.948 26.416 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 99.06 49.8348 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 95.25 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "fc2f0f8b-7d10-48a4-870f-42114d594643")
+		)
+		(pin "1"
+			(uuid "343fa57a-b7bb-44f2-a5a8-33ffe18a6ad5")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
+					(reference "C29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+BATT")
 		(at 69.85 46.99 0)
 		(unit 1)
@@ -7754,6 +7917,84 @@
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
 					(reference "#PWR0103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 87.63 30.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd590da6-0b1f-45f7-a1c8-8f012526b146")
+		(property "Reference" "#PWR0923"
+			(at 95.25 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 95.25 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 95.25 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5ce1847f-c551-42c6-87df-29e7754ee72a")
+		)
+		(instances
+			(project "niphar"
+				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/d1dace0b-a9b6-45b3-8b77-6cc73528f4f2"
+					(reference "#PWR0923")
 					(unit 1)
 				)
 			)

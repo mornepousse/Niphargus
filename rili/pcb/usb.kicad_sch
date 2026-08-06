@@ -1866,145 +1866,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3.3V"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "+3.3V"
-				(at 0 3.556 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+3.3V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3.3V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+5V"
 			(power global)
 			(pin_numbers
@@ -2416,8 +2277,16 @@
 		(uuid "065a99b2-af1c-4e47-87fa-8e03176e3f08")
 	)
 	(no_connect
+		(at 57.15 148.59)
+		(uuid "358afcb7-1607-47f1-9e9c-eb4838944001")
+	)
+	(no_connect
 		(at 82.55 133.35)
 		(uuid "41c5c3c1-439b-4599-8a79-6807dd91cc68")
+	)
+	(no_connect
+		(at 57.15 153.67)
+		(uuid "54a14de2-362e-4485-8130-1d117cdb4360")
 	)
 	(no_connect
 		(at 82.55 130.81)
@@ -2456,26 +2325,6 @@
 			(type default)
 		)
 		(uuid "19f54ad2-6d86-415d-858c-967aaa4773e8")
-	)
-	(wire
-		(pts
-			(xy 44.45 148.59) (xy 44.45 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d69c883-122e-41c9-bb83-7b629781ab73")
-	)
-	(wire
-		(pts
-			(xy 45.72 153.67) (xy 38.1 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1df53bc3-59b9-4c0b-a215-1fb4c0cc5326")
 	)
 	(wire
 		(pts
@@ -2529,16 +2378,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 148.59) (xy 57.15 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "427a5fbc-19f5-455f-a558-ad0469a1562a")
-	)
-	(wire
-		(pts
 			(xy 49.53 116.84) (xy 57.15 116.84)
 		)
 		(stroke
@@ -2566,16 +2405,6 @@
 			(type default)
 		)
 		(uuid "5237772e-2cb5-49e0-a7ee-645f31047bf2")
-	)
-	(wire
-		(pts
-			(xy 53.34 153.67) (xy 57.15 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "537b0d65-cd11-4197-9fb9-8ba24ebdc60e")
 	)
 	(wire
 		(pts
@@ -2616,16 +2445,6 @@
 			(type default)
 		)
 		(uuid "657844e9-b21d-4cd0-9767-7a8e75be4082")
-	)
-	(wire
-		(pts
-			(xy 45.72 148.59) (xy 44.45 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67c909e1-1e15-41a2-b42b-c127665a6154")
 	)
 	(wire
 		(pts
@@ -2706,16 +2525,6 @@
 			(type default)
 		)
 		(uuid "7e3eec03-c531-4c65-a146-d3326b09b155")
-	)
-	(wire
-		(pts
-			(xy 38.1 153.67) (xy 38.1 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8516c4f9-c542-492d-9f93-7f0ea6b680da")
 	)
 	(wire
 		(pts
@@ -3500,84 +3309,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 44.45 146.05 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "457a0177-7c93-429d-8e4e-baed57e49808")
-		(property "Reference" "#PWR054"
-			(at 44.45 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 44.45 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 44.45 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 44.45 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 44.45 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "38a73e8a-ef44-4a82-a9f5-367f5652fce8")
-		)
-		(instances
-			(project "niphar"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR054")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 63.5 38.1 270)
 		(mirror x)
@@ -4119,163 +3850,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 38.1 146.05 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8ae63274-c0c6-49e2-9582-ae672bb50dbd")
-		(property "Reference" "#PWR053"
-			(at 38.1 149.86 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 38.1 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 38.1 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 38.1 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fd02a2bb-9851-4e5c-8801-d0cb72a4b929")
-		)
-		(instances
-			(project "niphar"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "#PWR053")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 49.53 148.59 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b5899263-e05d-4401-bd4e-c27872fca00d")
-		(property "Reference" "R48"
-			(at 49.53 148.59 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 49.53 146.558 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 49.53 150.368 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 49.53 148.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "3ffff4b0-937c-4ecb-ba31-f98b8e94d295")
-		)
-		(pin "1"
-			(uuid "177cb4bc-91b2-40da-8bff-f1db4016bdb9")
-		)
-		(instances
-			(project "niphar"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "R48")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Interface_USB:CH334R")
 		(at 69.85 143.51 0)
 		(unit 1)
@@ -4417,85 +3991,6 @@
 			(project "niphar"
 				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
 					(reference "U13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 49.53 153.67 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f97eb142-4554-4267-919c-f9d281be36fd")
-		(property "Reference" "R49"
-			(at 49.53 153.67 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 49.53 151.638 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 49.53 155.448 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 49.53 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "8b4832ad-e099-4222-908b-c43ae2a52fc8")
-		)
-		(pin "1"
-			(uuid "50d99629-dd64-45fc-bbb6-0ec7ad6631f1")
-		)
-		(instances
-			(project "niphar"
-				(path "/7138aad8-3c5f-41d0-9987-adc2f08f0576/c05a1138-8c6c-44e2-ac38-1bed4028aa56"
-					(reference "R49")
 					(unit 1)
 				)
 			)

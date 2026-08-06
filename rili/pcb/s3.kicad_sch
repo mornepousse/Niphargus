@@ -4882,10 +4882,6 @@
 		(uuid "a3fb2245-b060-48ae-b138-cc0d00952e5c")
 	)
 	(no_connect
-		(at 364.49 86.36)
-		(uuid "c3bcd95c-51ef-4bf1-9719-47f36ae5097c")
-	)
-	(no_connect
 		(at 339.09 86.36)
 		(uuid "dde817e0-5621-49d7-ab2e-6ad6e5810188")
 	)
@@ -6839,6 +6835,16 @@
 		)
 		(uuid "2be47a2f-b27d-400d-b20d-fbe2fa8aa383")
 	)
+	(label "TIP_5V"
+		(at 361.95 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2eb70aae-4adb-4171-9f5a-e8b77ae7f343")
+	)
 	(label "row0"
 		(at 11.43 363.22 0)
 		(effects
@@ -6948,6 +6954,16 @@
 			(justify left bottom)
 		)
 		(uuid "5a06c235-b24a-4d2b-90f8-f59cfa58f861")
+	)
+	(label "TIP_5V"
+		(at 364.49 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5f2fbeb8-ec77-4986-acf2-7f5e18eabb04")
 	)
 	(label "SCK"
 		(at 259.08 142.24 0)
