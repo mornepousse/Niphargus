@@ -190,3 +190,37 @@ Complète l'annexe alim ci-dessus (DW01A, FS8205, TP4056, AO3407, SS14, MCP1700,
 - **Couverture du spec** : §4 alim ✓ (T1) ; §2 cœur S3 + nRF24 ✓ (T2) ; matrice/ULP ✓ (carte des pins + T3) ; §5 lien poignée de main ✓ (T4) ; §6 ESD couches 1-3 ✓ (T1/T3/T4 ; couche 0 = layout, hors plan) ; §7 zéro header ✓ (contraintes globales) ; coffre/§8 exclus explicitement (points ouverts) ; §10 tripwire ✓ (T0 + chaque tâche).
 - **Placeholders** : les réfs LCSC exactes des composants sont livrées à la Tâche 1 Étape 1 (dépendance stock/dispo du jour — donnée externe, pas un TBD de conception).
 - **Cohérence des noms** : nets normatifs définis une fois (interfaces de tâche) et réutilisés à l'identique ; carte des pins unique en tête.
+
+## Annexe — Brochage matrice RÉEL et conventions firmware (revue 2026-08-06, source netlist)
+
+La carte des pins « normative » ci-dessus reste valable pour tout SAUF la matrice : Mae a
+permuté rows/cols au routage (liberté actée — tout reste en GPIO1-12, domaine RTC, réveil
+EXT1 possible). **Le firmware doit porter DEUX tables** :
+
+| ligne | GAUCHE (U6) | DROITE (U5) |
+|---|---|---|
+| row0 | GPIO1 | GPIO2 |
+| row1 | GPIO2 | GPIO12 |
+| row2 | GPIO8 | GPIO4 |
+| row3 | GPIO6 | GPIO5 |
+| col0 | GPIO4 | GPIO6 |
+| col1 | GPIO5 | GPIO7 |
+| col2 | GPIO7 | GPIO8 |
+| col3 | GPIO9 | GPIO9 |
+| col4 | GPIO10 | GPIO11 |
+| col5 | GPIO11 | GPIO10 |
+| col6 | GPIO12 | GPIO1 |
+
+Conventions actées :
+- **Sens de scan** : chaîne réelle COL→SW→anode-diode-cathode→ROW. Le firmware PILOTE les
+  colonnes et LIT les rows ; le réveil sommeil profond (EXT1) s'arme sur les ROWS.
+- **TRRS** : câble droit, R1↔R1/R2↔R2 → TX arrive sur TX. Le croisement est fait en
+  FIRMWARE (matrice GPIO : une moitié échange U1TXD/U1RXD). Ne jamais activer les deux TX
+  push-pull sans ce swap (contention limitée par les 2×100Ω, mais contention quand même).
+- **Tip TRRS** protégé par le canal 3 du SRV05 (net TIP_5V) depuis la revue.
+- **microSD du coffre** : cartes insérées/retirées HORS TENSION uniquement (décision Mae
+  2026-08-06 — pas de TVS sur les lignes SD). Card-detect absent (connecteur Würth) :
+  détection logicielle par polling CMD.
+- **LDO moitiés = HT7833** (SOT-89 : 1=GND 2=VIN 3=VOUT) depuis la revue ; CH334R en mode
+  sans quartz avec R48/R49 SUPPRIMÉS par Mae (RESET# a un pull-up interne 25k).
+- Jauge batterie sur ADC2_CH2 : ADC2 inutilisable si le WiFi est actif (nRF24-only : OK).
