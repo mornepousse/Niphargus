@@ -9,11 +9,10 @@ HT7833,5,LDO 3.3V 500mA Holtek,SOT-89,2,"remplace MCP1700 (250mA trop juste pour
 SS14,5,Schottky 1A 40V onsemi,SMA,2,symbole TME SS14-FAI,https://www.tme.eu/en/details/ss14-fai/smd-schottky-diodes/onsemi/ss14/
 1N4148W,200,Diode matrice Lite-On,SOD-123,52,symbole TME 1N4148W-LIT,https://www.tme.eu/en/details/1n4148w-lit/smd-universal-diodes/diodes-lite-on-semiconductor/1n4148w/
 0603WAF1000T5E,200,100R 1% Royalohm,0603,40,,https://www.tme.eu/en/details/0603waf1000t5e/smd-resistors/royalohm/
-0603WAF1002T5E,100,10k 1% Royalohm,0603,11,,https://www.tme.eu/en/details/0603waf1002t5e/smd-resistors/royalohm/
+0603WAF1002T5E,100,10k 1% Royalohm,0603,10,,https://www.tme.eu/en/details/0603waf1002t5e/smd-resistors/royalohm/
 0603WAF5101T5E,100,5k1 1% Royalohm,0603,4,CC USB-C,https://www.tme.eu/en/details/0603waf5101t5e/smd-resistors/royalohm/
 0603WAF4701T5E,100,4k7 1% Royalohm,0603,2,I2C trackpad,https://www.tme.eu/en/details/0603waf4701t5e/smd-resistors/royalohm/
 0805W8F2401T5E,100,2k4 1% Royalohm,0805,2,PROG TP4056 - page vue via locale SG; ce lien /en/ a confirmer,https://www.tme.eu/en/details/0805w8f2401t5e/smd-resistors/royalohm/
 0805W8F1001T5E,100,1k 1% Royalohm,0805,4,,https://www.tme.eu/en/details/0805w8f1001t5e/smd-resistors/royalohm/
 0805S8F1004T5E,100,1M 1% Royalohm serie S,0805,4,jauge VBAT_SENSE - la serie W n'est pas chez TME,https://www.tme.com/us/en-us/details/0805s8f1004t5e/smd-resistors/royalohm/
-0603WAF1003T5E,100,100k 1% Royalohm,0603,4,,https://www.tme.eu/en/details/0603waf1003t5e/smd-resistors/royalohm/
-0805S8F1003T5E,100,100k 1% Royalohm serie S,0805,2,la serie W n'est pas chez TME,https://www.tme.eu/en/details/0805s8f1003t5e/smd-resistors/royalohm/
+0603WAF1003T5E,100,100k 1% Royalohm,0603,5,,https://www.tme.eu/en/details/0603waf1003t5e/smd-resistors/royalohm/
