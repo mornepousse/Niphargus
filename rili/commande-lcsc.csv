@@ -10,5 +10,4 @@ C1591,200,100nF X7R 50V Samsung,0603,7,serie CL en fin de vie chez TME - stock L
 C1711,100,100nF X7R 50V Samsung,0805,3,,https://lcsc.com/product-detail/C1711.html
 C15849,200,1uF Samsung,0603,6,,https://lcsc.com/product-detail/C15849.html
 C28323,100,1uF Samsung,0805,7,,https://lcsc.com/product-detail/C28323.html
-C128855,100,10uF X5R 25V YAGEO,1206,4,,https://lcsc.com/product-detail/C128855.html
-C45783,50,22uF X5R 25V Samsung,0805,1,a souder sur le pad 1206 (sortie AMS1117/LD1117),https://lcsc.com/product-detail/C45783.html
+C128855,100,10uF X5R 25V YAGEO,1206,5,"le 22uF de sortie AMS1117 devient 1-2x10uF (C16, empiler si 2)",https://lcsc.com/product-detail/C128855.html
