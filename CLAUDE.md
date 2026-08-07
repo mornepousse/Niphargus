@@ -3,7 +3,7 @@
 Clavier split (dérivé Jorne/Kyria), 100 % KiCad pour l'instant : schéma et PCB
 dans `hardware/pcb/` (projet KiCad `niphar` — nom complet du produit : **Niphargus**,
 ex-Rouge-Gorge/rili), footprints dans
-`hardware/pcb/EKR82-footprint.pretty/` et `kbd/`.
+`hardware/pcb/EKR82-footprint.pretty/`.
 
 ## Refonte en cours — cahier des charges
 
@@ -48,7 +48,7 @@ non-déterministe (±quelques erreurs par run), l'oracle tolère ±10 erreurs DR
 `pre-push` lance le check complet et bloque le push si rouge. WIP : `git push --no-verify`.
 
 **Hooks Claude Code** (`.claude/settings.json`, automatiques) :
-- `PostToolUse` sur édition d'un fichier surveillé (`hardware/`, `kbd/`,
+- `PostToolUse` sur édition d'un fichier surveillé (`hardware/`, `case/`,
   futur `firmware/`) → `check.sh --fast`.
 - `Stop` → `check.sh --fast` (garde-fou ~1 s avant de conclure). Le build complet
   (ERC/DRC kicad-cli) n'est PAS relancé à chaque fin de tour : il reste garanti

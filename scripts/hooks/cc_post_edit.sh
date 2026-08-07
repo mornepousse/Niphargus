@@ -7,7 +7,7 @@ cd "$REPO" || exit 1
 command -v python3 >/dev/null 2>&1 || { echo "tripwire: python3 absent, hook PostToolUse inactif" >&2; exit 0; }
 FP="$(python3 -c 'import sys,json; d=json.load(sys.stdin); print(d.get("tool_input",{}).get("file_path",""))' 2>/dev/null)"
 case "$FP" in
-  *"rili/"*|*"kbd/"*|*"firmware/"*) ;;
+  *"hardware/"*|*"case/"*|*"firmware/"*) ;;
   *) exit 0 ;;  # fichier non surveillé → rien
 esac
 # Debounce : pas de re-check si le dernier date de moins de TRIPWIRE_DEBOUNCE s (défaut 10).
