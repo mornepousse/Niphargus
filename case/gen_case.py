@@ -278,21 +278,107 @@ doc = App.newDocument("niphar_case_left")
 for nm, sh in (('frame_alu', frame), ('plate_top_PC', top), ('plate_bottom_PC', bot)):
     o = doc.addObject('Part::Feature', nm)
     o.Shape = sh
+    o.Label = nm          # sinon le STEP nomme les 3 pieces d'apres le document
     try:
         o.Visibility = True
     except Exception:
         pass
+
+# --- esquisses de reference (contours a plat, pour mesurer et construire dessus) ---
+# Le contour reste pilote par case_outline.svg ; ces esquisses en sont la trace
+# dans FreeCAD. PAS de Pad dessus : PartDesign et Part::Extrusion crashent sur
+# ces ~110 elements (verifie).
+def add_sketch(nm, pts, z=0.0):
+    try:
+        sk = doc.addObject('Sketcher::SketchObject', nm)
+        sk.Label = nm
+        pl = App.Placement(Vector(0, 0, z), App.Rotation(0, 0, 0, 1))
+        sk.Placement = pl
+        q = list(pts)
+        if math.hypot(q[0][0]-q[-1][0], q[0][1]-q[-1][1]) > 1e-4:
+            q.append(q[0])
+        geo = [Part.LineSegment(App.Vector(q[i][0], -q[i][1], 0),
+                                App.Vector(q[i+1][0], -q[i+1][1], 0))
+               for i in range(len(q)-1)]
+        sk.addGeometry(geo, False)
+        return sk
+    except Exception as ex:
+        say(f"   esquisse {nm} impossible ({ex})")
+        return None
+
+def add_circles(nm, centres, r, z=0.0):
+    try:
+        sk = doc.addObject('Sketcher::SketchObject', nm)
+        sk.Label = nm
+        sk.Placement = App.Placement(Vector(0, 0, z), App.Rotation(0, 0, 0, 1))
+        sk.addGeometry([Part.Circle(App.Vector(c[0], -c[1], 0), App.Vector(0, 0, 1), r)
+                        for c in centres], False)
+        return sk
+    except Exception as ex:
+        say(f"   esquisse {nm} impossible ({ex})")
+        return None
+
+_sk = [add_sketch('esq_frame_outer', outer_p),
+       add_sketch('esq_frame_inner', inner_p),
+       add_sketch('esq_pcb', pcb_p),
+       add_sketch('esq_battery', accu),
+       add_circles('esq_screws', vis, VIS_D/2),
+       add_circles('esq_pcb_M3', PCB_M3, PCB_M3_D/2)]
+say(f"esquisses de reference : {sum(1 for s in _sk if s)} sur {len(_sk)}")
+
 doc.recompute()
 fc = f"{OUTDIR}/niphar-case-left.FCStd"
 st = f"{OUTDIR}/niphar-case-left.step"
 doc.saveAs(fc)
-Part.export(doc.Objects, st)
-for o in doc.Objects:
+Part.export([o for o in doc.Objects if o.TypeId == 'Part::Feature'], st)
+for o in [x for x in doc.Objects if x.TypeId == 'Part::Feature']:
     b = o.Shape.BoundBox
     say(f"{o.Name:16s} {o.Shape.Volume/1000:6.1f} cm3  z {b.ZMin:6.2f}->{b.ZMax:6.2f}  "
         f"{b.XLength:.0f}x{b.YLength:.0f} mm  valide={o.Shape.isValid()} solides={len(o.Shape.Solids)}")
 say(f"FCStd : {fc}")
 say(f"STEP  : {st}")
+
+# STL des 3 pieces (impression 3D). Gitignores, mais toujours presents sur disque.
+try:
+    import Mesh, MeshPart
+    for o in [x for x in doc.Objects if x.TypeId == 'Part::Feature']:
+        m = MeshPart.meshFromShape(Shape=o.Shape, LinearDeflection=0.05,
+                                   AngularDeflection=0.15, Relative=False)
+        m.write(f"{OUTDIR}/{o.Name}.stl")
+    say("STL   : 3 fichiers")
+except Exception as ex:
+    say(f"STL non generes ({ex})")
+
+# Un document cree en --console n'a PAS de GuiDocument.xml : a l'ouverture,
+# FreeCAD ne sait ni quoi afficher ni comment. On repasse dessus avec la GUI en
+# mode offscreen pour poser visibilite et couleurs une bonne fois.
+import subprocess, tempfile
+_fix = tempfile.NamedTemporaryFile('w', suffix='.py', delete=False)
+_fix.write(f"""import FreeCAD as App, FreeCADGui as Gui
+COL = {{'frame_alu': (0.72, 0.73, 0.75, 0),
+        'plate_top_PC': (0.55, 0.75, 0.90, 55),
+        'plate_bottom_PC': (0.55, 0.75, 0.90, 55)}}
+d = App.openDocument({fc!r})
+for o in d.Objects:
+    o.ViewObject.Visibility = True
+    r, g, b, tr = COL.get(o.Name, (0.8, 0.8, 0.8, 0))
+    o.ViewObject.ShapeColor = (r, g, b)
+    o.ViewObject.Transparency = tr
+d.save()
+""")
+_fix.close()
+try:
+    env = dict(os.environ, QT_QPA_PLATFORM='offscreen')
+    subprocess.run(['freecad', _fix.name], env=env, timeout=300,
+                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    import zipfile
+    ok = 'GuiDocument.xml' in zipfile.ZipFile(fc).namelist()
+    say(f"vue enregistree dans le FCStd : {'oui' if ok else 'NON — le doc souvrira vide'}")
+except Exception as ex:
+    say(f"passe GUI impossible ({ex}) — le FCStd souvrira sans affichage")
+finally:
+    os.unlink(_fix.name)
+
 
 # ---------------- plan de controle ----------------
 def d_of(w):
