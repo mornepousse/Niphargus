@@ -11,8 +11,9 @@ python3 scripts/merge_panel.py /tmp/panel/panel.kicad_pcb
 ```
 
 Le script prend `hardware/pcb/niphar.kicad_pcb`, y insère
-`Conchodytes/hardware/pcb/conchodytes.kicad_pcb` tourné de 90° et translaté de
-(−50,50 · +218,85), ce qui pose la souris dans le vide entre les deux moitiés.
+`Conchodytes/hardware/pcb/conchodytes.kicad_pcb` tourné de **−90°** et translaté
+de (+170,85 · +26,15), ce qui pose la souris dans le vide entre les deux moitiés,
+l'avant (le renflement de l'USB-C) vers la droite.
 Tous les UUID sont régénérés pour éviter les collisions.
 
 ## Cotes

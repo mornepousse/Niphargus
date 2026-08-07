@@ -5,8 +5,8 @@ import re, math, uuid as U, sys
 KBD  = "/home/mae/Documents/GitHub/rili/hardware/pcb/niphar.kicad_pcb"
 MOUSE= "/home/mae/Documents/GitHub/Conchodytes/hardware/pcb/conchodytes.kicad_pcb"
 OUT  = sys.argv[1] if len(sys.argv)>1 else "/tmp/panel/panel.kicad_pcb"
-ROT  = 90.0
-DX, DY = -50.50, 218.85     # calcules : la souris tournee se pose en (18,103)
+ROT  = -90.0
+DX, DY = 170.85, 26.15      # calcules : la souris tournee se pose en (18,103)
 
 def bal(x,i):
     d=0;j=i;s=False
