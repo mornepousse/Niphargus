@@ -27,13 +27,25 @@ Tous les UUID sont régénérés pour éviter les collisions.
 La souris tient **dans l'espace déjà payé** du panneau : son PCB ne coûte
 pratiquement rien.
 
+## Tabs et mouse-bites
+
+| | Position | Tabs | Perçages |
+|---|---|---|---|
+| Souris → rail gauche | x 14,64 → 18,00 | 3 tabs de 3 mm, aux y 115-118, 121-124, 127-130 | 12 |
+| Moitiés → rail droit | x 186,95 → 190,01 | 4 pattes de 3,1 mm, aux y 32-38, 81-87, 159-165, 209-215 | 32 |
+
+Perçages **Ø 0,5 mm au pas de 0,75**, posés sur la ligne de rupture, côté carte,
+pour que la tranche reste propre après séparation. **44 au total.**
+
+Les quatre pattes du clavier n'avaient aucun perçage : le contour y était plein,
+il aurait fallu les couper à l'outil.
+
 ## À faire avant de commander
 
-- **tabs et mouse-bites** reliant la souris au panneau : elle est actuellement
-  posée dans le vide, sans attache. À placer sur ses longs côtés ;
 - vérifier que le contour de la souris est bien celui de la coque M100 — celui
   du dépôt vient du fork `USB-Mouse` ;
-- nettoyer le DRC des deux cartes (18 `copper_edge_clearance` côté souris).
+- nettoyer le DRC des deux cartes (18 `copper_edge_clearance` côté souris) ;
+- confronter le diamètre et le pas des mouse-bites aux règles de JLCPCB.
 
 ## Note
 
