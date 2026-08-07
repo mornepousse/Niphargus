@@ -1,12 +1,16 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="images/niphargus_logo_white.svg">
-  <img src="images/niphargus_logo.svg" alt="Niphargus" width="160" align="right">
-</picture>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="images/niphargus_logo_white.svg">
+    <img src="images/niphargus_logo.svg" alt="Niphargus" width="150">
+  </picture>
+</p>
 
-# Niphargus
+<h1 align="center">Niphargus</h1>
 
-*The cave shrimp: blind, discreet, indestructible.*
-*La crevette des cavernes : aveugle, discrète, indestructible.*
+<p align="center">
+  <em>The cave shrimp: blind, discreet, indestructible.</em><br>
+  <em>La crevette des cavernes : aveugle, discrète, indestructible.</em>
+</p>
 
 ![Niphargus PCB v2](images/nipharPCB.png)
 
