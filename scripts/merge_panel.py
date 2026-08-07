@@ -144,6 +144,19 @@ panel, ok2 = split_vertical(panel, RAIL_X, 62.86, 183.59, TABS)
 say = print
 say(f"  contour souris interrompu : {ok1}    rail interrompu : {ok2}")
 
+# Le contour doit rester une boucle FERMEE : interrompre les deux bords laisse
+# 12 extremites libres, et un contour ouvert n'est pas interpretable par le
+# fabricant (le panneau ressort plein). On referme donc le vide AUTOUR de chaque
+# tab par deux segments horizontaux — le pont de matiere est alors delimite.
+ferme=[]
+for y0,y1 in TABS:
+    ferme.append(edge_seg(MOUSE_X, y0, RAIL_X, y0))
+    ferme.append(edge_seg(MOUSE_X, y1, RAIL_X, y1))
+k = panel.rstrip().rfind(")")
+panel = panel[:k] + "\n" + "\n".join(ferme) + "\n" + panel[k:]
+open(OUT,'w').write(panel)
+say(f"  contour referme autour des tabs : {len(ferme)} segments horizontaux")
+
 # mouse-bites : rangee de trous sur la ligne de rupture, cote souris
 bites=[]
 n=0

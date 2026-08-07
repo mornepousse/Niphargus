@@ -40,6 +40,13 @@ pour que la tranche reste propre après séparation. **44 au total.**
 Les quatre pattes du clavier n'avaient aucun perçage : le contour y était plein,
 il aurait fallu les couper à l'outil.
 
+⚠️ **Le contour du panneau doit rester une boucle fermée.** Interrompre les deux
+bords de part et d'autre d'un tab laisse des extrémités libres, et un contour
+ouvert n'est pas interprétable : le panneau ressort plein chez le fabricant.
+Le vide est donc **refermé autour** de chaque tab par deux segments horizontaux,
+ce qui délimite le pont de matière. Vérification : `0 extrémité libre`, comme le
+panneau du clavier seul.
+
 ## À faire avant de commander
 
 - vérifier que le contour de la souris est bien celui de la coque M100 — celui
