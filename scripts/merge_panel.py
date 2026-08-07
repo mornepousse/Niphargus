@@ -210,5 +210,39 @@ for y0,y1 in KBD_TABS:
 k = panel.rstrip().rfind(")")
 panel = panel[:k] + "\n" + "\n".join(bites2) + "\n" + panel[k:]
 open(OUT,'w').write(panel)
-say(f"  clavier : {len(KBD_TABS)} tabs, {n2} trous de mouse-bite a x={KBD_BREAK_X}")
-say(f"  TOTAL mouse-bites : {n + n2}")
+say(f"  clavier droit : {len(KBD_TABS)} tabs, {n2} trous a x={KBD_BREAK_X}")
+
+# --- pattes du clavier cote GAUCHE : le bord de la carte y est en biais
+#     (le biseau du clavier), la ligne de rupture suit donc une pente.
+KBD_TABS_L = [(40.42, 46.42, 18.67, 19.73),
+              (56.86, 62.86, 21.55, 22.61),
+              (183.59, 189.59, 22.61, 21.55),
+              (200.03, 206.03, 19.73, 18.67)]
+panel = open(OUT).read()
+bites3=[]; n3=0
+for y0, y1, x0, x1 in KBD_TABS_L:
+    y = y0 + BITE_P/2
+    while y < y1:
+        # le percage suit le bord incline de la carte, recule de 0,2 mm
+        f = (y - y0) / (y1 - y0)
+        x = round(x0 + (x1 - x0)*f - 0.2, 3)
+        bites3.append(f'''\t(footprint "MouseBite"
+\t\t(layer "F.Cu")
+\t\t(uuid "{U.uuid4()}")
+\t\t(at {x} {round(y,3)})
+\t\t(attr through_hole exclude_from_pos_files exclude_from_bom)
+\t\t(pad "" np_thru_hole circle
+\t\t\t(at 0 0)
+\t\t\t(size {BITE_D} {BITE_D})
+\t\t\t(drill {BITE_D})
+\t\t\t(layers "F&B.Cu" "*.Mask")
+\t\t\t(uuid "{U.uuid4()}")
+\t\t)
+\t)''')
+        y += BITE_P
+        n3 += 1
+k = panel.rstrip().rfind(")")
+panel = panel[:k] + "\n" + "\n".join(bites3) + "\n" + panel[k:]
+open(OUT,'w').write(panel)
+say(f"  clavier gauche : {len(KBD_TABS_L)} tabs, {n3} trous (bord en biais)")
+say(f"  TOTAL mouse-bites : {n + n2 + n3}  sur {len(TABS)+len(KBD_TABS)+len(KBD_TABS_L)} jonctions")
