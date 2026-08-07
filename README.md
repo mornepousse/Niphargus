@@ -1,33 +1,105 @@
 # Niphargus
 
+*The cave shrimp: blind, discreet, indestructible.*
 *La crevette des cavernes : aveugle, discrète, indestructible.*
 
-Niphargus est un clavier split sans fil, fin et increvable :
+![Niphargus PCB v2](images/nipharPCB.png)
 
-- **Deux moitiés autonomes** — ESP32-S3-WROOM-1 + nRF24L01+ chacune, batterie
-  16340, scan matrice en sommeil profond (domaine RTC), dongle KaSe côté hôte.
-- **Fallback filaire** : USB-C direct + jack TRRS entre moitiés — « rebrancher
-  doit suffire ». Poignée de main 5 V sur le lien (hot-plug sans étincelles).
-- **Robustesse ESD partout** : TVS sur USB/TRRS, 100 Ω série sur chaque ligne
-  de matrice, plans de masse — la décharge du retour au clavier ne le plantera plus.
-- **Écran Sharp Memory LCD** (droite) : layer + batteries, tient l'image à ~µA
-  sans jamais clignoter. **Trackpad Azoteq TPS43** (gauche), I2C.
-- **La trousse de secours** : un coffre ESP32-P4 derrière un hub USB (CH334R) —
-  clé bootable multi-ISO, token PGP, stockage — qui ne s'allume qu'en filaire.
+---
 
-Refonte complète du **Rouge-Gorge** (v1, 2022, ci-dessous) ; le dépôt porte tout
-l'historique (Rouge-Gorge → rili → Niphargus). Projet KiCad : `hardware/pcb/niphar.kicad_pro`.
-Anti-régression : `./scripts/check.sh` (ERC/DRC en baseline ratchet, CI épinglée KiCad 10.0.4).
+## English
 
-**État (2026-07)** : schéma v2 en cours (matrice ✓, alim ✓, MCU+radio ✓, USB/hub ✓,
-TRRS ✓, coffre P4 en chantier) — layout et firmware à suivre.
+Niphargus is a thin, unkillable wireless split keyboard.
 
-en : Niphargus is a thin, unkillable wireless split keyboard — one ESP32-S3 +
-nRF24L01+ and a 16340 cell per half, USB-C/TRRS wired fallback, ESD hardening
-everywhere, a Sharp memory LCD + Azoteq trackpad, and a hidden sysadmin survival
-kit (multi-ISO boot key, PGP token, storage) behind a USB hub, awake only when
-plugged. Complete redesign of the Rouge-Gorge (v1, below); this repo carries the
-full history.
+- **Two self-contained halves** — one ESP32-S3-WROOM-1 + nRF24L01+ and a 16340
+  cell each, matrix scanning in deep sleep (RTC domain), KaSe dongle on the host side.
+- **Wired fallback** — direct USB-C plus a TRRS jack between halves: *plugging it
+  back in must be enough*. A 5 V handshake on the link makes hot-plug spark-free.
+- **ESD hardening throughout** — TVS diodes on USB and TRRS, 100 Ω in series on
+  every matrix line, careful ground planes. The static discharge you bring back
+  to the keyboard will no longer crash it.
+- **Sharp Memory LCD** (right half) for layer and battery status: holds its image
+  at a few µA and never flickers. **Azoteq TPS43 trackpad** (left half), over I²C.
+- **The survival kit** — an ESP32-P4 vault behind a CH334R USB hub: multi-ISO boot
+  key, PGP token, storage. It only powers up when the keyboard is plugged in.
+
+A complete redesign of the **Rouge-Gorge** (v1, 2022, below). This repository
+carries the full history: Rouge-Gorge → rili → Niphargus.
+
+**Status (2026-08)** — v2 schematic complete and reviewed, board routed, ERC and
+DRC clean. Case in progress (see below). Firmware to follow.
+
+## Français
+
+Niphargus est un clavier split sans fil, fin et increvable.
+
+- **Deux moitiés autonomes** — ESP32-S3-WROOM-1 + nRF24L01+ et une batterie 16340
+  chacune, scan de la matrice en sommeil profond (domaine RTC), dongle KaSe côté hôte.
+- **Repli filaire** — USB-C direct et jack TRRS entre les moitiés : *rebrancher
+  doit suffire*. Une poignée de main 5 V sur le lien évite les étincelles au branchement à chaud.
+- **Robustesse ESD partout** — TVS sur USB et TRRS, 100 Ω série sur chaque ligne
+  de matrice, plans de masse soignés. La décharge que vous ramenez au clavier ne
+  le plantera plus.
+- **Écran Sharp Memory LCD** (moitié droite) pour le calque et l'état des batteries :
+  tient l'image à quelques µA sans jamais clignoter. **Trackpad Azoteq TPS43**
+  (moitié gauche), en I²C.
+- **La trousse de secours** — un coffre ESP32-P4 derrière un hub USB CH334R : clé
+  bootable multi-ISO, token PGP, stockage. Il ne s'allume qu'en filaire.
+
+Refonte complète du **Rouge-Gorge** (v1, 2022, ci-dessous). Le dépôt porte tout
+l'historique : Rouge-Gorge → rili → Niphargus.
+
+**État (2026-08)** — schéma v2 terminé et relu, carte routée, ERC et DRC au vert.
+Boîtier en cours (ci-dessous). Firmware à suivre.
+
+---
+
+## Repository layout · Organisation du dépôt
+
+| Path | Contents |
+|---|---|
+| `hardware/pcb/` | KiCad project — `niphar.kicad_pro` (schematic, board, footprints) |
+| `hardware/order-*.csv` | Part orders: TME, LCSC, AliExpress |
+| `hardware/kit-jlcpcb/` | Gerbers, BOM and CPL for JLCPCB |
+| `case/` | Case generator and CAD output |
+| `scripts/` | Anti-regression checks |
+| `docs/` | Design specs and plans |
+
+### Case · Boîtier
+
+Three parts: a **CNC-machined 8.5 mm aluminium frame**, sandwiched between two
+**2 mm polycarbonate plates**, 12.5 mm overall. The 16340 cell sits *beside* the
+board, in a pocket milled into the frame itself.
+
+Trois pièces : un **cadre aluminium usiné de 8,5 mm** pris entre deux **plaques
+polycarbonate de 2 mm**, 12,5 mm hors tout. La 16340 se loge *à côté* de la carte,
+dans une poche fraisée à même le cadre.
+
+The frame outline is **not computed — it is drawn**. Edit `case/case_outline.svg`
+(KiCad coordinates, 1 unit = 1 mm), then run:
+
+Le contour du cadre n'est **pas calculé, il est dessiné**. Éditez
+`case/case_outline.svg` (repère KiCad, 1 unité = 1 mm), puis lancez :
+
+```sh
+freecad --console case/gen_case.py
+```
+
+This regenerates the `.FCStd`, the STEP, the STL files and `case_plan.svg`.
+
+### Anti-regression · Anti-régression
+
+```sh
+./scripts/check.sh --fast   # schematic ERC against the committed baseline
+./scripts/check.sh          # + full board DRC
+./scripts/install-hooks.sh  # once per clone: pre-push runs the full check
+```
+
+Green means *never more ERC/DRC errors or warnings than the committed baseline*
+(`.tripwire-kicad-baseline`). CI is pinned to KiCad 10.0.4 with its own reference.
+
+Vert signifie *jamais plus d'erreurs ni de warnings ERC/DRC que la référence
+committée*. La CI est épinglée sur KiCad 10.0.4 avec sa propre référence.
 
 ---
 
@@ -35,63 +107,49 @@ full history.
 
 <img src="images/robinlogo.png" alt="Rouge-Gorge logo" width="300" height="300">
 
-The keyboard I created is a derivative of the Jorne and Kyria rev2, two keyboards highly appreciated in the community of mechanical keyboard enthusiasts. I took the best for me.
+**en** — A derivative of the Jorne and the Kyria rev2, two keyboards well loved in
+the mechanical keyboard community. I took what suited me best from each. The PCB
+was never tested and the QMK firmware never written — Niphargus supersedes it.
 
-fr : Le clavier que j'ai créé est un dérivé du Jorne et du Kyria rev2, deux claviers très appréciés dans la communauté des amateurs de claviers mécaniques. J'ai pris le meilleur pour moi.
-
-Update: 
-
-Currently, I have not yet had the time to test the PCB and create the QMK code.
-
-Actuellement, je n'ai pas encore eu le temps de tester le PCB et de créer le code QMK.
-
-## PCB
+**fr** — Un dérivé du Jorne et du Kyria rev2, deux claviers très appréciés dans la
+communauté des claviers mécaniques. J'ai pris de chacun ce qui me convenait le
+mieux. Le PCB n'a jamais été testé ni le firmware QMK écrit — Niphargus lui succède.
 
 ![](images/TestBuild.jpg)
 
 ![](images/PCB.PNG)
 
-
 Creation date: 02/12/2022
 
+Ordering at [JLCPCB](https://cart.jlcpcb.com/quote?orderType=1&stencilLayer=2&stencilWidth=100&stencilLength=100&stencilCounts=5):
+x 5 = 10.60 $ — u = 2.12 $ x 2 = 4.24 $
 
-By ordering on [JLCPCB](https://cart.jlcpcb.com/quote?orderType=1&stencilLayer=2&stencilWidth=100&stencilLength=100&stencilCounts=5):
+| Id | Reference | Package | Qty | Designation | Supplier | Price |
+|----|-----------|---------|-----|-------------|----------|-------|
+| 1  | D1,D2,D3…| Diode_TH_SOD123EKR | 26 | D | [aliexpress](https://fr.aliexpress.com/item/1005003631407506.html), [TME](https://www.tme.eu/fr/details/1n5711w-7-f/diodes-schottky-smd/diodes-incorporated/) | 0.0546 € × 26 = 1.42 € |
+| 2  | L1,L2,L3…| SK6812MINI_rev | 26 | SK6812MINI | [aliexpress](https://fr.aliexpress.com/item/1005003021596311.html) | 0.0704 € × 26 = 1.83 € |
+| 3  | SW1,SW2,SW3…| MX_Socket_18mm | 26 | SW_PUSH | [aliexpress](https://fr.aliexpress.com/item/1005003873653184.html) | 0.1285 € × 26 = 3.34 € |
+| 5  | U1 | ProMicro_v2 | 1 | ProMicro | [aliexpress](https://fr.aliexpress.com/item/1005003622414316.html) | 6.155 € |
+| 8  | JP1 | JPC2 | 1 | 1x4 Pin | [aliexpress](https://fr.aliexpress.com/item/4000979967513.html) | 0.182 € |
+| 9  | J2 | OLED | 1 | OLED | [aliexpress](https://fr.aliexpress.com/item/33024849277.html) | 3.10 € |
+| 10 | J1 | MJ-4PP-9 | 1 | MJ-4PP-9 | [aliexpress](https://fr.aliexpress.com/item/33029465106.html) | 0.246 € |
+| 11 | RSW1 | ResetSW | 1 | SW_PUSH | [aliexpress](https://fr.aliexpress.com/item/1005004067514307.html) | 0.137 € |
+| 12 | L22,L23,L24… | SK6812MINI_underglow_rev | 7 | SK6812MINI | [aliexpress](https://fr.aliexpress.com/item/1005003021596311.html) | 0.0704 € × 7 = 0.49 € |
 
-x 5 = 10.60$
+Total: 16.45 € × 2 = 32.90 €
 
-u = 2.12$ x 2 = 4.24$
+Other parts · Autres pièces:
 
+| Name | Links |
+|------|-------|
+| TRRS jack cable | [ali1](https://fr.aliexpress.com/item/1005003415667083.html) · [ali2](https://fr.aliexpress.com/item/33006667627.html) · [ali3](https://fr.aliexpress.com/item/1005002888851426.html) |
+| Switches | [ali1](https://fr.aliexpress.com/item/1005003436102892.html) · [Kailh Cream](https://fr.aliexpress.com/item/1005003694230110.html) |
+| Keycaps | [AF SA](https://fr.aliexpress.com/item/1005003935785708.html) · [cerise](https://fr.aliexpress.com/item/1005003932690197.html) |
 
-| Id | Reference | Package | Quantity | Designation | Supplier and ref | Ali price |
-|----|-----------|---------|----------|------------|-------------------|------|
-| 1  | D1,D2,D3...| Diode_TH_SOD123EKR | 26 | D |  [aliexpress](https://fr.aliexpress.com/item/1005003631407506.html?spm=a2g0o.order_list.order_list_main.10.6f255e5bMe6RnY&gatewayAdapt=glo2fra) , [TME](https://www.tme.eu/fr/details/1n5711w-7-f/diodes-schottky-smd/diodes-incorporated/) | 0.0546€ x 26 = 1.42€ |
-| 2  | L1,L2,L3...| SK6812MINI_rev | 26 | SK6812MINI |  [aliexpress](https://fr.aliexpress.com/item/1005003021596311.html?spm=a2g0o.order_list.order_list_main.20.6f255e5bMe6RnY&gatewayAdapt=glo2fra) | 0.0704€ x 26 = 1.83€ |
-| 3  | SW1,SW2,SW3...| MX_Socket_18mm | 26 | SW_PUSH | [aliexpress](https://fr.aliexpress.com/item/1005003873653184.html?spm=a2g0o.order_list.order_list_main.55.6f255e5bMe6RnY&gatewayAdapt=glo2fra)  | 0.1285€ x 26 = 3.34€ |
-| 5  | U1 | ProMicro_v2 | 1 | ProMicro | [aliexpress](https://fr.aliexpress.com/item/1005003622414316.html?spm=a2g0o.order_list.order_list_main.26.6f255e5bMe6RnY&gatewayAdapt=glo2fra)  | 6.155€ |
-| 8  | JP1 | JPC2 | 1 |  1X4Pin | [aliexpress](https://fr.aliexpress.com/item/4000979967513.html?spm=a2g0o.productlist.main.15.5b3f66e9o9m0cy&algo_pvid=850782ff-bfc7-4801-b06f-c64a524add1d&algo_exp_id=850782ff-bfc7-4801-b06f-c64a524add1d-7&pdp_ext_f=%7B%22sku_id%22%3A%2210000013144422246%22%7D&pdp_npi=3%40dis%21EUR%210.95%210.91%21%21%21%21%21%4021227e5116761981638552814d0652%2110000013144422246%21sea%21FR%212090266028&curPageLogUid=i54TIsZb6YSi)  | 0.182€ |
-| 9  | J2 | OLED | 1 | OLED |  [aliexpress](https://fr.aliexpress.com/item/33024849277.html?spm=a2g0o.order_list.order_list_main.288.3e135e5bkwqkdx&gatewayAdapt=glo2fra) | 3.10€ |
-| 10 | J1 | MJ-4PP-9 | 1 | MJ-4PP-9 |  [aliexpress](https://fr.aliexpress.com/item/33029465106.html?spm=a2g0o.order_list.order_list_main.253.3e135e5bkwqkdx&gatewayAdapt=glo2fra) | 0.246€ |
-| 11 | RSW1 | ResetSW | 1 | SW_PUSH | [aliexpress](https://fr.aliexpress.com/item/1005004067514307.html?spm=a2g0o.productlist.main.1.73f16315tgnplA&algo_pvid=d4307642-89a4-423d-b78d-a7bb9a884aa8&algo_exp_id=d4307642-89a4-423d-b78d-a7bb9a884aa8-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000027928467484%22%7D&pdp_npi=3%40dis%21EUR%210.52%210.46%21%21%21%21%21%40211bea0816761983658792786d0728%2112000027928467484%21sea%21FR%212090266028&curPageLogUid=7tFJg1Tj6lU0)  | 0.137€ |
-| 12 | L22,L23,L24... | SK6812MINI_underglow_rev | 7 | SK6812MINI |  [aliexpress](https://fr.aliexpress.com/item/1005003021596311.html?spm=a2g0o.order_list.order_list_main.20.3e135e5bkwqkdx&gatewayAdapt=glo2fra) | 0.0704€ x 7 = 0.49€ |
+Simulated final price (case not included) · Prix final simulé (boîtier non compris) :
 
+| PCB | SMDs | Switches | Keycaps | Total |
+|-----|------|----------|---------|-------|
+| 3.97 € | 32.90 € | 18.06 € | 48.98 € | 103.91 € |
 
-Total price : 16.45€ x 2 = 32.90€
-
-Other Parts:
-| Name | links |
-|------------------------|-----------------------------------------------|
-| Jack TRRS cable | [ali1](https://fr.aliexpress.com/item/1005003415667083.html?spm=a2g0o.productlist.main.37.3441d84fbFu5Hf&algo_pvid=1adb3a47-ca94-434c-803d-4ccde599e237&algo_exp_id=1adb3a47-ca94-434c-803d-4ccde599e237-18&pdp_ext_f=%7B%22sku_id%22%3A%2212000025692890634%22%7D&pdp_npi=3%40dis%21EUR%212.14%211.81%21%21%21%21%21%4021227d8316762009574963433d0686%2112000025692890634%21sea%21FR%212090266028&curPageLogUid=nj2yMe0X7UII) [ali2](https://fr.aliexpress.com/item/33006667627.html?spm=a2g0o.productlist.main.25.3441d84fbFu5Hf&algo_pvid=db7c9240-7399-4f47-bad7-a78af453f498&algo_exp_id=db7c9240-7399-4f47-bad7-a78af453f498-12&pdp_ext_f=%7B%22sku_id%22%3A%2267037901505%22%7D&pdp_npi=3%40dis%21EUR%212.33%212.1%21%21%21%21%21%4021227e5116762010359954759d0652%2167037901505%21sea%21FR%212090266028&curPageLogUid=f0e0CcMaVshO) [ali3](https://fr.aliexpress.com/item/1005002888851426.html?spm=a2g0o.productlist.main.3.3441d84fbFu5Hf&algo_pvid=f9d24cf2-f17b-4ef0-a9a0-7f2f2ca77156&algo_exp_id=f9d24cf2-f17b-4ef0-a9a0-7f2f2ca77156-1&pdp_ext_f=%7B%22sku_id%22%3A%2212000022630947685%22%7D&pdp_npi=3%40dis%21EUR%213.8%212.66%21%21%21%21%21%40211bda9b16762013003935948d0706%2112000022630947685%21sea%21FR%212090266028&curPageLogUid=8BMH4jwvmLwd) |
-| Switchs | [ali1](https://fr.aliexpress.com/item/1005003436102892.html?spm=a2g0o.order_list.order_list_main.223.34db5e5bkYd3Bk&gatewayAdapt=glo2fra), [ali Khail Cream](https://fr.aliexpress.com/item/1005003694230110.html?spm=a2g0o.productlist.main.1.5385245cS4FtLp&algo_pvid=043b18d1-9122-4b42-8289-2a2ee88619fe&algo_exp_id=043b18d1-9122-4b42-8289-2a2ee88619fe-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000026831639163%22%7D&pdp_npi=3%40dis%21EUR%21177.39%2172.73%21%21%21%21%21%402102188b16762015218328204d070d%2112000026831639163%21sea%21FR%212090266028&curPageLogUid=lFpdV2qDqqbg) |
-| Keycaps | [AF SA](https://fr.aliexpress.com/item/1005003935785708.html?spm=a2g0o.order_list.order_list_main.5.41db5e5b7Wn8vO&gatewayAdapt=glo2fra), [cerise](https://fr.aliexpress.com/item/1005003932690197.html?gatewayAdapt=glo2fra) |
-
-Simulate the final price (case not included):
-
-| PCB | SMDs | Switchs | Keycaps[?](https://fr.aliexpress.com/item/1005003935785708.html?spm=a2g0o.order_list.order_list_main.5.41db5e5b7Wn8vO&gatewayAdapt=glo2fra) | Total |
-|----------|----------|----------|----------|----------|
-| 3.97€ | 32.90€ | 18.06€ | 48.98€ | 103.91€ |
-
-[BOM](https://github.com/mornepousse/Morne/blob/jorne/doc/BOM.md)
-
-[Firmware](https://github.com/mornepousse/Rouge-Gorge_QMX_Part)
-
-
+[BOM](docs/BOM.md) · [Firmware (v1, QMK)](https://github.com/mornepousse/Rouge-Gorge_QMX_Part)
