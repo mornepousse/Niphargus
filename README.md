@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="images/niphargus_logo_white.svg">
+  <img src="images/niphargus_logo.svg" alt="Niphargus" width="160" align="right">
+</picture>
+
 # Niphargus
 
 *The cave shrimp: blind, discreet, indestructible.*
