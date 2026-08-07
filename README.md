@@ -16,7 +16,7 @@ Niphargus est un clavier split sans fil, fin et increvable :
   clé bootable multi-ISO, token PGP, stockage — qui ne s'allume qu'en filaire.
 
 Refonte complète du **Rouge-Gorge** (v1, 2022, ci-dessous) ; le dépôt porte tout
-l'historique (Rouge-Gorge → rili → Niphargus). Projet KiCad : `rili/pcb/niphar.kicad_pro`.
+l'historique (Rouge-Gorge → rili → Niphargus). Projet KiCad : `hardware/pcb/niphar.kicad_pro`.
 Anti-régression : `./scripts/check.sh` (ERC/DRC en baseline ratchet, CI épinglée KiCad 10.0.4).
 
 **État (2026-07)** : schéma v2 en cours (matrice ✓, alim ✓, MCU+radio ✓, USB/hub ✓,

@@ -15,8 +15,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 cd "$PROJECT_DIR" || exit 1
 
-SCH="rili/pcb/niphar.kicad_sch"
-PCB="rili/pcb/niphar.kicad_pcb"
+SCH="hardware/pcb/niphar.kicad_sch"
+PCB="hardware/pcb/niphar.kicad_pcb"
 # La CI pointe TRIPWIRE_BASELINE vers .tripwire-kicad-baseline-ci : l'environnement
 # conteneur décale les comptes de warnings (fontes/libs globales) — même design,
 # même ratchet, référence par environnement.

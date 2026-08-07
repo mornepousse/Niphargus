@@ -1,0 +1,11 @@
+Item,Quantity,Description,Qty per board,Statut,Notes,Link
+Module nRF24L01+,4,Radio 2.4GHz breakout 2x4 pin,2,a verifier tiroir,prendre des PA/LNA-free (portee clavier suffisante) - 2 rechanges,https://fr.aliexpress.com/w/wholesale-nrf24l01%2B.html
+Module ESP32-P4 JC-ESP32P4-M3,1,Coffre - module V0.2,1,a commander,empreinte V0.2 sur le PCB - verifier la revision vendue,https://fr.aliexpress.com/w/wholesale-esp32-p4-module.html
+Jack TRRS MJ-4PP-9,4,Jack 3.5mm 4 poles CMS,2,a commander,lien v1 qui marchait - 2 rechanges,https://fr.aliexpress.com/item/33029465106.html
+Cable TRRS 4 poles,2,Liaison inter-moities,1,a verifier tiroir,cable DROIT (croisement gere en firmware) - liens v1,https://fr.aliexpress.com/item/1005002888851426.html
+Switchs MX hotswap sockets,60,Sockets Kailh MX,52,a verifier tiroir,lien v1 (MX_Socket) - marge casse,https://fr.aliexpress.com/item/1005003873653184.html
+Switchs mecaniques,60,MX ou Choc au gout,52,a verifier tiroir,ex. Kailh Cream du README v1,https://fr.aliexpress.com/item/1005003694230110.html
+Keycaps,1,Set profil au gout,1,a verifier tiroir,liens v1 : AF SA / cerise,https://fr.aliexpress.com/item/1005003935785708.html
+Cellule 16340,4,Li-ion 3.7V (avec ou sans teton selon holder),2,a commander,prendre des protegees ou non selon contacts retenus - decision layout holder en attente,https://fr.aliexpress.com/w/wholesale-16340-battery.html
+Contacts ou holder 16340,2,Contacts ressort CMS ou holder,2,a commander,ATTENTE decision layout (design doc) - empreinte pas encore posee,https://fr.aliexpress.com/w/wholesale-16340-holder.html
+Antenne u.FL 2.4GHz,2,Pour les WROOM-1U du tiroir,2,a commander si pas en tiroir,antenne IPEX/u.FL courte + verifier longueur cable,https://fr.aliexpress.com/w/wholesale-ufl-antenna-2.4ghz.html

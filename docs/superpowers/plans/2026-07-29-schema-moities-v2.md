@@ -8,7 +8,7 @@ v# Schéma KiCad des moitiés Rouge-Gorge v2 — Plan d'implémentation
 
 **Architecture** (décision Mae 2026-07-29 : **pas de PCB réversible, pas de deuxième projet — un seul projet, un seul `.kicad_pcb` contenant les deux moitiés côte à côte**, deux contours sur Edge.Cuts) : projet KiCad neuf `rouge-gorge/`, feuille chapeau `moitie.kicad_sch` contenant les 4 feuilles (alim / mcu+radio / matrice / liens), instanciée 2× à la racine (gauche/droite) — les tâches 1-4 se font sur une seule instance, la 2ᵉ instance arrive en Tâche 5. Réf. : design doc `docs/superpowers/specs/2026-07-29-rouge-gorge-refonte-design.md`.
 
-**Stack** : KiCad 10.0.x · tripwire (`./scripts/check.sh --fast` = ERC ratchet) · libs locales existantes (`rili/pcb/*.pretty`, `mae.kicad_sym`) + libs officielles KiCad.
+**Stack** : KiCad 10.0.x · tripwire (`./scripts/check.sh --fast` = ERC ratchet) · libs locales existantes (`hardware/pcb/*.pretty`, `mae.kicad_sym`) + libs officielles KiCad.
 
 ## Contraintes globales
 
@@ -55,7 +55,7 @@ nets anonymes) ; la feuille Matrix ne porte plus que la droite (`col*_d`/`row*_d
 
 **Interfaces :** produit le squelette de projet + 4 feuilles hiérarchiques vides nommées `alim`, `mcu_radio`, `matrice`, `liens` que les tâches 1-4 remplissent.
 
-- [ ] **Étape 1 (Mae)** : KiCad → Fichier → Nouveau projet → `rouge-gorge/rouge-gorge` à la racine du repo. Dans le schéma racine, poser UNE feuille hiérarchique (Placer → Feuille) : `moitie.kicad_sch`, nommée `gauche`. Entrer dans `moitie` et y poser les 4 feuilles : `alim.kicad_sch`, `mcu_radio.kicad_sch`, `matrice.kicad_sch`, `liens.kicad_sch`. (La 2ᵉ instance `droite` de `moitie` sera posée en Tâche 5, une fois l'instance unique verte.) Recopier les tables de libs : Préférences → Gérer les librairies de symboles/empreintes → ajouter (projet) `mae.kicad_sym`, `rouge_gorge.kicad_sym` et les `.pretty` de `rili/pcb/` utiles (`key`, `MaeLid`, `EKR82-footprint`). Sauvegarder.
+- [ ] **Étape 1 (Mae)** : KiCad → Fichier → Nouveau projet → `rouge-gorge/rouge-gorge` à la racine du repo. Dans le schéma racine, poser UNE feuille hiérarchique (Placer → Feuille) : `moitie.kicad_sch`, nommée `gauche`. Entrer dans `moitie` et y poser les 4 feuilles : `alim.kicad_sch`, `mcu_radio.kicad_sch`, `matrice.kicad_sch`, `liens.kicad_sch`. (La 2ᵉ instance `droite` de `moitie` sera posée en Tâche 5, une fois l'instance unique verte.) Recopier les tables de libs : Préférences → Gérer les librairies de symboles/empreintes → ajouter (projet) `mae.kicad_sym`, `rouge_gorge.kicad_sym` et les `.pretty` de `hardware/pcb/` utiles (`key`, `MaeLid`, `EKR82-footprint`). Sauvegarder.
 - [ ] **Étape 2 (Claude)** : retarget `scripts/kicad-check.sh` : `SCH="rouge-gorge/rouge-gorge.kicad_sch"`, `PCB="rouge-gorge/rouge-gorge.kicad_pcb"` ; supprimer `.tripwire-kicad-baseline` (la baseline se ré-initialise au premier run) ; ajouter `rouge-gorge/` à la puce chemins surveillés de CLAUDE.md.
 - [ ] **Étape 3 (vérif)** : `./scripts/check.sh --fast` → vert, baseline ré-initialisée à ~0/0 (schéma quasi vide). `./scripts/check.sh` → DRC : le PCB vide initialisera sa référence (probablement 1 erreur `invalid_outline` — c'est la référence de départ, elle fondra au layout).
 - [ ] **Étape 4 (commit)** : `git add rouge-gorge/ scripts/kicad-check.sh CLAUDE.md .tripwire-kicad-baseline && git commit -m "feat(v2): projet KiCad rouge-gorge + bascule tripwire"`
@@ -81,7 +81,7 @@ VSYS ─ SW1 slide MSK-12C02 (coupure côté système) ─ MCP1700-3302E/TT ─ 
 +BATT ─ R 1M ─┬─ R 1M ─ GND   (jauge)    ┬ = VBAT_SENSE, + C 100nF vers GND
 ```
 
-- [x] **Étape 1 (Claude)** : liste de courses livrée (2026-07-29, réfs LCSC vérifiées en ligne, symboles vérifiés dans les libs KiCad 10 installées) — voir annexe « Liste de courses feuille alim » en fin de plan. Symbole `FS8205` créé dans `rili/pcb/rouge_gorge.kicad_sym` (absent des libs officielles ; pinout SOT23-6 vérifié sur datasheet Fortune).
+- [x] **Étape 1 (Claude)** : liste de courses livrée (2026-07-29, réfs LCSC vérifiées en ligne, symboles vérifiés dans les libs KiCad 10 installées) — voir annexe « Liste de courses feuille alim » en fin de plan. Symbole `FS8205` créé dans `hardware/pcb/rouge_gorge.kicad_sym` (absent des libs officielles ; pinout SOT23-6 vérifié sur datasheet Fortune).
 - [ ] **Étape 2 (Mae)** : dessiner la feuille selon la chaîne ci-dessus, netlabels exactement `+BATT`, `VSYS`, `+3V3`, `VBUS_5V`, `VBAT_SENSE`. PWR_FLAG sur `+BATT` et `VBUS_5V`. Sauvegarder.
 - [ ] **Étape 3 (vérif)** : `./scripts/check.sh --fast` → vert (0 erreur ; le ratchet reste 0). Claude relit `alim.kicad_sch` (texte) et recoupe chaque net contre la chaîne ci-dessus — écarts signalés, corrigés, re-check.
 - [ ] **Étape 4 (commit)** : `git add rouge-gorge/ .tripwire-kicad-baseline && git commit -m "feat(v2): feuille alim — 16340, protection, charge 500mA, load-sharing, MCP1700"`

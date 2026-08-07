@@ -3,15 +3,12 @@
 *.kicad_pcb-bak
 **/gerber/*
 
-rili/pcb/DXF/
-rili/pcb/rili-backups/
-rili/pcb/corne-cherry-backups/
 
 # Fichiers de verrou KiCad (session ouverte)
 *.lck
 
 # Dump fournisseur du module dev JC-ESP32P4-M3-C6 (350 Mo, retéléchargeable)
-rili/pcb/JC-ESP32P4-M3-C6/
+hardware/pcb/JC-ESP32P4-M3-C6/
 
 # KiCad — backups et fichiers transitoires
 *-backups/
@@ -24,8 +21,11 @@ fp-info-cache
 .claude/*.tmp.*
 
 # cache du plugin kicad-jlcpcb-tools
-rili/pcb/jlcpcb/
+hardware/pcb/jlcpcb/
 
 
 # sauvegardes FreeCAD
 *.FCBak
+
+# case — produits regeneres par gen_case.py (sources : gen_case.py + case_outline.svg)
+case/*.stl
