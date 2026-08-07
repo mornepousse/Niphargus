@@ -9,57 +9,48 @@ Reprendre l'objectif d'origine — **fin et durable** — sans reproduire l'éch
 imprimée qui fend, PCB mal soutenu). Trois pièces, aucune imprimée, et une silhouette qui
 tire parti du seul relief inévitable : la pile.
 
-## 2. Structure retenue : sandwich à trois pièces
+## 2. Structure retenue : cinq pièces
 
 | Pièce | Matière | Épaisseur | Fabrication |
 |---|---|---|---|
-| Plaque à switchs | polycarbonate transparent | **2,0 mm** | découpe |
-| Cadre | **aluminium usiné** | **8,5 mm** (partie courante) | CNC — test JLCPCB |
+| Plaque à switchs | polycarbonate transparent | **2,0 mm** | découpe (26 ouvertures MX 14×14, orientées) |
+| Cadre | **aluminium usiné** | **8,5 mm** | CNC — test JLCPCB |
 | Fond | polycarbonate transparent | **2,0 mm** | découpe |
+| Logement accu | aluminium (solidaire du cadre) | 19,5 mm local | CNC |
+| Trappe accu | alu ou PC | 2,0 mm | découpe |
 
-**Total : 12,5 mm hors tout** (hors keycaps), **≈21,5 mm** au bord de la pile.
+**Clavier plat à 12,5 mm hors tout**, sauf la bande de l'accu (19,5 mm, dépassant de 9 mm
+sous le fond). Choix Mae du 2026-08-07 : plaque à 2 mm (et non 1,5) — les clips MX ne se
+verrouillent donc pas, les switchs sont tenus par les sockets hotswap.
 
-Le polycarbonate haut et bas donne la transparence (l'électronique et la sérigraphie sont
-visibles) et une frappe plus douce que le FR4 ou l'alu. Le cadre alu apporte la rigidité,
-le chant métal et un chemin de masse pour l'ESD (§6 du design doc v2).
-
-## 3. Empilage interne (les cotes qui coûtent cher si on les perd)
+## 3. Empilage interne (cotes mesurées sur la carte routée)
 
 ```
-        ┌───────────────────────┐  plaque PC 2,0
+        ┌───────────────────────┐  plaque PC 2,0        z 8,5 → 10,5
         │   3,4 mm  (norme MX)  │  ← module P4 (3,2) y tient à 0,2 près
-   ─────┼───────────────────────┼─────  PCB 1,6
-cadre   │   3,5 mm              │  ← module S3 3,1 · nRF24 ~3 · interrupteur 2,5 · microSD 1,9
-  8,5   └───────────────────────┘  fond PC 2,0
+   ─────┼───────────────────────┼─────  PCB 1,6         z 3,5 → 5,1
+cadre   │   3,5 mm              │  ← module S3 3,1 · nRF24 · interrupteur · microSD
+  8,5   └───────────────────────┘  fond PC 2,0          z -2 → 0
 ```
 
-- **3,4 mm PCB → plaque** : cote normalisée MX. Contrainte forte : le **module P4 est côté
-  touches** (3,2 mm) — vérifié sans conflit avec aucun switch.
-- **3,5 mm sous la carte** : couvre tout le côté fond **sauf le jack TRRS**.
-- **Jack TRRS (~6,3 mm, côté fond)** : plonge dans une **découpe ajustée du fond**, dépasse
-  de **0,8 mm** sous le clavier. La découpe sert de berceau et le tient latéralement.
-  Pieds caoutchouc de 3 mm → il ne touche jamais la table.
-- **Plaque de 2 mm** (choix Mae) : les clips MX ne se verrouillent pas (cote de clipsage =
-  1,5 mm). Les switchs sont tenus par les sockets hotswap et guidés par la plaque ;
-  conséquence assumée : un switch peut suivre un keycap qu'on retire.
+Jeu autour du PCB : **0,5 mm** (tolérance fraisage PCB ±0,2 + usinage ±0,1). Le PCB est
+positionné par les 4 vis M3, pas par le cadre.
 
-## 4. Silhouette : la pile porte l'inclinaison
+**Jack TRRS** (~6,3 mm, côté fond d'après le fichier) : ouverture pleine hauteur dans la
+paroi. À confirmer sur pièce — Mae le pense côté touches, le fichier dit `B.Cu`.
 
-La 16340 (Ø16,5 × 34,5) ne rentre dans aucun boîtier de 12,5 mm. Plutôt que de la subir,
-elle devient le parti pris : le cadre s'épaissit **en coin** jusqu'à ~21,5 mm le long du
-bord qui la loge, et redescend à 12,5 mm à l'opposé. Inclinaison intégrée, **aucun pied
-rapporté**.
+## 4. Accu : À CÔTÉ de la carte, pas dessous
 
-Marges libres autour du champ de touches (moitié gauche, carte 177,3 × 107,9 mm) :
+La 16340 (Ø16,5 × 34,5) est logée **hors du contour du PCB**, le long du bord inférieur
+gauche (segment 27,4·90 → 81,4·80,3, pente −10°), sous les touches SW5/SW14/SW21 au sens
+du plan. Centre à ~53,6 · 96,5, axe à 11 mm du bord. Le cadre s'élargit localement au lieu
+de s'épaissir : **19,5 mm sur 44 mm de long** au lieu de 29,5 mm si l'accu passait sous la
+carte. Poche cylindrique Ø17,5 ouverte par le dessous, fermée par une **trappe** (fixation
+à définir) — l'accu se change sans ouvrir le clavier.
 
-| Bord | Marge | Conséquence si la pile y va |
-|---|---|---|
-| extérieur (auriculaire) | 19 mm | place facile ; pente descendant vers le centre |
-| intérieur (pouce) | 14 mm, chargé (USB-C, TRRS, trackpad) | vrai tenting ergonomique |
-| arrière | 9 mm | tilt classique ~5° ; la pile empiète sous les touches du haut |
-| avant | 16 mm | tilt inversé, déconseillé |
-
-**Non tranché** — sera décidé sur le prototype plexi, à l'essai.
+**Repères** : KiCad et FreeCAD partagent x (horizontal), y (vertical), z (profondeur) ;
+seule différence, y pointe vers le bas dans KiCad et vers le haut dans FreeCAD — le
+générateur convertit (y_fc = −y_kicad), les plans SVG restent en repère KiCad.
 
 ## 5. Fabrication : prototype d'abord
 
@@ -76,7 +67,15 @@ Marges libres autour du champ de touches (moitié gauche, carte 177,3 × 107,9 m
 **Règle de dessin CNC** : pas d'angle intérieur vif — la fraise est ronde. Un dessin pensé
 pour l'impression 3D ne s'usine pas.
 
-## 6. Modèle 3D
+## 6. Modèle 3D — `boitier/`
+
+`boitier/gen_pd.py` (lancé par `freecad --console`) génère `niphar-cadre-gauche.FCStd`,
+le STEP et les plans SVG depuis le PCB. Paramètres en tête du fichier : `WALL`, `FIT`,
+hauteurs, `SKIP_BOXES` (zones où le cadre ne suit pas le contour — le décrochement
+d'antenne nRF24 en fait partie), `OPENINGS`, `BATT_*`. Les ouvertures sont des
+**esquisses éditables** dans FreeCAD (`esq_USB_C`, `esq_TRRS`, `esq_SWITCH`) ; le contour
+du cadre reste un solide calculé (PartDesign et Part::Extrusion plantent sur ses ~110
+éléments d'offset).
 
 Généré **par script paramétrique** (CadQuery/build123d ou `freecadcmd`, en shell éphémère
 NixOS) à partir des cotes réelles du PCB : contour, trous de montage, positions des

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 180 76">
+<rect width="180" height="76" fill="#fcfcfe"/>
+<rect x="18" y="31.2" width="95" height="3.2" fill="#dff0ff" stroke="#48a" stroke-width="0.3"/>
+<rect x="18" y="34.4" width="4" height="13.600000000000001" fill="#e8e8ec" stroke="#666" stroke-width="0.3"/>
+<rect x="109" y="34.4" width="4" height="13.600000000000001" fill="#e8e8ec" stroke="#666" stroke-width="0.3"/>
+<rect x="22" y="39.84" width="87" height="2.5600000000000005" fill="#2a7" stroke="#175" stroke-width="0.3"/>
+<rect x="18" y="48.0" width="95" height="3.2" fill="#dff0ff" stroke="#48a" stroke-width="0.3"/>
+<rect x="113" y="31.2" width="22" height="31.200000000000003" fill="#ffe9b0" stroke="#c90" stroke-width="0.3"/>
+<circle cx="124" cy="46.8" r="14.0" fill="#fd7" stroke="#960" stroke-width="0.3"/>
+<text x="124" y="47.2" font-size="3" fill="#750" text-anchor="middle">accu</text>
+<rect x="113" y="62.4" width="22" height="3.2" fill="#f5d98a" stroke="#960" stroke-width="0.3"/>
+<text x="138" y="64.4" font-size="3" fill="#750">trappe</text>
+<text x="14" y="41.6" font-size="3.6" fill="#111" text-anchor="end" transform="rotate(-90,14,41.6)">12,5 mm</text>
+<text x="113" y="68.8" font-size="3.2" fill="#960">19,5 mm ici seulement</text>
+<text x="6" y="8" font-size="5" fill="#111">Coupe : l'accu est À CÔTÉ, dans une excroissance du cadre</text>
+<text x="6" y="14" font-size="3.2" fill="#666">le clavier reste plat à 12,5 mm ; seule la bande accu descend de 9 mm sous le fond</text>
+</svg>
