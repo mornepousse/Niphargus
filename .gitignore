@@ -26,3 +26,6 @@ fp-info-cache
 # cache du plugin kicad-jlcpcb-tools
 rili/pcb/jlcpcb/
 
+
+# sauvegardes FreeCAD
+*.FCBak
