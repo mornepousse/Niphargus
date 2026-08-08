@@ -10,7 +10,9 @@ Trois variantes exportées pour comparer le coût réel du multi-design.
 | *(ancien panneau 185,4 × 212,3)* | clavier avant re-panneautage | | 393,5 cm² | 2 | 56,68 € |
 | *(panneau commun, écarté)* | clavier + souris | 185,4 × 212,3 | 393,5 cm² | 3 | 70,89 € |
 
-## Décision : commander séparément, avec le panneau compact
+## Décision : commander séparément, avec le panneau horizontal
+
+**Commandé le 2026-08-08 : 60,83 €.**
 
 Devis JLCPCB, 4 couches vert, août 2026 :
 

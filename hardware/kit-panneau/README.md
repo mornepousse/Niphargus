@@ -1,5 +1,9 @@
 # Kit de fabrication
 
+> **Commandé le 2026-08-08 chez JLCPCB — 60,83 €.** Avant de souder, lire
+> [`AU-MONTAGE.md`](AU-MONTAGE.md) : **J6 se soude par le dessous**, le monter
+> par le dessus inverse Tip et Sleeve.
+
 Après devis, on commande les deux cartes **séparément**, et le clavier dans sa
 version **compacte**.
 
