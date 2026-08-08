@@ -1,0 +1,81 @@
+(footprint "MouseBite_4x0.5mm"
+	(version 20240108)
+	(generator "manual")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Rangee de 4 trous non metallises D0.5 mm au pas de 0.75 — ligne de rupture d'un tab de panneau. A poser au MILIEU du tab : au ras du bord de carte les trous tombent dans le plan de masse (hole_clearance).")
+	(tags "panel mousebite tab")
+	(attr through_hole exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+	(property "Reference" "MB**"
+		(at 0 -2.58 0)
+		(layer "F.SilkS")
+		(uuid "3036a9fa-e71c-439c-9095-419775d5ee28")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+			(hide yes)
+		)
+	)
+	(property "Value" "MouseBite_4x0.5mm"
+		(at 0 2.58 0)
+		(layer "F.Fab")
+		(uuid "334cc7e6-b69e-4b56-a400-3a4adf35704e")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+			(hide yes)
+		)
+	)
+	(fp_line
+		(start -0.4 -1.57)
+		(end 0.4 -1.57)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1f957ec9-d573-45fc-a608-cc6182ea651e")
+	)
+	(fp_line
+		(start -0.4 1.57)
+		(end 0.4 1.57)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0fe4397f-0998-4597-b3b3-19fb9fdb2dc1")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 -1.125)
+		(size 0.5 0.5)
+		(drill 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "6f506afe-7d79-4a6f-b64d-9c101abdf982")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 -0.375)
+		(size 0.5 0.5)
+		(drill 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "44230392-1218-4ae6-9626-ea01949ca2dc")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0.375)
+		(size 0.5 0.5)
+		(drill 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "6d751dfe-8f1d-4721-a1fd-82976ed06d01")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 1.125)
+		(size 0.5 0.5)
+		(drill 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "8541007b-fb69-4470-a144-d74e075d87dc")
+	)
+)

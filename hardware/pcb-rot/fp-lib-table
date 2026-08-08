@@ -1,0 +1,9 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "PMW3360") (type "KiCad") (uri "${KIPRJMOD}/PMW3360.pretty") (options "") (descr ""))
+	(lib (name "nice-nano") (type "KiCad") (uri "${KIPRJMOD}/nice-nano.pretty") (options "") (descr ""))
+	(lib (name "MaeLid") (type "KiCad") (uri "${KIPRJMOD}/MaeLid.pretty") (options "") (descr ""))
+	(lib (name "key") (type "KiCad") (uri "${KIPRJMOD}/key.pretty") (options "") (descr ""))
+	(lib (name "footprints") (type "KiCad") (uri "${KIPRJMOD}/footprints.pretty") (options "") (descr ""))
+	(lib (name "EKR82-footprint") (type "KiCad") (uri "${KIPRJMOD}/EKR82-footprint.pretty") (options "") (descr ""))
+)

@@ -1,0 +1,88 @@
+(footprint "MouseBite_5x0.5mm"
+	(version 20240108)
+	(generator "manual")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Rangee de 5 trous non metallises D0.5 mm au pas de 0.75 — ligne de rupture d'un tab de panneau. A poser au MILIEU du tab : au ras du bord de carte les trous tombent dans le plan de masse (hole_clearance).")
+	(tags "panel mousebite tab")
+	(attr through_hole exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+	(property "Reference" "MB**"
+		(at 0 -2.95 0)
+		(layer "F.SilkS")
+		(uuid "e7e81844-edba-4c69-8045-d2dbcb707f9e")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+			(hide yes)
+		)
+	)
+	(property "Value" "MouseBite_5x0.5mm"
+		(at 0 2.95 0)
+		(layer "F.Fab")
+		(uuid "488a0eba-d7d9-455e-81db-bb3937f6c515")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+			(hide yes)
+		)
+	)
+	(fp_line
+		(start -0.4 -1.95)
+		(end 0.4 -1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e597effa-4e9e-417c-9d6c-153ab88faa7e")
+	)
+	(fp_line
+		(start -0.4 1.95)
+		(end 0.4 1.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "be26aab0-834a-4e43-8540-1222693d05a8")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 -1.5)
+		(size 0.5 0.5)
+		(drill 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "ba7c040e-11cb-4003-be2a-c2a88b983eac")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 -0.75)
+		(size 0.5 0.5)
+		(drill 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "375c6741-f573-4e6a-a3b8-10fc0d4cc1bc")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 0.5 0.5)
+		(drill 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "f4ab5673-396b-4d07-94f0-8a934cb3f7a4")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0.75)
+		(size 0.5 0.5)
+		(drill 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "e88548c8-c929-4b50-b3e6-5d0a3391868e")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 1.5)
+		(size 0.5 0.5)
+		(drill 0.5)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "4077edc4-fdb0-42e2-afc3-c70ed40482b2")
+	)
+)
