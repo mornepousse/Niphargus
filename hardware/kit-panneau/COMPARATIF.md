@@ -4,36 +4,46 @@ Trois variantes exportées pour comparer le coût réel du multi-design.
 
 | Zip | Contenu | Dimensions | Surface | Designs | Prix (vert, 2026-08) |
 |---|---|---|---|---|---|
-| `niphargus_conchodytes-gerbers.zip` | clavier + souris | 185,4 × 212,3 | 393,5 cm² | **3** | **70,89 €** |
-| `niphargus-seul-gerbers.zip` | clavier seul, 2 moitiés | 185,4 × 212,3 | 393,5 cm² | **2** | **56,68 €** |
-| `conchodytes-seul-gerbers.zip` | souris seule | 39,0 × 81,5 | 31,8 cm² | **1** | **6,06 €** |
+| `niphargus-gerbers.zip` | **clavier compact, retenu** | 169,2 × 198,2 | 335 cm² | **2** | **53,65 €** |
+| `conchodytes-seul-gerbers.zip` | **souris, retenue** | 39,0 × 81,5 | 31,8 cm² | **1** | **6,06 €** |
+| *(ancien panneau 185,4 × 212,3)* | clavier avant re-panneautage | | 393,5 cm² | 2 | 56,68 € |
+| *(panneau commun, écarté)* | clavier + souris | 185,4 × 212,3 | 393,5 cm² | 3 | 70,89 € |
 
-## Décision : commander séparément
+## Décision : commander séparément, avec le panneau compact
+
+Devis JLCPCB, 4 couches vert, août 2026 :
 
 ```
-   A — panneau 3 designs          70,89 EUR
-   B — clavier 2 + souris 1       56,68 + 6,06  =  62,74 EUR      <-- retenu
-                                                   ---------
-   ecart                                           8,15 EUR
+   A  panneau commun 3 designs                        70,89 EUR
+   B  clavier 394 cm2 (2 designs) + souris     56,68 + 6,06 = 62,74 EUR
+   C  clavier 335 cm2 (2 designs) + souris     53,65 + 6,06 = 59,71 EUR   <-- retenu
 ```
 
-**Le panneau commun est plus cher, contre toute intuition.** Ajouter la souris au
-panneau coûte **14,21 €** de surcoût multi-design, alors que la même carte
-commandée seule vaut **6,06 €** : on la paierait 2,3 fois son prix, pour une
-surface identique au millimètre.
+**11,18 EUR d'economie** entre le point de depart et la solution retenue.
 
-Le port ne départage pas : les PCB partent dans une commande plus large, il est
-mutualisé dans les deux cas.
+La repartition est instructive :
 
-Le panneau commun et `scripts/merge_panel.py` sont conservés — la technique est
-au point et resservira si le rapport de prix change — mais **ce n'est pas ce
-qu'on commande.**
+- **8,15 EUR** viennent du seul fait de **ne pas panneauter la souris avec le
+  clavier**. Ajouter la souris au panneau coute 14,21 EUR de surcout
+  multi-design alors que la carte seule vaut 6,06 EUR : on la paierait 2,3 fois
+  son prix, pour une surface identique au millimetre.
+- **3,03 EUR** viennent du **re-panneautage du clavier**, passe de 394 a
+  335 cm2 (-15 %) en tournant la moitie droite de 180 degres, en supprimant les
+  rails et en imbriquant les deux moities. Le prix ne suit pas la surface : le
+  surcout multi-design est un forfait qui pese davantage que les cm2 gagnes.
+
+Le second point vaut d'etre retenu pour la suite : **sur un petit panneau,
+economiser un design rapporte plus qu'economiser de la surface.**
+
+Le panneau commun et `scripts/merge_panel.py` sont conserves — la technique est
+au point et resservira si le rapport de prix change — mais ce n'est pas ce
+qu'on commande.
 
 ### Conséquence heureuse
 
 La souris n'est plus contrainte par le panneau du clavier. La limite de **42 mm**
-de largeur, qui pesait sur la mesure de la coque M100, **disparaît** : son
-contour définitif pourra faire la taille nécessaire.
+de largeur, qui pesait sur la mesure de la coque M100, **disparait** : son
+contour definitif pourra faire la taille necessaire.
 
 ## Ce que dit JLCPCB
 
