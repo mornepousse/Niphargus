@@ -2,22 +2,38 @@
 
 Trois variantes exportées pour comparer le coût réel du multi-design.
 
-| Zip | Contenu | Dimensions | Surface | Designs déclarés | Prix (à remplir) |
+| Zip | Contenu | Dimensions | Surface | Designs | Prix (vert, 2026-08) |
 |---|---|---|---|---|---|
-| `niphargus_conchodytes-gerbers.zip` | clavier + souris | 185,4 × 212,3 | 393,5 cm² | **3** | |
-| `niphargus-seul-gerbers.zip` | clavier seul, 2 moitiés | 185,4 × 212,3 | 393,5 cm² | **2** | |
-| `conchodytes-seul-gerbers.zip` | souris seule | 39,0 × 81,5 | 31,8 cm² | **1** | |
+| `niphargus_conchodytes-gerbers.zip` | clavier + souris | 185,4 × 212,3 | 393,5 cm² | **3** | **70,89 €** |
+| `niphargus-seul-gerbers.zip` | clavier seul, 2 moitiés | 185,4 × 212,3 | 393,5 cm² | **2** | **56,68 €** |
+| `conchodytes-seul-gerbers.zip` | souris seule | 39,0 × 81,5 | 31,8 cm² | **1** | **6,06 €** |
 
-La comparaison qui décide :
+## Décision : commander séparément
 
 ```
-   commande unique            :  panneau 3 designs
-   deux commandes séparées    :  clavier 2 designs  +  souris 1 design
+   A — panneau 3 designs          70,89 EUR
+   B — clavier 2 + souris 1       56,68 + 6,06  =  62,74 EUR      <-- retenu
+                                                   ---------
+   ecart                                           8,15 EUR
 ```
 
-**La surface du panneau ne change pas** entre les deux premières variantes : la
-souris tient dans le vide déjà payé. L'écart de prix est donc *uniquement* le
-surcoût du design supplémentaire — c'est exactement ce qu'on cherche à mesurer.
+**Le panneau commun est plus cher, contre toute intuition.** Ajouter la souris au
+panneau coûte **14,21 €** de surcoût multi-design, alors que la même carte
+commandée seule vaut **6,06 €** : on la paierait 2,3 fois son prix, pour une
+surface identique au millimètre.
+
+Le port ne départage pas : les PCB partent dans une commande plus large, il est
+mutualisé dans les deux cas.
+
+Le panneau commun et `scripts/merge_panel.py` sont conservés — la technique est
+au point et resservira si le rapport de prix change — mais **ce n'est pas ce
+qu'on commande.**
+
+### Conséquence heureuse
+
+La souris n'est plus contrainte par le panneau du clavier. La limite de **42 mm**
+de largeur, qui pesait sur la mesure de la coque M100, **disparaît** : son
+contour définitif pourra faire la taille nécessaire.
 
 ## Ce que dit JLCPCB
 

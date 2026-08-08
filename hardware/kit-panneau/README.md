@@ -1,39 +1,29 @@
-# Panneau Niphargus + Conchodytes
+# Kit de fabrication
 
-Gerbers du panneau de fabrication : les **deux moitiés du clavier Niphargus** et
-la **carte de la souris Conchodytes**, réunies dans un seul panneau.
+**Trois variantes de gerbers.** Après devis, on commande les deux cartes
+**séparément** — le panneau commun revient plus cher (voir `COMPARATIF.md`).
 
-Les deux projets restent **indépendants** — chacun son dépôt, son schéma, son
-layout. Ils ne sont réunis qu'ici, à l'export, par `scripts/merge_panel.py` :
-
-```sh
-python3 scripts/merge_panel.py /tmp/panel/panel.kicad_pcb
-```
-
-Le script prend `hardware/pcb/niphar.kicad_pcb`, y insère
-`Conchodytes/hardware/pcb/conchodytes.kicad_pcb` tourné de **−90°** et translaté
-de (+170,85 · +26,15), ce qui pose la souris dans le vide entre les deux moitiés,
-l'avant (le renflement de l'USB-C) vers la droite.
-Tous les UUID sont régénérés pour éviter les collisions.
-
-## Cotes
-
-| | |
-|---|---|
-| Panneau | 185,4 × 212,3 mm, 4 couches |
-| Souris dans le panneau | 84,35 × 39,0 mm, en (18 · 103) |
-| Vide disponible mesuré | 112 × 42 mm — marge 27,7 mm en x, 3,0 mm en y |
-
-La souris tient **dans l'espace déjà payé** du panneau : son PCB ne coûte
-pratiquement rien.
+| Zip | Ce que c'est | Designs | Prix |
+|---|---|---|---|
+| `niphargus-seul-gerbers.zip` | le clavier, 2 moitiés sécables | 2 | 56,68 € |
+| `conchodytes-seul-gerbers.zip` | la souris | 1 | 6,06 € |
+| `niphargus_conchodytes-gerbers.zip` | les deux dans un panneau — **non retenu** | 3 | 70,89 € |
 
 ## Tabs et mouse-bites
 
 | | Position | Tabs | Perçages |
 |---|---|---|---|
-| Souris → rail gauche | x 14,64 → 18,00 | 3 tabs de 3 mm, aux y 115-118, 121-124, 127-130 | 12 |
 | Moitiés → rail droit | x 186,95 → 190,01 | 4 pattes de 3,1 mm, aux y 32-38, 81-87, 159-165, 209-215 | 32 |
 | Moitiés → rail gauche | x 14,64 → 18,7 à 22,6 | 4 pattes aux y 40-46, 57-63, 184-190, 200-206 | 32 |
+| Souris → rail gauche *(panneau commun seulement)* | x 14,64 → 18,00 | 3 tabs de 3 mm | 12 |
+
+Les **64 perçages du clavier sont dans `niphar.kicad_pcb` lui-même**
+(`scripts/mousebites.py`), donc présents que l'on commande le clavier seul ou le
+panneau. Ils étaient auparavant posés par `merge_panel.py`, donc absents du
+clavier seul — le zip livrait des pattes en matière pleine.
+
+⚠️ **Les perçages vont au milieu du tab, pas au ras de la carte.** Au ras du bord
+ils tombent dans le plan de masse : 35 violations `hole_clearance` (vérifié).
 
 Perçages **Ø 0,5 mm au pas de 0,75**, posés sur la ligne de rupture, côté carte,
 pour que la tranche reste propre après séparation. **76 au total sur 11
