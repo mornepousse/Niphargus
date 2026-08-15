@@ -2,14 +2,14 @@
 # Image kicad/kicad épinglée sur la version EXACTE du poste local (10.0.4) :
 # un autre patch de KiCad change les comptes ERC/DRC et fausse la baseline
 # (constaté : 10.0.5 en CI vs 10.0.4 local -> +5 warnings DRC). Monter les deux ensemble.
-# Étages : fast (ERC) sur PR, full (ERC+DRC) sur main + nightly.
+# Étages : fast (ERC) sur PR, full (ERC+DRC) sur main.
+# PAS de nightly : un design KiCad ne change pas tout seul entre deux nuits, le
+# cron ne détectait rien et ne produisait que des échecs quotidiens (2026-08-15).
 name: tripwire
 on:
   pull_request:
   push:
     branches: ["main"]
-  schedule:
-    - cron: "0 3 * * *"   # nightly full — supprimer si inutile
 
 jobs:
   check-fast:
