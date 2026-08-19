@@ -164,7 +164,12 @@ Une prise branchée au BIOS d'une machine quelconque donne :
   matrice, batt_dV, link_q).
 - **Pairing runtime KaSe** (canal 40, set_id dérivé du MAC du dongle, canaux 80-119) : l'isolation
   entre Rouge-Gorge et les claviers KaSe voisins est déjà résolue par construction.
-- Rouge-Gorge occupe **les 2 slots d'un dongle** → dongle dédié à ce clavier.
+- ⚠ **Corrigé le 2026-08-19** : Rouge-Gorge n'occupe **qu'un seul slot** du dongle.
+  Le second appartient à la souris **Conchodytes**, qui vise le même récepteur. En
+  conséquence les moitiés ne passent plus toutes deux par le dongle : la droite
+  émet en direct vers la gauche, qui porte le moteur keymap et parle seule au
+  dongle. Voir le design firmware dans KeSp_firmware
+  (`docs/superpowers/specs/2026-08-19-niphargus-firmware-design.md`).
 - Plus tard, optionnel : canal ESP-NOW « info » via le C6 du module P4 (antenne IPEX déjà sur le
   module) — coût hardware nul aujourd'hui.
 

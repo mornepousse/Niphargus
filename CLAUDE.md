@@ -17,9 +17,12 @@ Le projet sort de sa tombe pour une refonte complète :
   touches), plans de masse soignés, chemin de décharge vers GND.
 - Objectif mécanique : **fin et durable**.
 - Retirer « les sw » (à préciser avec l'utilisateur au moment de la refonte du schéma).
-- Le firmware ESP32/nRF24 vivra **dans ce repo** (dossier `firmware/` à venir) —
-  à son arrivée : renseigner `MODULE_FAST` dans `scripts/check.sh` et relancer
-  `/tripwire:init` en mode mise à jour.
+- Le firmware ESP32/nRF24 **ne vit PAS dans ce repo** : il est développé dans
+  `~/Documents/GitHub/KaSe_firmware` (KeSp_firmware), aux côtés du dongle dont il
+  réutilise la pile RF et le moteur keymap. Design :
+  `KaSe_firmware/docs/superpowers/specs/2026-08-19-niphargus-firmware-design.md`.
+  Ce repo reste le matériel : schéma, PCB, boîtier. Pas de `MODULE_FAST` à
+  renseigner ici.
 
 ## Workflow anti-régression (OBLIGATOIRE)
 
@@ -48,17 +51,16 @@ non-déterministe (±quelques erreurs par run), l'oracle tolère ±10 erreurs DR
 `pre-push` lance le check complet et bloque le push si rouge. WIP : `git push --no-verify`.
 
 **Hooks Claude Code** (`.claude/settings.json`, automatiques) :
-- `PostToolUse` sur édition d'un fichier surveillé (`hardware/`, `case/`,
-  futur `firmware/`) → `check.sh --fast`.
+- `PostToolUse` sur édition d'un fichier surveillé (`hardware/`, `case/`)
+  → `check.sh --fast`.
 - `Stop` → `check.sh --fast` (garde-fou ~1 s avant de conclure). Le build complet
   (ERC/DRC kicad-cli) n'est PAS relancé à chaque fin de tour : il reste garanti
   au pre-push git.
 
-### Norme TDD — nouvelle logique pure
-Toute nouvelle fonction de logique pure (futur firmware ESP32/nRF24 : protocole
-radio, matrice, gestion des modes filaire/sans-fil) : test écrit **d'abord**,
-ajouté à la suite de tests de la phase rapide. Le test doit être rouge avant
-l'implémentation, vert après, et parallel-safe (pas d'état global muté).
+### Norme TDD
+Ce repo n'héberge pas de logique exécutable : l'oracle est le ratchet ERC/DRC
+ci-dessus. La norme TDD sur la logique pure (protocole radio, matrice, modes
+filaire/sans-fil) s'applique côté KeSp_firmware, où vit le firmware.
 
 ### Économie de modèles (subagents)
 Le pipeline check.sh permet de descendre en gamme SANS risque d'hallucination,
