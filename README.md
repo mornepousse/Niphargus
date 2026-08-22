@@ -21,7 +21,8 @@
 Niphargus is a thin, unkillable wireless split keyboard.
 
 - **Two self-contained halves** — one ESP32-S3-WROOM-1 + nRF24L01+ and a 16340
-  cell each, matrix scanning in deep sleep (RTC domain), KaSe dongle on the host side.
+  cell each, matrix scanning in deep sleep (RTC domain), the
+  [KeSp dongle](https://github.com/mornepousse/KeSp_dongle) on the host side.
 - **Wired fallback** — direct USB-C plus a TRRS jack between halves: *plugging it
   back in must be enough*. A 5 V handshake on the link makes hot-plug spark-free.
 - **ESD hardening throughout** — TVS diodes on USB and TRRS, 100 Ω in series on
@@ -44,7 +45,8 @@ DRC clean. Case in progress (see below). Firmware to follow.
 Niphargus est un clavier split sans fil, fin et increvable.
 
 - **Deux moitiés autonomes** — ESP32-S3-WROOM-1 + nRF24L01+ et une batterie 16340
-  chacune, scan de la matrice en sommeil profond (domaine RTC), dongle KaSe côté hôte.
+  chacune, scan de la matrice en sommeil profond (domaine RTC),
+  [dongle KeSp](https://github.com/mornepousse/KeSp_dongle) côté hôte.
 - **Repli filaire** — USB-C direct et jack TRRS entre les moitiés : *rebrancher
   doit suffire*. Une poignée de main 5 V sur le lien évite les étincelles au branchement à chaud.
 - **Robustesse ESD partout** — TVS sur USB et TRRS, 100 Ω série sur chaque ligne
