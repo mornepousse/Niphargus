@@ -29,3 +29,7 @@ hardware/pcb/jlcpcb/
 
 # case — produits regeneres par gen_case.py (sources : gen_case.py + case_outline.svg)
 case/*.stl
+
+# Python — caches
+__pycache__/
+*.pyc

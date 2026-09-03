@@ -6,9 +6,14 @@ LOG = open("/tmp/gen_case.log", "w", buffering=1)
 def say(*a):
     LOG.write(" ".join(str(x) for x in a) + "\n")
 
-OUTDIR = "/home/mae/Documents/GitHub/rili/case"
+# Chemins deduits de l'emplacement du script. Ils etaient absolus et pointaient
+# vers .../GitHub/rili, l'ancien nom du projet : plus rien ne tournait apres le
+# renommage. NIPHAR_CASE_OUT permet de forcer une autre sortie.
+HERE   = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else os.getcwd()
+OUTDIR = os.environ.get("NIPHAR_CASE_OUT", HERE)
+REPO   = os.path.dirname(OUTDIR)
 SRC    = f"{OUTDIR}/case_outline.svg"
-PCB    = "/home/mae/Documents/GitHub/rili/hardware/pcb/niphar.kicad_pcb"
+PCB    = f"{REPO}/hardware/pcb/niphar.kicad_pcb"
 
 # --- cotes ---
 H        = 8.5     # cadre alu
@@ -22,10 +27,18 @@ PCB_M3_D = 3.2
 MX_HOLE  = 14.0
 Z_PCB_TOP = H - H_TOP          # 5.1
 Z_PCB_BOT = Z_PCB_TOP - T_PCB  # 3.5
+# (nom, x, y, largeur, z0, z1, profondeur)
+# profondeur None => calculee, distance au bord + 12 mm de marge.
+# TRRS : profondeur 16 mm relevee au banc sur l'impression 3D.
+# La hauteur reste z 5,1 -> 8,5 (3,4 mm) : le jack est pose sur le DESSUS du
+# PCB (Z_PCB_TOP = 5,1), donc encocher plus bas retire de la matiere du cadre
+# la ou il n'y a rien a degager. Une decoche de 7 mm calee a 2 mm du bas avait
+# ete essayee : elle descend 3,1 mm sous le jack et deborde de 0,5 mm le haut
+# du cadre (8,5), qui ne peut pas la contenir.
 OPENINGS = [
-    ("USB_C",  181.36, 26.38, 9.6, Z_PCB_TOP - 0.3, Z_PCB_TOP + 3.9),
-    ("TRRS",   186.86, 80.23, 7.5, Z_PCB_TOP, H),
-    ("SWITCH",  27.76, 75.48, 9.0, 0.5, Z_PCB_BOT),
+    ("USB_C",  181.36, 26.38, 9.6, Z_PCB_TOP - 0.3, Z_PCB_TOP + 3.9, None),
+    ("TRRS",   186.86, 80.23, 7.5, Z_PCB_TOP,       H,               16.0),
+    ("SWITCH",  27.76, 75.48, 9.0, 0.5,             Z_PCB_BOT,       None),
 ]
 # calage valide a 0,009 mm sur les 26 decoupes de touches
 DX, DY = -28.030, -137.600
@@ -207,10 +220,17 @@ def exit_dir(kx, ky):
                 best, nrm, dist = d, n, d
     return nrm, dist
 
-for nm, kx, ky, w, z0, z1 in OPENINGS:
+for nm, kx, ky, w, z0, z1, prof in OPENINGS:
     d, dist = exit_dir(kx, ky)
     ang = math.degrees(math.atan2(d.y, d.x))
-    b = Part.makeBox(dist + 12, w, z1 - z0, Vector(-4, -w/2, z0))
+    # prof = penetration REELLE depuis le bord exterieur, pas la longueur de la
+    # boite. Le bord est a `dist` du point du connecteur : on demarre donc a
+    # dist - prof et on ressort de 2 mm pour garantir le debouche. Sans ca les
+    # mm demandes partent dans le vide au-dela du chant.
+    if prof:
+        b = Part.makeBox(prof + 2, w, z1 - z0, Vector(dist - prof, -w/2, z0))
+    else:
+        b = Part.makeBox(dist + 12, w, z1 - z0, Vector(-4, -w/2, z0))
     b.rotate(Vector(0, 0, 0), Vector(0, 0, 1), ang)
     b.translate(P(kx, ky, 0))
     before = frame.Volume
@@ -242,11 +262,16 @@ for pts in touches:
 top = top.cut(Part.Face(w_accu).extrude(Vector(0, 0, T_PLATE + 4)).
               translated(Vector(0, 0, H - 2)))
 # le jack sort par le dessus
-for nm, kx, ky, w, z0, z1 in OPENINGS:
+for nm, kx, ky, w, z0, z1, prof in OPENINGS:
     if nm != 'TRRS':
         continue
     d, dist = exit_dir(kx, ky)
-    b = Part.makeBox(dist + 12, w, T_PLATE + 4, Vector(-4, -w/2, 0))
+    # traversant sur toute l'epaisseur : une decoupe laser passe ou ne passe pas,
+    # elle ne s'arrete pas a mi-epaisseur comme le fraisage du cadre.
+    if prof:
+        b = Part.makeBox(prof + 2, w, T_PLATE + 4, Vector(dist - prof, -w/2, 0))
+    else:
+        b = Part.makeBox(dist + 12, w, T_PLATE + 4, Vector(-4, -w/2, 0))
     b.rotate(Vector(0, 0, 0), Vector(0, 0, 1), math.degrees(math.atan2(d.y, d.x)))
     b.translate(P(kx, ky, H - 2))
     top = top.cut(b)
@@ -273,6 +298,35 @@ bot = plate(-T_PLATE)
 for hx, hy in PCB_M3:
     bot = bot.cut(Part.makeCylinder(PCB_M3_D/2, T_PLATE + 4, P(hx, hy, -T_PLATE - 2), Vector(0, 0, 1)))
 say(f"plaque basse : {len(vis)} vis + {len(PCB_M3)} trous M3 de la carte")
+
+# Acces au connecteur de programmation de l'ESP32-S3, par le dessous.
+# J1 est en B.Cu (sous la carte) et porte les nets /s3/* : c'est celui de la
+# moitie GAUCHE. J2, meme empreinte, porte les nets /right/* — les deux moities
+# sont cote a cote dans niphar.kicad_pcb, ce ne sont pas deux variantes en
+# miroir. Pour le boitier droit, utiliser J2 a (227.471, 41.050).
+#
+# Comme pour DEGAGE_HAUT, on vise le CENTRE reel et non l'origine de
+# l'empreinte : J1 est a (151.990, 40.648) mais ses pastilles sont centrees
+# 1,42 mm plus loin. Transform verifie sur J12, qui redonne la valeur deja
+# retenue pour connecteur_ecran.
+# Jeu genereux : ce n'est pas un simple degagement, il faut y passer un clip ou
+# des pointes de test.
+DEGAGE_BAS = [
+    ("prog_S3", 153.26, 41.28, -90.0, 5.0, 10.0, 0.5),   # J1, header 2x03 pas 1,27
+    # 5 x 10 = le connecteur AVEC sa partie plastique, mesure par Mae. Le cuivre
+    # seul ne fait que 2,27 x 3,54 : c'est le capot qui impose l'ouverture.
+    # Le 10 est place sur le local Y, l'axe des 3 rangees — le capot est plus
+    # long du cote ou il y a le plus de broches.
+]
+for nm, kx, ky, rot, w, h, jeu in DEGAGE_BAS:
+    b = Part.makeBox(w + 2*jeu, h + 2*jeu, T_PLATE + 4,
+                     Vector(-(w + 2*jeu)/2, -(h + 2*jeu)/2, 0))
+    b.rotate(Vector(0, 0, 0), Vector(0, 0, 1), -rot)
+    b.translate(P(kx, ky, -T_PLATE - 2))
+    before = bot.Volume
+    bot = bot.cut(b)
+    say(f"   degagement {nm}: {w+2*jeu:.1f} x {h+2*jeu:.1f} mm a ({kx:.1f},{ky:.1f}), "
+        f"{(before-bot.Volume)/T_PLATE:.0f} mm2 retires")
 
 doc = App.newDocument("niphar_case_left")
 for nm, sh in (('frame_alu', frame), ('plate_top_PC', top), ('plate_bottom_PC', bot)):
@@ -348,6 +402,61 @@ try:
     say("STL   : 3 fichiers")
 except Exception as ex:
     say(f"STL non generes ({ex})")
+
+# DXF des deux plaques polycarbonate, pour la decoupe laser.
+# On coupe chaque solide a mi-epaisseur plutot que de prendre une face : la
+# section donne le vrai profil traversant — contour exterieur, vis, trous M3,
+# decoupes de touches, fenetre accu, degagements — en un seul jeu de contours.
+# Le cadre alu n'est pas exporte : 8,5 mm d'epaisseur, ce n'est pas une piece
+# de decoupe laser, et ses ouvertures sont a des hauteurs differentes.
+#
+# Ecriture directe en DXF R12 plutot que via importDXF : ce module tire la GUI
+# et fait planter freecadcmd. R12 est aussi le dialecte le plus surement lu par
+# les logiciels de decoupe. Cercles entiers -> CIRCLE (le decoupeur garde un
+# vrai cercle pour sa compensation de saignee), le reste -> LINE.
+def _dxf_write(path, wires, tol=0.02):
+    e = []
+    def line(a, b):
+        e.append("0\nLINE\n8\n0\n10\n%.4f\n20\n%.4f\n30\n0.0\n"
+                 "11\n%.4f\n21\n%.4f\n31\n0.0" % (a.x, a.y, b.x, b.y))
+    n_circ = n_seg = 0
+    for w in wires:
+        for ed in w.Edges:
+            crv = ed.Curve
+            if isinstance(crv, Part.Circle) and ed.isClosed():
+                c = crv.Center
+                e.append("0\nCIRCLE\n8\n0\n10\n%.4f\n20\n%.4f\n30\n0.0\n40\n%.4f"
+                         % (c.x, c.y, crv.Radius))
+                n_circ += 1
+            elif isinstance(crv, Part.Line):
+                line(ed.Vertexes[0].Point, ed.Vertexes[-1].Point)
+                n_seg += 1
+            else:
+                pts = ed.discretize(Deflection=tol)
+                for i in range(len(pts) - 1):
+                    line(pts[i], pts[i + 1])
+                n_seg += len(pts) - 1
+    open(path, "w").write("0\nSECTION\n2\nENTITIES\n"
+                          + "".join(x + "\n" for x in e)
+                          + "0\nENDSEC\n0\nEOF\n")
+    return n_circ, n_seg
+
+try:
+    for _nm, _sh, _zmid in (("plate_top_PC",    top, H + T_PLATE/2),
+                            ("plate_bottom_PC", bot, -T_PLATE/2)):
+        _wires = _sh.slice(Vector(0, 0, 1), _zmid)
+        if not _wires:
+            say(f"DXF   : {_nm} — section vide a z={_zmid}, non genere")
+            continue
+        _comp = Part.Compound(_wires)
+        _comp.translate(Vector(0, 0, -_zmid))          # a plat sur z = 0
+        _p = f"{OUTDIR}/{_nm}.dxf"
+        _c, _l = _dxf_write(_p, _comp.Wires)
+        _bb = _comp.BoundBox
+        say(f"DXF   : {_nm}.dxf — {len(_comp.Wires)} contours "
+            f"({_c} cercles, {_l} segments), {_bb.XLength:.1f}x{_bb.YLength:.1f} mm")
+except Exception as ex:
+    say(f"DXF non generes ({ex})")
 
 # Un document cree en --console n'a PAS de GuiDocument.xml : a l'ouverture,
 # FreeCAD ne sait ni quoi afficher ni comment. On repasse dessus avec la GUI en
