@@ -1,0 +1,18 @@
+LCSC Part Number,Quantity,Description,Package,Niphargus,Conchodytes,Besoin,Notes
+C81598,100,1N4148W diode de matrice,SOD-123,52,0,52,"D1-D48 + U1-U4 (ces 4 sont des diodes malgre leur reference en U)"
+C2827707,30,SD05C-01F TVS unidirectionnelle,SOD-323,22,0,22,protection ESD des lignes de matrice
+C2480,6,SS14 Schottky 1A 40V,SMA,2,1,3,chemin USB / batterie
+C16581,6,TP4056-42-ESOP8 chargeur Li-ion,SOIC-8-1EP,2,1,3,
+C50936,6,HT7833 LDO 3.3V 500mA,SOT-89-3,2,1,3,"PIEGE : brochage 1=GND 2=VIN 3=VOUT, PAS celui du MCP1700 SOT-23"
+C351410,6,DW01A protection de cellule,SOT-23-6,2,1,3,va par paire avec le FS8205
+C32254,6,FS8205 double MOSFET de protection,SOT-23-6,2,1,3,va par paire avec le DW01A
+C351408,6,AO3407 P-MOSFET load-share,SOT-23,2,1,3,
+C7519,6,USBLC6-2SC6 TVS USB,SOT-23-6,2,1,3,
+C13612,5,SRV05-4 TVS 4 lignes,SOT-23-6,2,0,2,TRRS ; alternative budget Leiditech C384887
+C141606,5,SiP32431DR3 load switch,SOT-363 SC-70-6,2,0,2,poignee de main 5V du lien TRRS
+C4154405,3,CH334R hub USB 2.0,QSOP-16,1,0,1,WCH - introuvable hors Chine
+C6186,3,AMS1117-3.3 LDO du coffre P4,SOT-223-3,1,0,1,
+C20612443,2,PMW3360DM-T2QU capteur optique,DIP-16 optique,0,1,1,"A VERIFIER : code releve sur lcsc.com, pas dans le schema. Lentille LM19-LSI a commander a part"
+C2891260,5,XC6206P202MR-G LDO 2.0V 120mA,SOT-23,0,1,1,"REMPLACE le 1.8V : 1.80 est le MINIMUM datasheet (typ 1.90, max abs 2.10). 2.0V +-2% = 1.96-2.04, dans la plage. ATTENTION : brochage SOT-23 du XC6206 = 1 VSS, 2 VOUT, 3 VIN — les pistes des pads 2 et 3 de U100 sont INVERSEES sur le PCB, a corriger avant de commander (voir NOTE-LDO-PMW3360.md)"
+A CHOISIR,10,LED temoin de charge,0805,2,1,3,aucune reference au schema - couleur au gout
+A CHOISIR,5,LED infrarouge 940nm eclairage capteur,0805,0,1,1,aucune reference au schema - verifier l'intensite requise par le PMW3360
