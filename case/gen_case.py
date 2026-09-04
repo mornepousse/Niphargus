@@ -13,6 +13,23 @@ HERE   = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() e
 OUTDIR = os.environ.get("NIPHAR_CASE_OUT", HERE)
 REPO   = os.path.dirname(OUTDIR)
 SRC    = f"{OUTDIR}/case_outline.svg"
+
+# ── GARDE-FOU ───────────────────────────────────────────────────────────────
+# Depuis le passage en PartDesign, niphar-case-left.FCStd est la SOURCE DE
+# VERITE : il s'edite dans FreeCAD, et ce script l'ecraserait. Il ne sert plus
+# qu'a re-amorcer le modele depuis le SVG et le PCB, ce qui efface toutes les
+# retouches faites a la main.
+#   - pour sortir les DXF/STEP/STL apres une edition : freecadcmd export_case.py
+#   - pour vraiment re-amorcer :  NIPHAR_RESEED=1 freecadcmd gen_case.py
+_FCSTD = f"{OUTDIR}/niphar-case-left.FCStd"
+if os.path.exists(_FCSTD) and not os.environ.get("NIPHAR_RESEED"):
+    # freecadcmd avale le message de sys.exit : on l'imprime nous-memes
+    print(f"\n*** {_FCSTD} existe deja et fait foi. ***\n"
+          f"  exporter les fichiers de fab : freecadcmd export_case.py\n"
+          f"  re-amorcer malgre tout       : NIPHAR_RESEED=1 freecadcmd gen_case.py\n",
+          flush=True)
+    sys.exit(1)
+# ────────────────────────────────────────────────────────────────────────────
 PCB    = f"{REPO}/hardware/pcb/niphar.kicad_pcb"
 
 # --- cotes ---
@@ -29,7 +46,9 @@ Z_PCB_TOP = H - H_TOP          # 5.1
 Z_PCB_BOT = Z_PCB_TOP - T_PCB  # 3.5
 # (nom, x, y, largeur, z0, z1, profondeur)
 # profondeur None => calculee, distance au bord + 12 mm de marge.
-# TRRS : profondeur 16 mm relevee au banc sur l'impression 3D.
+# TRRS : profondeur 16 mm et decalage lateral de 1 mm releves au banc sur
+# l'impression 3D. Le y vaut donc 81,23 et non les 80,23 de J6 : la decoche ne
+# tombe PAS sur l'origine de l'empreinte du jack.
 # La hauteur reste z 5,1 -> 8,5 (3,4 mm) : le jack est pose sur le DESSUS du
 # PCB (Z_PCB_TOP = 5,1), donc encocher plus bas retire de la matiere du cadre
 # la ou il n'y a rien a degager. Une decoche de 7 mm calee a 2 mm du bas avait
@@ -37,7 +56,7 @@ Z_PCB_BOT = Z_PCB_TOP - T_PCB  # 3.5
 # du cadre (8,5), qui ne peut pas la contenir.
 OPENINGS = [
     ("USB_C",  181.36, 26.38, 9.6, Z_PCB_TOP - 0.3, Z_PCB_TOP + 3.9, None),
-    ("TRRS",   186.86, 80.23, 7.5, Z_PCB_TOP,       H,               16.0),
+    ("TRRS",   186.86, 81.23, 7.5, Z_PCB_TOP,       H,               16.0),
     ("SWITCH",  27.76, 75.48, 9.0, 0.5,             Z_PCB_BOT,       None),
 ]
 # calage valide a 0,009 mm sur les 26 decoupes de touches
@@ -88,6 +107,38 @@ def arc_pts(p0, rx, ry, phi, large, sweep, p1, n=16):
         out.append((cs*rx*math.cos(th) - sn*ry*math.sin(th) + cx,
                     sn*rx*math.cos(th) + cs*ry*math.sin(th) + cy))
     return out
+
+def arc_params(p0, rx, ry, phi, large, sweep, p1):
+    """arc SVG circulaire -> (cx, cy, r, th0, dth). Meme math que arc_pts, mais
+    on garde les parametres au lieu d'echantillonner."""
+    phi = math.radians(phi)
+    cs, sn = math.cos(phi), math.sin(phi)
+    dx2, dy2 = (p0[0]-p1[0])/2.0, (p0[1]-p1[1])/2.0
+    x1 =  cs*dx2 + sn*dy2
+    y1 = -sn*dx2 + cs*dy2
+    rx, ry = abs(rx), abs(ry)
+    lam = x1*x1/(rx*rx) + y1*y1/(ry*ry)
+    if lam > 1:
+        sc = math.sqrt(lam); rx *= sc; ry *= sc
+    num = rx*rx*ry*ry - rx*rx*y1*y1 - ry*ry*x1*x1
+    den = rx*rx*y1*y1 + ry*ry*x1*x1
+    co = math.sqrt(max(num, 0)/den) if den else 0.0
+    if large == sweep:
+        co = -co
+    cxp, cyp = co*rx*y1/ry, -co*ry*x1/rx
+    cx = cs*cxp - sn*cyp + (p0[0]+p1[0])/2.0
+    cy = sn*cxp + cs*cyp + (p0[1]+p1[1])/2.0
+    def ang(ux, uy, vx, vy):
+        d_ = (ux*vx + uy*vy) / (math.hypot(ux, uy)*math.hypot(vx, vy))
+        a = math.acos(max(-1, min(1, d_)))
+        return -a if ux*vy - uy*vx < 0 else a
+    th0 = ang(1, 0, (x1-cxp)/rx, (y1-cyp)/ry)
+    dth = ang((x1-cxp)/rx, (y1-cyp)/ry, (-x1-cxp)/rx, (-y1-cyp)/ry)
+    if not sweep and dth > 0:
+        dth -= 2*math.pi
+    elif sweep and dth < 0:
+        dth += 2*math.pi
+    return cx, cy, rx, th0, dth
 
 def parse_d(d):
     cur, cmds = None, []
@@ -156,12 +207,14 @@ def bbox(pts):
     return min(xs), max(xs), min(ys), max(ys)
 
 txt = open(SRC).read()
-raw = [parse_d(m) for m in re.findall(r'<path[^>]*\bd="([^"]+)"', txt)]
-raw = [p for p in raw if len(p) >= 4]
+# on garde la chaine d d'origine : les esquisses parametriques la relisent pour
+# conserver arcs et beziers, au lieu des centaines de segments de parse_d.
+raw = [(m, parse_d(m)) for m in re.findall(r'<path[^>]*\bd="([^"]+)"', txt)]
+raw = [p for p in raw if len(p[1]) >= 4]
 say(f"SVG source : {len(raw)} contours lus")
 
 vis, touches, gros, accu = [], [], [], None
-for pts in raw:
+for _d, pts in raw:
     x0, x1, y0, y1 = bbox(pts)
     w, h = x1-x0, y1-y0
     if abs(w - VIS_D) < 0.3 and abs(h - VIS_D) < 0.3:
@@ -169,7 +222,7 @@ for pts in raw:
     elif 12.0 < w < 22.0 and 12.0 < h < 22.0:
         touches.append(pts)
     elif w > 100:
-        gros.append((w*h, pts))
+        gros.append((w*h, pts, _d))
     elif 25 < w < 60:
         accu = pts
 gros.sort(key=lambda a: -a[0])
@@ -178,6 +231,7 @@ say(f"   {len(vis)} trous de vis, {len(touches)} decoupes de touches, "
 if len(gros) < 3 or accu is None:
     sys.exit("SVG incomplet")
 outer_p, inner_p, pcb_p = gros[0][1], gros[1][1], gros[2][1]
+outer_d, inner_d = gros[0][2], gros[1][2]
 for nm, pp in (("exterieur", outer_p), ("interieur", inner_p), ("PCB", pcb_p), ("accu", accu)):
     x0, x1, y0, y1 = bbox(pp)
     say(f"   {nm:10s} x {x0:7.2f}..{x1:7.2f}  y {y0:7.2f}..{y1:7.2f}  ({x1-x0:.2f} x {y1-y0:.2f})")
@@ -329,12 +383,259 @@ for nm, kx, ky, rot, w, h, jeu in DEGAGE_BAS:
         f"{(before-bot.Volume)/T_PLATE:.0f} mm2 retires")
 
 doc = App.newDocument("niphar_case_left")
-for nm, sh in (('frame_alu', frame), ('plate_top_PC', top), ('plate_bottom_PC', bot)):
-    o = doc.addObject('Part::Feature', nm)
-    o.Shape = sh
-    o.Label = nm          # sinon le STEP nomme les 3 pieces d'apres le document
+
+# ---------------- arbre parametrique ----------------
+# Les trois pieces sont construites comme un arbre Part (esquisses ->
+# Part::Extrusion -> Part::MultiFuse -> Part::Cut) et non comme des formes
+# figees. On peut donc ouvrir le FCStd, editer une esquisse ou une cote de
+# boite, et recalculer — ce que des Part::Feature a forme figee ne permettent
+# pas.
+#
+# Le script reste la source de verite : une regeneration realigne tout sur
+# case_outline.svg et sur niphar.kicad_pcb, et ecrase les retouches faites a la
+# main. Editer dans FreeCAD sert a ajuster et a essayer, pas a archiver.
+#
+# NB : le commentaire historique disait que Part::Extrusion crashait au-dela
+# de ~110 elements. Verifie sur FreeCAD 1.1.3 : faux. L'extrusion passe a 66,
+# 110, 300, 605 et 1000 segments, et sur des arcs.
+
+def sk_loops(nm, loops, z=0.0):
+    """une esquisse portant plusieurs contours fermes (les 26 touches tiennent
+    ainsi dans un seul objet au lieu de 26)"""
+    sk = doc.addObject('Sketcher::SketchObject', nm)
+    sk.Label = nm
+    sk.Placement = App.Placement(Vector(0, 0, z), App.Rotation(0, 0, 0, 1))
+    geo = []
+    for pts in loops:
+        q = list(pts)
+        if math.hypot(q[0][0]-q[-1][0], q[0][1]-q[-1][1]) > 1e-4:
+            q.append(q[0])
+        geo += [Part.LineSegment(App.Vector(q[i][0], -q[i][1], 0),
+                                 App.Vector(q[i+1][0], -q[i+1][1], 0))
+                for i in range(len(q)-1)]
+    sk.addGeometry(geo, False)
+    return sk
+
+def parse_edges(d):
+    """SVG -> geometrie FreeCAD en gardant arcs et beziers. C'est ce qui rend
+    l'esquisse editable : le contour exterieur tombe de ~605 segments a ~66
+    elements. parse_d, lui, echantillonne tout en droites (arc_pts n=16,
+    bez n=12) — parfait pour le solide, inutilisable dans le Sketcher.
+    Les beziers sont converties en B-splines : Sketcher refuse les
+    Part::GeomBezierCurve mais accepte les B-splines, qui les representent
+    exactement."""
+    T = lambda x, y: App.Vector(x + DX, -(y + DY), 0)   # meme repere que P() apres DX/DY
+    cur, cmds = None, []
+    for c, v in re.findall(r'([MmLlHhVvCcSsQqAaZz])|(-?\d*\.?\d+(?:[eE][-+]?\d+)?)', d):
+        if c:
+            cur = c; cmds.append([c, []])
+        elif cur:
+            cmds[-1][1].append(float(v))
+    geo, p, start, pc2 = [], (0.0, 0.0), None, None
+    def seg(a, b):
+        if math.hypot(a[0]-b[0], a[1]-b[1]) > 1e-7:
+            geo.append(Part.LineSegment(T(*a), T(*b)))
+    for c, a in cmds:
+        C, rel, i = c.upper(), c.islower(), 0
+        if C == 'Z':
+            if start: seg(p, start); p = start
+            continue
+        need = {'M':2,'L':2,'H':1,'V':1,'C':6,'S':4,'Q':4,'T':2,'A':7}[C]
+        while i + need <= len(a):
+            v = a[i:i+need]; i += need
+            if C in ('M', 'L'):
+                q = (p[0]+v[0], p[1]+v[1]) if rel else (v[0], v[1])
+                if C == 'M':
+                    if start is None: start = q
+                    C = 'L'
+                else:
+                    seg(p, q)
+            elif C == 'H':
+                q = (p[0]+v[0], p[1]) if rel else (v[0], p[1]); seg(p, q)
+            elif C == 'V':
+                q = (p[0], p[1]+v[0]) if rel else (p[0], v[0]); seg(p, q)
+            elif C == 'A':
+                q = (p[0]+v[5], p[1]+v[6]) if rel else (v[5], v[6])
+                cx, cy, r, th0, dth = arc_params(p, v[0], v[1], v[2],
+                                                 int(v[3]), int(v[4]), q)
+                circ = Part.Circle(T(cx, cy), App.Vector(0, 0, 1), r)
+                # le repere cible est mirroir en y : un angle th devient -th et
+                # le sens de parcours s'inverse. ArcOfCircle va toujours en sens
+                # trigo de son premier angle vers le second.
+                a0, a1 = -th0, -(th0 + dth)
+                geo.append(Part.ArcOfCircle(circ, a1, a0) if dth > 0
+                           else Part.ArcOfCircle(circ, a0, a1))
+            elif C in ('C', 'S'):
+                if C == 'C':
+                    c1 = (p[0]+v[0], p[1]+v[1]) if rel else (v[0], v[1])
+                    c2 = (p[0]+v[2], p[1]+v[3]) if rel else (v[2], v[3])
+                    q  = (p[0]+v[4], p[1]+v[5]) if rel else (v[4], v[5])
+                else:
+                    c1 = (2*p[0]-pc2[0], 2*p[1]-pc2[1]) if pc2 else p
+                    c2 = (p[0]+v[0], p[1]+v[1]) if rel else (v[0], v[1])
+                    q  = (p[0]+v[2], p[1]+v[3]) if rel else (v[2], v[3])
+                bz = Part.BezierCurve()
+                bz.setPoles([T(*p), T(*c1), T(*c2), T(*q)])
+                geo.append(bz.toBSpline()); pc2 = c2
+            elif C in ('Q', 'T'):
+                if C == 'Q':
+                    c1 = (p[0]+v[0], p[1]+v[1]) if rel else (v[0], v[1])
+                    q  = (p[0]+v[2], p[1]+v[3]) if rel else (v[2], v[3])
+                else:
+                    c1 = (2*p[0]-pc2[0], 2*p[1]-pc2[1]) if pc2 else p
+                    q  = (p[0]+v[0], p[1]+v[1]) if rel else (v[0], v[1])
+                bz = Part.BezierCurve()
+                bz.setPoles([T(*p), T(*c1), T(*q)])
+                geo.append(bz.toBSpline()); pc2 = c1
+            if C not in ('C', 'S', 'Q', 'T'):
+                pc2 = None
+            p = q
+    return geo
+
+def sk_edges(nm, d, secours, z=0.0):
+    """esquisse a partir du SVG en gardant les courbes ; retombe sur le
+    polygone echantillonne si la conversion ne ferme pas le contour"""
+    sk = None
     try:
-        o.Visibility = True
+        sk = doc.addObject('Sketcher::SketchObject', nm)
+        sk.Label = nm
+        sk.Placement = App.Placement(Vector(0, 0, z), App.Rotation(0, 0, 0, 1))
+        g = parse_edges(d)
+        sk.addGeometry(g, False)
+        sk.recompute()          # sans ca sk.Shape est vide en mode console
+        edges = sk.Shape.Edges
+        if not edges:
+            raise ValueError("esquisse vide apres recompute")
+        groupes = Part.sortEdges(edges)
+        if len(groupes) != 1:
+            raise ValueError(f"{len(groupes)} chaines d'aretes au lieu d'une")
+        if not Part.Wire(groupes[0]).isClosed():
+            raise ValueError("contour non ferme")
+        say(f"   esquisse {nm} : {len(g)} elements (courbes conservees)")
+        return sk
+    except Exception as ex:
+        say(f"   esquisse {nm} : conversion en courbes abandonnee ({ex}), "
+            f"repli sur le polygone")
+        if sk is not None:
+            try: doc.removeObject(sk.Name)
+            except Exception: pass
+        return sk_loops(nm, [secours], z)
+
+def sk_circles(nm, centres, r, z=0.0):
+    sk = doc.addObject('Sketcher::SketchObject', nm)
+    sk.Label = nm
+    sk.Placement = App.Placement(Vector(0, 0, z), App.Rotation(0, 0, 0, 1))
+    sk.addGeometry([Part.Circle(App.Vector(c[0], -c[1], 0), App.Vector(0, 0, 1), r)
+                    for c in centres], False)
+    return sk
+
+def extrude(nm, base, length, z0=0.0):
+    e = doc.addObject('Part::Extrusion', nm)
+    e.Label = nm
+    e.Base = base
+    e.DirMode = 'Custom'
+    e.Dir = Vector(0, 0, 1)
+    e.LengthFwd = length
+    e.Solid = True
+    e.Placement = App.Placement(Vector(0, 0, z0), App.Rotation(0, 0, 0, 1))
+    return e
+
+def box(nm, lg, wd, ht, place):
+    b = doc.addObject('Part::Box', nm)
+    b.Label = nm
+    b.Length, b.Width, b.Height = lg, wd, ht
+    b.Placement = place
+    return b
+
+def fuse(nm, objs):
+    f = doc.addObject('Part::MultiFuse', nm)
+    f.Label = nm
+    f.Shapes = objs
+    return f
+
+def cut(nm, base, tool):
+    c = doc.addObject('Part::Cut', nm)
+    c.Label = nm
+    c.Base, c.Tool = base, tool
+    return c
+
+# --- esquisses pilotes ---
+sk_ext  = sk_edges('esq_contour_ext', outer_d, outer_p)
+sk_int  = sk_edges('esq_contour_int', inner_d, inner_p)
+sk_accu = sk_loops('esq_fenetre_accu', [accu])
+sk_tch  = sk_loops('esq_touches', touches)
+sk_vis  = sk_circles('esq_vis', vis, VIS_D/2)
+sk_m3   = sk_circles('esq_pcb_M3', PCB_M3, PCB_M3_D/2)
+
+def opening_box(nm, kx, ky, w, z0, z1, prof, ht=None):
+    """meme construction que la coupe figee, exprimee en Placement"""
+    d, dist = exit_dir(kx, ky)
+    ang = math.degrees(math.atan2(d.y, d.x))
+    lg = (prof + 2) if prof else (dist + 12)
+    x0 = (dist - prof) if prof else -4.0
+    h  = ht if ht is not None else (z1 - z0)
+    pl = (App.Placement(P(kx, ky, 0), App.Rotation(Vector(0, 0, 1), ang))
+          * App.Placement(Vector(x0, -w/2, z0), App.Rotation(0, 0, 0, 1)))
+    return box(nm, lg, w, h, pl)
+
+def degage_box(nm, kx, ky, rot, w, h, jeu, z0):
+    W, H_ = w + 2*jeu, h + 2*jeu
+    pl = (App.Placement(P(kx, ky, z0), App.Rotation(Vector(0, 0, 1), -rot))
+          * App.Placement(Vector(-W/2, -H_/2, 0), App.Rotation(0, 0, 0, 1)))
+    return box(nm, W, H_, T_PLATE + 4, pl)
+
+# --- cadre alu ---
+p_frame = cut('frame_alu',
+              cut('cadre_brut', extrude('ext_contour_ext', sk_ext, H),
+                                extrude('ext_contour_int', sk_int, H)),
+              fuse('outils_cadre',
+                   [extrude('ext_accu_cadre', sk_accu, H + 2),
+                    extrude('ext_vis_cadre', sk_vis, H + 4, -2)]
+                   + [opening_box(f'ouv_{nm}', kx, ky, w, z0, z1, prof)
+                      for nm, kx, ky, w, z0, z1, prof in OPENINGS]))
+
+# --- plaque haute ---
+outils_top = ([extrude('ext_vis_haut',   sk_vis, T_PLATE + 4, H - 2),
+               extrude('ext_M3_haut',    sk_m3,  T_PLATE + 4, H - 2),
+               extrude('ext_touches',    sk_tch, T_PLATE + 4, H - 2),
+               extrude('ext_accu_haut',  sk_accu, T_PLATE + 4, H - 2)]
+              + [opening_box(f'ouv_haut_{nm}', kx, ky, w, z0, z1, prof, ht=T_PLATE + 4)
+                 for nm, kx, ky, w, z0, z1, prof in OPENINGS if nm == 'TRRS']
+              + [degage_box(f'deg_haut_{nm}', kx, ky, rot, w, h, jeu, H - 2)
+                 for nm, kx, ky, rot, w, h, jeu in DEGAGE_HAUT])
+p_top = cut('plate_top_PC', extrude('ext_plaque_haute', sk_ext, T_PLATE, H),
+            fuse('outils_plaque_haute', outils_top))
+
+# --- plaque basse ---
+outils_bot = ([extrude('ext_vis_bas', sk_vis, T_PLATE + 4, -T_PLATE - 2),
+               extrude('ext_M3_bas',  sk_m3,  T_PLATE + 4, -T_PLATE - 2)]
+              + [degage_box(f'deg_bas_{nm}', kx, ky, rot, w, h, jeu, -T_PLATE - 2)
+                 for nm, kx, ky, rot, w, h, jeu in DEGAGE_BAS])
+p_bot = cut('plate_bottom_PC', extrude('ext_plaque_basse', sk_ext, T_PLATE, -T_PLATE),
+            fuse('outils_plaque_basse', outils_bot))
+
+doc.recompute()
+
+# --- verification : le parametrique doit redonner les formes figees ---
+FIGE = {'frame_alu': frame, 'plate_top_PC': top, 'plate_bottom_PC': bot}
+for o in (p_frame, p_top, p_bot):
+    ref = FIGE[o.Name]
+    try:
+        vp, vr = o.Shape.Volume, ref.Volume
+        ecart = abs(vp - vr)
+        ok = o.Shape.isValid() and len(o.Shape.Solids) == 1 and ecart < 1.0
+        say(f"   {o.Name:16s} parametrique {vp/1000:7.3f} cm3  vs fige {vr/1000:7.3f} cm3  "
+            f"ecart {ecart:.3f} mm3  {'OK' if ok else 'DIVERGE'}")
+        if not ok:
+            o.Shape = ref
+            say(f"   !! {o.Name} : arbre parametrique ecarte, forme figee conservee")
+    except Exception as ex:
+        say(f"   !! {o.Name} verification impossible ({ex})")
+
+_finaux = {p_frame.Name, p_top.Name, p_bot.Name}
+for o in doc.Objects:
+    try:
+        o.Visibility = o.Name in _finaux
     except Exception:
         pass
 
@@ -372,20 +673,157 @@ def add_circles(nm, centres, r, z=0.0):
         say(f"   esquisse {nm} impossible ({ex})")
         return None
 
-_sk = [add_sketch('esq_frame_outer', outer_p),
-       add_sketch('esq_frame_inner', inner_p),
-       add_sketch('esq_pcb', pcb_p),
-       add_sketch('esq_battery', accu),
-       add_circles('esq_screws', vis, VIS_D/2),
-       add_circles('esq_pcb_M3', PCB_M3, PCB_M3_D/2)]
-say(f"esquisses de reference : {sum(1 for s in _sk if s)} sur {len(_sk)}")
+_sk = [add_sketch('esq_pcb', pcb_p)]   # seule reference sans equivalent parametrique
+say(f"esquisse de reference PCB : {sum(1 for s_ in _sk if s_)} sur {len(_sk)}")
 
 doc.recompute()
-fc = f"{OUTDIR}/niphar-case-left.FCStd"
+
+# ============================================================================
+# Mode PartDesign : NIPHAR_PARTDESIGN=1 freecadcmd gen_case.py
+# ----------------------------------------------------------------------------
+# Sort un SECOND fichier, ou chaque piece est un PartDesign::Body : un Pad sur
+# l'esquisse de contour, puis UNE POCHE PAR PERCEMENT, chacune pilotee par sa
+# propre esquisse. C'est le geste FreeCAD normal — double-clic sur une poche,
+# on edite son esquisse, ca recalcule.
+#
+# Ce fichier est une AMORCE : une fois genere, c'est lui la source de verite.
+# Le lien avec niphar.kicad_pcb est rompu — les 26 touches, les trous M3 et les
+# positions de connecteurs y sont figes. Un composant deplace sur le PCB ne s'y
+# propagera plus. C'est le choix assume en echange de la vraie editabilite.
+# ============================================================================
+if True:   # amorcage PartDesign
+    pdoc = App.newDocument("niphar_case_left_pd")
+
+    def pd_body(nm):
+        return pdoc.addObject('PartDesign::Body', nm)
+
+    def pd_sk(body, nm, geo, place):
+        sk = pdoc.addObject('Sketcher::SketchObject', nm)
+        sk.Label = nm
+        body.addObject(sk)
+        sk.Placement = place
+        sk.addGeometry(geo, False)
+        pdoc.recompute()
+        return sk
+
+    def geo_loops(loops):
+        g = []
+        for pts in loops:
+            q = list(pts)
+            if math.hypot(q[0][0]-q[-1][0], q[0][1]-q[-1][1]) > 1e-4:
+                q.append(q[0])
+            g += [Part.LineSegment(App.Vector(q[i][0], -q[i][1], 0),
+                                   App.Vector(q[i+1][0], -q[i+1][1], 0))
+                  for i in range(len(q)-1)]
+        return g
+
+    def geo_circles(centres, r):
+        return [Part.Circle(App.Vector(c[0], -c[1], 0), App.Vector(0, 0, 1), r)
+                for c in centres]
+
+    def geo_rect(w, h, cx=0.0, cy=0.0):
+        p = [(cx-w/2, cy-h/2), (cx+w/2, cy-h/2), (cx+w/2, cy+h/2), (cx-w/2, cy+h/2)]
+        return [Part.LineSegment(App.Vector(*p[i], 0), App.Vector(*p[(i+1) % 4], 0))
+                for i in range(4)]
+
+    def plan(z):
+        return App.Placement(Vector(0, 0, z), App.Rotation(0, 0, 0, 1))
+
+    def pd_pad(body, sk, length):
+        f = pdoc.addObject('PartDesign::Pad', f'pad_{body.Name}')
+        body.addObject(f); f.Profile = sk; f.Length = length
+        pdoc.recompute(); return f
+
+    def pd_poche(body, sk, nm, longueur=None, inverse=True):
+        f = pdoc.addObject('PartDesign::Pocket', nm)
+        body.addObject(f); f.Profile = sk
+        if longueur is None:
+            f.Type = 1                      # ThroughAll
+        else:
+            f.Type = 0; f.Length = longueur
+        f.Reversed = inverse
+        pdoc.recompute(); return f
+
+    def esq_laterale(body, nm, kx, ky, w, z0, z1, prof):
+        """esquisse verticale devant le chant, pour une poche d'ouverture"""
+        d, dist = exit_dir(kx, ky)
+        ang = math.degrees(math.atan2(d.y, d.x))
+        lg = (prof if prof else dist + 8) + 2.0
+        base = P(kx, ky, 0) + d.multiply(dist + 2.0)
+        rot = App.Rotation(Vector(0, 0, 1), ang + 90) * App.Rotation(Vector(1, 0, 0), 90)
+        sk = pd_sk(body, nm, geo_rect(w, z1 - z0, 0.0, (z0 + z1)/2), App.Placement(base, rot))
+        return sk, lg
+
+    # ---------- cadre alu ----------
+    b_cadre = pd_body('frame_alu')
+    pd_pad(b_cadre, pd_sk(b_cadre, 'esq_cadre_contour', parse_edges(outer_d), plan(0)), H)
+    pd_poche(b_cadre, pd_sk(b_cadre, 'esq_cadre_interieur', parse_edges(inner_d), plan(0)),
+             'poche_interieur')
+    pd_poche(b_cadre, pd_sk(b_cadre, 'esq_cadre_accu', geo_loops([accu]), plan(0)),
+             'poche_accu')
+    pd_poche(b_cadre, pd_sk(b_cadre, 'esq_cadre_vis', geo_circles(vis, VIS_D/2), plan(0)),
+             'poche_vis')
+    for nm, kx, ky, w, z0, z1, prof in OPENINGS:
+        sk, lg = esq_laterale(b_cadre, f'esq_ouv_{nm}', kx, ky, w, z0, z1, prof)
+        pd_poche(b_cadre, sk, f'poche_ouv_{nm}', longueur=lg, inverse=False)
+
+    # ---------- plaque haute ----------
+    b_haut = pd_body('plate_top_PC')
+    pd_pad(b_haut, pd_sk(b_haut, 'esq_haut_contour', parse_edges(outer_d), plan(H)), T_PLATE)
+    for nm, geo in (('vis', geo_circles(vis, VIS_D/2)),
+                    ('M3', geo_circles(PCB_M3, PCB_M3_D/2)),
+                    ('touches', geo_loops(touches)),
+                    ('accu', geo_loops([accu]))):
+        pd_poche(b_haut, pd_sk(b_haut, f'esq_haut_{nm}', geo, plan(H)), f'poche_haut_{nm}')
+    for nm, kx, ky, w, z0, z1, prof in OPENINGS:
+        if nm != 'TRRS':
+            continue
+        d, dist = exit_dir(kx, ky)
+        ang = math.degrees(math.atan2(d.y, d.x))
+        lg = (prof if prof else dist + 8)
+        rot = App.Rotation(Vector(0, 0, 1), ang)
+        base = P(kx, ky, H) + d.multiply(dist + 2.0)
+        sk = pd_sk(b_haut, f'esq_haut_ouv_{nm}',
+                   geo_rect(lg + 2.0, w, -(lg + 2.0)/2, 0.0), App.Placement(base, rot))
+        pd_poche(b_haut, sk, f'poche_haut_ouv_{nm}')
+    for nm, kx, ky, rot, w, h, jeu in DEGAGE_HAUT:
+        pl = App.Placement(P(kx, ky, H), App.Rotation(Vector(0, 0, 1), -rot))
+        pd_poche(b_haut, pd_sk(b_haut, f'esq_haut_deg_{nm}',
+                               geo_rect(w + 2*jeu, h + 2*jeu), pl), f'poche_haut_deg_{nm}')
+
+    # ---------- plaque basse ----------
+    b_bas = pd_body('plate_bottom_PC')
+    pd_pad(b_bas, pd_sk(b_bas, 'esq_bas_contour', parse_edges(outer_d), plan(-T_PLATE)), T_PLATE)
+    for nm, geo in (('vis', geo_circles(vis, VIS_D/2)),
+                    ('M3', geo_circles(PCB_M3, PCB_M3_D/2))):
+        pd_poche(b_bas, pd_sk(b_bas, f'esq_bas_{nm}', geo, plan(-T_PLATE)), f'poche_bas_{nm}')
+    for nm, kx, ky, rot, w, h, jeu in DEGAGE_BAS:
+        pl = App.Placement(P(kx, ky, -T_PLATE), App.Rotation(Vector(0, 0, 1), -rot))
+        pd_poche(b_bas, pd_sk(b_bas, f'esq_bas_deg_{nm}',
+                              geo_rect(w + 2*jeu, h + 2*jeu), pl), f'poche_bas_deg_{nm}')
+
+    pdoc.recompute()
+    say("PartDesign :")
+    for b, ref in ((b_cadre, frame), (b_haut, top), (b_bas, bot)):
+        try:
+            v = b.Shape.Volume
+            say(f"   {b.Name:16s} {v/1000:7.3f} cm3  vs reference {ref.Volume/1000:7.3f} cm3  "
+                f"ecart {abs(v-ref.Volume):8.3f} mm3  solides={len(b.Shape.Solids)}  "
+                f"features={len(b.Group)}")
+        except Exception as ex:
+            say(f"   {b.Name}: mesure impossible ({ex})")
+    fpd = _FCSTD          # le PartDesign EST le modele desormais
+    pdoc.saveAs(fpd)
+    say(f"FCStd PartDesign : {fpd}")
+
+fc = f"{OUTDIR}/niphar-case-left-booleens.FCStd"   # reference interne, pas le modele
 st = f"{OUTDIR}/niphar-case-left.step"
 doc.saveAs(fc)
-Part.export([o for o in doc.Objects if o.TypeId == 'Part::Feature'], st)
-for o in [x for x in doc.Objects if x.TypeId == 'Part::Feature']:
+# Les 3 pieces sont des Part::Cut depuis le passage en arbre parametrique :
+# filtrer sur Part::Feature ne renvoyait plus rien et exportait un STEP vide.
+PIECES = [p_frame, p_top, p_bot]
+Part.export(PIECES, st)
+for o in PIECES:
     b = o.Shape.BoundBox
     say(f"{o.Name:16s} {o.Shape.Volume/1000:6.1f} cm3  z {b.ZMin:6.2f}->{b.ZMax:6.2f}  "
         f"{b.XLength:.0f}x{b.YLength:.0f} mm  valide={o.Shape.isValid()} solides={len(o.Shape.Solids)}")
@@ -395,11 +833,13 @@ say(f"STEP  : {st}")
 # STL des 3 pieces (impression 3D). Gitignores, mais toujours presents sur disque.
 try:
     import Mesh, MeshPart
-    for o in [x for x in doc.Objects if x.TypeId == 'Part::Feature']:
+    _n = 0
+    for o in PIECES:
         m = MeshPart.meshFromShape(Shape=o.Shape, LinearDeflection=0.05,
                                    AngularDeflection=0.15, Relative=False)
         m.write(f"{OUTDIR}/{o.Name}.stl")
-    say("STL   : 3 fichiers")
+        _n += 1
+    say(f"STL   : {_n} fichiers")   # compte reel, le message etait en dur
 except Exception as ex:
     say(f"STL non generes ({ex})")
 
@@ -467,9 +907,12 @@ _fix.write(f"""import FreeCAD as App, FreeCADGui as Gui
 COL = {{'frame_alu': (0.72, 0.73, 0.75, 0),
         'plate_top_PC': (0.55, 0.75, 0.90, 55),
         'plate_bottom_PC': (0.55, 0.75, 0.90, 55)}}
+VISIBLE = {{'frame_alu', 'plate_top_PC', 'plate_bottom_PC'}}
 d = App.openDocument({fc!r})
 for o in d.Objects:
-    o.ViewObject.Visibility = True
+    # arbre parametrique : seules les 3 pieces finales sont visibles, sinon on
+    # ouvre le fichier sur une pile de boites de coupe posees sur les pieces.
+    o.ViewObject.Visibility = o.Name in VISIBLE
     r, g, b, tr = COL.get(o.Name, (0.8, 0.8, 0.8, 0))
     o.ViewObject.ShapeColor = (r, g, b)
     o.ViewObject.Transparency = tr
@@ -478,7 +921,7 @@ d.save()
 _fix.close()
 try:
     env = dict(os.environ, QT_QPA_PLATFORM='offscreen')
-    subprocess.run(['freecad', _fix.name], env=env, timeout=300,
+    subprocess.run(['freecad', _fix.name], env=env, timeout=900,
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     import zipfile
     ok = 'GuiDocument.xml' in zipfile.ZipFile(fc).namelist()
