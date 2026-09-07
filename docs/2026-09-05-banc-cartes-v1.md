@@ -58,7 +58,42 @@ dans KiCad, avec le routage.
 
 ---
 
-## 2. Aucune tension sur la moitié gauche en mode batterie — À MESURER
+## 2. Aucune tension sur la moitié gauche en mode batterie — RÉSOLU
+
+> **CAUSE : la broche 1 de Q4 (FS8205) n'était pas soudée.**
+>
+> Broche 1 = `S1` = `-BATT`, la source du FET de décharge. Patte en l'air, donc
+> aucun chemin de retour pour la batterie — ni en décharge, ni en charge.
+> Ressoudée, la moitié gauche démarre sur batterie.
+>
+> **Pourquoi la continuité ne l'a pas vu.** `U23 pad 6 ↔ Q4 pad 1` bipait
+> correctement : une broche non soudée **repose** sur sa pastille, et la pointe
+> de touche l'y écrase. Le contact se fait pendant la mesure et disparaît dès
+> qu'on retire la pointe. **Aucun test de continuité ne peut attraper une
+> soudure froide sur une patte posée.** Il faut un contrôle visuel, ou pousser
+> la patte latéralement pendant la mesure.
+>
+> **Ce qui a fini par le trahir** : le pont maintenu entre `-BATT` et `GND`
+> faisait passer OD à 3,5 V, mais l'état ne tenait pas au retrait du pont. Or si
+> FET1 conduisait, son canal maintiendrait `GND` sur `-BATT` et l'état
+> s'auto-entretiendrait. Il ne tenait pas ⇒ la commande arrivait, le canal ne
+> conduisait pas ⇒ le défaut était dans Q4 ou ses soudures de puissance, pas
+> dans le pilotage.
+>
+> Le reste de la chaîne était sain et se comportait logiquement : `GND`
+> flottait faute de retour, CS lisait 0,5 à 2,2 V selon la charge — bien
+> au-dessus du seuil de 150 mV — donc le DW01A coupait la décharge et gardait la
+> charge ouverte. Comportement conforme à sa datasheet du début à la fin.
+
+### Ce qui reste vrai et vérifié dans l'analyse ci-dessous
+
+Le brochage du DW01A et celui du FS8205 ont été contrôlés sur les datasheets
+fabricant à cette occasion. **Ils sont justes** — c'est consigné plus bas et ça
+reste valable pour toute panne future sur cette chaîne.
+
+---
+
+### Analyse d'origine (conservée)
 
 **Symptôme** : rien en batterie sur la gauche. Tout fonctionne sur USB.
 
