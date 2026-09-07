@@ -6,7 +6,21 @@ d'entre elles ne coûtent rien à écarter.
 
 ---
 
-## 1. Point de chauffe sur U21 — CAUSE TROUVÉE, PCB CORRIGÉ
+## 1. Point de chauffe sur U21 — RÉSOLU (LDO remplacé), PCB CORRIGÉ
+
+> **U21 remplacé, la moitié droite fonctionne.** Le pontage de masque avait mis
+> `GND`, l'entrée et la sortie `+3.3V_D` en court : le régulateur y est passé.
+> Un HT7833 neuf et le rail remonte.
+>
+> ⚠️ **Le défaut de masque est TOUJOURS sur la carte.** Le composant neuf est
+> posé sur les mêmes trois pastilles, sans vernis entre elles. Ça fonctionne
+> aujourd'hui parce que la soudure ne ponte pas — rien ne garantit que ça tienne
+> à un cycle thermique, une reprise au fer ou un choc. **Isoler les pastilles**
+> (vernis, kapton) reste à faire, ici et sur toutes les moitiés droites déjà
+> fabriquées.
+>
+> Le PCB est corrigé pour les fabrications suivantes (commit `53564e4`).
+
 
 **Symptôme** : gros point de chauffe sur U21, le LDO 3,3 V de la moitié droite.
 
